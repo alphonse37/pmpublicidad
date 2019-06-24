@@ -216,13 +216,14 @@ https://www.basili.co/en/agency/
 	transition: 0.5s;
 }
 
-.leyenda {
+.banner {
     position: relative;
-    margin-top:-25%;
+    margin-bottom: 5%;
 }
 
-.banner {
-    margin-bottom: 25%;
+.leyenda {
+    position: absolute;
+    top: 25%;
 }
 
 .introduccion {
@@ -355,7 +356,7 @@ https://www.basili.co/en/agency/
 
 /* SECCION DE QUIENES SOMOS */
 .nosotros {
-    margin-top: 23%;
+    margin-top: 5%;
     color: var(--textos2);
 }
 
