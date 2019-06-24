@@ -277,9 +277,11 @@ https://www.basili.co/en/agency/
 
 /* servicios */
 .servicios {
-    color: var(--textos1);
+    color: var(--textos2);
     font-family: var(--titulos);
 }
+
+
 
 /* SERVICIOS */
 
