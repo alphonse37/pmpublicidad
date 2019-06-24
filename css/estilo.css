@@ -275,7 +275,10 @@ https://www.basili.co/en/agency/
 
 
 /* servicios */
-
+.servicios {
+    color: var(--textos1);
+    font-family: var(--titulos);
+}
 
 /* SERVICIOS */
 
