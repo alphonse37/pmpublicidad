@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cotiza | PM Publicidad</title>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- iconos materialize -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- estilo css -->
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <!-- scripts de js -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <!-- BARRA DE NAVEGACION -->
+        <nav class="nav-wrapper barra">
+            <div class="row">
+                <!-- LOGO DE LA EMPRESA -->
+                <div class="logo col s5">
+                    <a href="index.html" class="brand-logo logo1"><img src="imagenes/logo2.png"></a>
+                </div>
+            </div>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="large material-icons white-text">menu</i></a>
+            <div class="col s7  menu">
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="quienessomos.html">Quienes somos</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="cotiza.html">Cotiza</a></li>
+                    <li><a href="contactanos.html">Contáctanos</a></li>    
+                </ul>
+            </div>
+        </nav>
+            
+        <!-- MENU DE HAMBURGUESA PARA DISPOSITIVOS MEDIUM Y SMALL -->
+        <ul class="sidenav" id="mobile-demo">
+            <!-- <li><i class="material-icons right">close</i></li> -->
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="quienessomos.html">Nosotros</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="cotiza.html">Cotiza</a></li>
+            <li><a href="contactanos.html">Contáctanos</a></li>   
+        </ul>
+    
+    </header>
+    
+    <main>
+        <!-- banner -->
+        <div class="banner">
+            <img src="imagenes/cotiza.jpg" alt="banner de inicio" width="100%">
+            <h1 class="leyenda center">Cotiza</h1>
+    
+            <!-- <div class="informacion center">
+                <h1>
+                    <span class="pm">" Pm</span>
+                    <span class="publi">Publicidad&nbsp;</span>
+                    <span class="pm2">"</span>
+                </h1>
+            </div> -->
+        </div>
+        <section class="cotizar">
+            <!-- <h2>¡Cotiza tu producto!</h2> -->
+            <div class="row">
+                <div class="col s12 l6">
+                    <h5 class="center">Datos del cliente</h5>
+                    <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <br>
+                    <form action="">
+                        <div class="row">
+                            <div class="input-field col s12 l6">
+                                <input type="text">
+                                <label for="">Nombre</label>
+                            </div>
+
+                            <div class="input-field col s12 l6">
+                                <input type="text">
+                                <label for="">Apellido</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12 l6">
+                                <input type="text">
+                                <label for="">Teléfono</label>
+                            </div>
+
+                            <div class="input-field col s12 l6">
+                                <input type="email">
+                                <label for="">Correo Electrónico</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <h5 class="center">Datos de cotización.</h5>
+                            <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <div class="input-field col s12 l6"> 
+                                <select name="" id="" multiple>
+                                    <option value="" selected disabled>Elige el servicio</option>
+                                    <option value="">Bordados</option>
+                                    <option value="">Serigrafía</option>
+                                    <option value="">Impresión Láser</option>
+                                    <option value="">Impresión Digital</option>
+                                    <option value="">Instalaciones</option>
+                                </select>
+                            </div>
+
+                            <div class="input-field col s12 l6">
+                                <select name="" id="">
+                                    <option value="" selected disabled>Elige el producto</option>
+                                    <option value="">Opción 1</option>
+                                    <option value="">Opción 2</option>
+                                    <option value="">Opción 3</option>
+                                    <option value="">Opción 4</option>
+                                    <option value="">Opción 5</option>
+                                </select>
+
+                            </div>
+
+                            <div class="input-field col s12 l6">
+                                <input type="number">
+                                <label for="">Cantidad</label>
+                            </div>
+
+                            <div class="input-field col s12 l6">
+                                <select name="" id="select">
+                                    <option value="" selected disabled>Selecciona el material</option>
+                                    <option value="">Vinil</option>
+                                    <option value="">Opción 2</option>
+                                    <option value="">Opción 3</option>
+                                </select>
+                            </div>
+
+                            <div class="input-field col s12">
+                                <h6 class="center">Medidas a escala</h6>
+                                <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <div class="row">
+                                    <div class="input-field col s12 l6">
+                                        <input type="number" id="alto" required>
+                                        <label for="">Alto</label>
+                                    </div>
+
+                                    <div class="input-field col s12 l6">
+                                        <input type="number" id="ancho" required>
+                                        <label for="">Ancho</label>
+                                    </div>
+
+                                    <div class="boton center">
+                                        <button class="cyan btn modal-trigger" data-target="modal1">Previsualizar tamaño</button>
+                                        <a href="" class="btn cyan">Cotizar</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                    </form>
+                </div>
+
+                <div class="col s12 l6">
+                    <h6>Tamaño a escala.</h6>
+                    <div class="caja center">
+                        <div class="medidas"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                <!-- Modal -->
+        <div id="modal1" class="modal modal-fixed-footer">
+            <div class="modal-content">
+                <h6>Tamaño a escala.</h6>
+                <div class="text-center">
+                    <div class="medidas text-center"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+            <a href="#!" class="cyan modal-close waves-effect waves-green btn-flat">Cerrar</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+            <div class="footer center">
+                <div class="row">
+                    <div class="col s12 m6 l4 f-logo">
+                        <img src="imagenes/logo2.png" alt="" width="60%">
+                       
+                    </div>
+                    <div class="col s12 m6 l4">
+                        <p>Contáctanos.</p>
+                        <p><i class="far fa-envelope iconos"></i> pmpublicidadventas@gmail.com</p>
+                        <p><i class="fas fa-phone iconos"></i> +(503) 2406-6563</p>
+                        <p><i class="fab fa-whatsapp iconos"></i> +(503) 7580-1762</p>
+                    </div>
+                    <div class="col s12 m6 l4">
+                        <p>Síguenos:</p>
+                        <p class="icono"><a href="https://es-la.facebook.com/pages/category/Product-Service/Pm-Publicidad-83252799961/" target="_blank"><i class="fab fa-facebook-square" id="iconoRedes"></i></a></p>
+                        <br>
+                        <a href="cotiza.html" class="btn btn-small cyan"><p>¡Cotiza aquí!</p></a>
+                    </div>
+                </div>
+                <br>
+                <p class="center">Derechos Reservados &copy; PmPublicidad 2019.</p>
+            </div>
+        </footer>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    </body>
+</html>
