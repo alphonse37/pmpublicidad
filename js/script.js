@@ -1,7 +1,7 @@
 // JQUERY
 // CAMBIO DE BARRAS AL HACER SCROLL
 $(window).scroll(function() {
-	console.log($(window).scrollTop());
+	$(window).scrollTop();
 	if ($(window).scrollTop() > 150) {
 		$('.nav-wrapper').addClass('barra2');
 		$('.nav-wrapper').removeClass('barra');
@@ -49,8 +49,8 @@ $(document).ready(function(){
 		  $('.carousel').carousel('prev');
 	  });
 
-	//   efecto parallax
-	$('.parallax').parallax();
+	// //   efecto parallax
+	// $('.parallax').parallax();
 
 	//   efecto de tabs
 	$('.tabs').tabs();

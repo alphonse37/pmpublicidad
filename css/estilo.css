@@ -277,8 +277,13 @@ https://www.basili.co/en/agency/
 
 /* servicios */
 .servicios {
+    /* background-image: url('../imagenes/n-servicios.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover; */
     color: var(--textos2);
     font-family: var(--titulos);
+
 }
 
 
@@ -385,27 +390,33 @@ https://www.basili.co/en/agency/
 /* SECCION DE PRODUCTOS */
 
 .categorias {
-    width: 80vw;
     margin: 0 auto;
     position: relative;
     z-index: 200;
+}
+
+.busqueda {
+    width: 95vw;
+    margin: 0 auto;
+    text-align: center
 }
 
 .busqueda p {
     font-size: 25px;
 }
 
-.busqueda ul li a {
+.busqueda a {
     text-decoration: none;
     color: black;
     font-size: 16px;
+    padding: 15px;
 }
 
 .busqueda a:hover {
     color: var(--textos2);
 }
 
-.seccion_productos {
+.seccion-productos {
     width: 100vw;
     margin: 0 auto;
 }
@@ -644,9 +655,21 @@ https://www.basili.co/en/agency/
     color: var(--textos2) !important;
 }
 
-.suc1 {
+.sucursales {
     width: 80vw;
     margin: 0 auto;
+}
+
+.info-contacto {
+    background-color: var(--terciario);
+    height: 500px;
+}
+
+.info-contacto p {
+    color: var(--textos1);
+    font-family: var(--parrafo);
+    margin: 10%;
+    width: 80%;
 }
 
 /* FOOTER */
