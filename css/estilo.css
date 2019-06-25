@@ -277,15 +277,15 @@ https://www.basili.co/en/agency/
 
 /* servicios */
 .servicios {
-    /* background-image: url('../imagenes/n-servicios.jpg');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover; */
     color: var(--textos2);
     font-family: var(--titulos);
-
+    position: relative;
 }
 
+.servicios-texto {
+    position: absolute;
+    top: 0;
+}
 
 
 /* SERVICIOS */
