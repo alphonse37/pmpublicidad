@@ -279,12 +279,14 @@ https://www.basili.co/en/agency/
 .servicios {
     color: var(--textos2);
     font-family: var(--titulos);
-    position: relative;
+
 }
 
-.servicios-texto {
-    position: absolute;
-    top: 0;
+.frase-servicios {
+    font-family: var(--titulos);
+    color: var(--textos1);
+    font-size: 48px;
+    padding: 40px;
 }
 
 
@@ -392,11 +394,11 @@ https://www.basili.co/en/agency/
 .categorias {
     margin: 0 auto;
     position: relative;
-    z-index: 200;
+    /* z-index: 200; */
 }
 
 .busqueda {
-    width: 95vw;
+    width: 95%;
     margin: 0 auto;
     text-align: center
 }
@@ -417,7 +419,7 @@ https://www.basili.co/en/agency/
 }
 
 .seccion-productos {
-    width: 100vw;
+    width: 100%;
     margin: 0 auto;
 }
 

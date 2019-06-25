@@ -89,19 +89,6 @@
                     <div id="productos">
                         <div class="row">
                             <div class="col s12 m6 l4" v-for="producto in productos" vbind:key="producto.id_producto">
-                                <!-- <div class="card-product">
-                                    <div class="imagen1">
-                                        <img src="imagenes/camisa.jpg">
-                                        <strong><p class="center">{{producto.nombre}}</p></strong>
-                                    </div>
-                                    <div class="detalles">
-                                        <div class="center">
-                                            <h5>{{producto.nombre}}<br><span>Precio</span></h5>
-                                            <p>Descripción: Lorem ipsum is simple dummy text on the printing and typesetting industry.</p>
-                                            <button class="btn btn-small">Ver imagen</button>
-                                        </div>
-                                    </div>
-                                </div> -->
                                 <div class="product-card">
                                     <div class="product-front">
                                         <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt.png" alt="">
@@ -109,14 +96,14 @@
                                         <div id="view_details">View details</div>
                                         <div class="stats">        	
                                             <div class="stats-container">
-                                                <span class="product_price">$39</span>
-                                                <span class="product_name">Adidas Originals</span>    
+                                                <span class="product_price">{{producto.id_producto}}</span>
+                                                <span class="product_name">{{producto.nombre}}</span>    
                                                 <p>Men's running shirt</p>                                            
                                                 <div class="product-options">
                                                 <strong>SIZES</strong>
                                                 <span>XS, S, M, L, XL, XXL</span>
                                                 <strong>COLORS</strong>
-                                                <span>esto</span>
+                                                <span>{{producto.activo}}</span>
                                                 </div>                       
                                             </div>                         
                                         </div>
@@ -130,7 +117,7 @@
         </div>
     </main>
     
-    <!-- <footer>
+    <footer>
             <div class="footer center">
                 <div class="row">
                     <div class="col s12 m6 l4 f-logo">
@@ -153,7 +140,7 @@
                 <br>
                 <p class="center">Derechos Reservados &copy; PmPublicidad 2019.</p>
             </div>
-        </footer> -->
+        </footer>
     
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

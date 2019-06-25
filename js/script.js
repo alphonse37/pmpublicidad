@@ -83,7 +83,7 @@ $(document).ready(function(){
 		$('.modal').modal();
 
 		// tarjetas
-		$('#product-card').hover(function(){
+		$('.product-card').hover(function(){
 			$(this).addClass('animate');
 			$('div.carouselNext, div.carouselPrev').addClass('visible');			
 		 }, function(){
