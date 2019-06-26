@@ -645,12 +645,13 @@ https://www.basili.co/en/agency/
 }
 
 .medidas {
-    border: 1px solid rgb(95, 191, 255);
-    margin: 2px;
+    border: 3px solid rgb(36, 167, 255);
+    background-color: rgb(95, 191, 255);
+    margin: 0 auto;
 }
 
 .modal {
-    transition: 0.2s;
+    transition: 0.05s;
 }
 
 /* SECCION DE CONTACTOS */
@@ -715,6 +716,18 @@ footer {
 
     .texto2 {
         display: none;
+    }
+
+    .logo img {
+        width: 20vw;
+        transition: 0.5s;
+        margin-top: 25px;
+    }
+
+    .logo2 img {
+        width: 20vw;
+        transition: 0.5s;
+        margin-top: 25px;
     }
 }
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,7 +29,7 @@
             <div class="row">
                 <!-- LOGO DE LA EMPRESA -->
                 <div class="logo col s5">
-                    <a href="index.html" class="brand-logo logo1"><img src="imagenes/logo2.png"></a>
+                    <a href="index.html" class="brand-logo logo1"><img src="imagenes/logo.png"></a>
                 </div>
             </div>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="large material-icons white-text">menu</i></a>
@@ -106,44 +106,35 @@
                             <h5 class="center">Datos de cotización.</h5>
                             <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                             <div class="input-field col s12 l6"> 
-                                <select name="" id="">
+                                <select name="servicio" id="servicio" onchange="cargarProductos()">
                                     <option value="" selected disabled>Elige el servicio</option>
-                                    <option value="">Bordados</option>
+                                    <!-- <option value="">Bordados</option>
                                     <option value="">Serigrafía</option>
                                     <option value="">Impresión Láser</option>
                                     <option value="">Impresión Digital</option>
-                                    <option value="">Instalaciones</option>
+                                    <option value="">Instalaciones</option> -->
                                 </select>
                             </div>
 
                             <div class="input-field col s12 l6">
-                                <select name="" id="">
+                                <select name="producto" id="producto">
                                     <option value="" selected disabled>Elige el producto</option>
-                                    <option value="">Opción 1</option>
+                                    <!-- <option value="">Opción 1</option>
                                     <option value="">Opción 2</option>
                                     <option value="">Opción 3</option>
                                     <option value="">Opción 4</option>
-                                    <option value="">Opción 5</option>
+                                    <option value="">Opción 5</option> -->
                                 </select>
 
                             </div>
 
-                            <div class="input-field col s12 l6">
+                            <div class="input-field col s12 l6 offset-l3">
                                 <input type="number">
                                 <label for="">Cantidad</label>
                             </div>
 
-                            <div class="input-field col s12 l6">
-                                <select name="" id="select">
-                                    <option value="" selected disabled>Selecciona el material</option>
-                                    <option value="">Vinil</option>
-                                    <option value="">Opción 2</option>
-                                    <option value="">Opción 3</option>
-                                </select>
-                            </div>
-
-                            <div class="input-field col s12">
-                                <h6 class="center">Medidas a escala</h6>
+                            <div class="input-field col s12 material">
+                                <h6 class="center">Material y medidas a escala</h6>
                                 <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                 <div class="row">
                                     <div class="input-field col s12 l6">
@@ -155,6 +146,15 @@
                                         <input type="number" id="ancho" required>
                                         <label for="">Ancho</label>
                                     </div>
+
+                                    <div class="input-field col s12 l6 offset-l3">
+                                            <select name="" id="select">
+                                                <option value="" selected disabled>Selecciona el material</option>
+                                                <option value="">Vinil</option>
+                                                <option value="">Opción 2</option>
+                                                <option value="">Opción 3</option>
+                                            </select>
+                                        </div>
 
                                     <div class="boton center">
                                         <button class="cyan btn modal-trigger" data-target="modal1">Previsualizar tamaño</button>
@@ -172,15 +172,15 @@
         </section>
 
                 <!-- Modal -->
-        <div id="modal1" class="modal modal-fixed-footer">
+        <div id="modal1" class="modal modal-fixed-footer" style="width:80%">
             <div class="modal-content">
-                <h6>Tamaño a escala.</h6>
+                <h5 class="center">Tamaño a escala.</h5>
                 <div class="text-center">
-                    <div class="medidas text-center"></div>
+                    <div class="medidas text-center white-text"></div>
                 </div>
             </div>
             <div class="modal-footer">
-            <a href="#!" class="cyan modal-close waves-effect waves-green btn-flat">Cerrar</a>
+            <a href="#!" class="cyan modal-close waves-effect waves-green btn-flat white-text">Cerrar</a>
             </div>
         </div>
     </main>
@@ -211,6 +211,66 @@
         </footer>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+    // Servicios de select en Formulario de cotización
+
+// agregar opciones de servicios
+function cargarServicios() {
+	var array = ["Promocionales", "Bordados", "Impresión Digital", "Serigrafía", "Confección", "Sublimación", "Impresión Láser"];
+	array.sort();
+	addOptions("servicio", array);
+}
+
+// agregar servicios al select
+function addOptions (domElement, array) {
+	var selector = document.getElementsByName(domElement)[0];
+	for (servicio in array) {
+		var opcion = document.createElement("option");
+		opcion.text = array[servicio];
+
+		// convertir string en minusculas y quitar espacios
+		opcion.value = array[servicio].trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, '').replace(/ /g, '');
+		selector.add(opcion);
+	}
+}
+
+
+
+// agregar productos a los servicios
+function cargarProductos() {
+	var listaProductos = {
+		bordados: ["Camisas"],
+      impresiondigital: ["Banner", "Vinil", "Microperforado"],
+      promocionales: ["Gorras", "Llaveros", "Agendas", "Gabachas", "Camisetas", "Lapiceros", "Calculadoras", "Tazas", "Lanyard", "Pachones", "Almohadas", "Lápices", "Pulseras"],
+      serigrafia: ["Camisas", "Pachones", "Telas"],
+      confeccion: ["Camisas Polo", "Suéteres", "Uniformes"],
+      sublimacion: ["Tazas", "Camisas", "Telas"],
+      impresionlaser: ["Foldcote", "Couche", "Adhesivo"]
+	}
+
+	var servicios = document.getElementById("servicio");
+	var productos = document.getElementById("producto");
+	var servicioSeleccionado = servicios.value;
+
+	// limpiar select de productos
+	productos.innerHTML = "<option >Selecciona un producto</option>"
+
+	if (servicioSeleccionado !== '') {
+		servicioSeleccionado = listaProductos[servicioSeleccionado];
+		servicioSeleccionado.sort();
+
+		servicioSeleccionado.forEach(function(producto){
+			let opcion = documetn.createElement("option");
+			opcion.value = producto;
+			opcion.text = producto;
+			productos.add(opcion);
+		});
+    }
+}
+
+cargarServicios();
+    </script>
 
     </body>
 </html>

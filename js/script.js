@@ -72,12 +72,34 @@ $(document).ready(function(){
 			var ancho =$(document.getElementById('ancho')).val();
 			var alto = $(document.getElementById('alto')).val();
 			var txt = "";
-			txt += $(".medidas").width(ancho + "px") + "</br>";
-			txt += $(".medidas").height(alto + "px");
-			$(".medidas").html();
-			$("#alto").val("");
-			$("#ancho").val("");
+			
+			if (ancho <= 25 && alto <= 25) {
+				txt += $(".medidas").width(ancho*10 + "px") + "</br>";
+				txt += $(".medidas").height(alto*10 + "px");
+				$(".medidas").html();
+				$("#alto").val("");
+				$("#ancho").val("");
+			} else if (ancho > 25 && ancho <= 50 && alto > 25 && alto >= 50) {
+				txt += $(".medidas").width(ancho*5 + "px") + "</br>";
+				txt += $(".medidas").height(alto*5 + "px");
+				$(".medidas").html();
+				$("#alto").val("");
+				$("#ancho").val("");
+			} else if (ancho > 50 && ancho <= 150 && alto > 50 && alto >= 150) {
+				txt += $(".medidas").width(ancho*4 + "px") + "</br>";
+				txt += $(".medidas").height(alto*4 + "px");
+				$(".medidas").html();
+				$("#alto").val("");
+				$("#ancho").val("");
+			} else if (ancho > 150 &&  alto > 150) {
+				txt += $(".medidas").width(ancho*2 + "px") + "</br>";
+				txt += $(".medidas").height(alto*2 + "px");
+				$(".medidas").html();
+				$("#alto").val("");
+				$("#ancho").val("");
+			}
 		});
+
 
 		// para abrir el modal
 		$('.modal').modal();

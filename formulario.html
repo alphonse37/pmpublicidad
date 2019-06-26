@@ -9,7 +9,7 @@
 <body onload="cargarServicios()">
    
        
-               <!-- Añadido onchange para cargar los pueblos -->
+               <!-- Añadido onchange para cargar los productos -->
                <select name="servicio" id="servicio" onchange="cargarProductos()">
                    <!-- Hay que terminar los options -->
                    <!-- 
@@ -35,7 +35,7 @@
 
      <script>
          function cargarServicios() {
-    var array = ["Promocionales", "Bordados", "Láser", "Impresión Digital", "Serigrafía", "Confección", "Sublimación"];
+    var array = ["Promocionales", "Bordados", "Impresión Digital", "Serigrafía", "Confección", "Sublimación", "Impresión Láser"];
     array.sort();
     addOptions("servicio", array);
 }
@@ -47,39 +47,37 @@ function addOptions(domElement, array) {
     for (servicio in array) {
         var opcion = document.createElement("option");
         opcion.text = array[servicio];
-        // Añadimos un value a los option para hacer mas facil escoger los pueblos
-        opcion.value = array[servicio].toLowerCase()
+        // Añadimos un value a los option para hacer mas facil escoger los productos
+        opcion.value = array[servicio].trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/ /g, "");
         selector.add(opcion);
     }
 }
 
-
-
 function cargarProductos() {
-    // Objeto de provincias con pueblos
+    // Objeto servicios con productos
     var listaProductos = {
       bordados: ["Camisas"],
-      impresionDigital: ["Banner", "Vinil", "Microperforado"],
-      I: ["Foldcote", "Couche", "Adhesivo"],
+      impresiondigital: ["Banner", "Vinil", "Microperforado"],
       promocionales: ["Gorras", "Llaveros", "Agendas", "Gabachas", "Camisetas", "Lapiceros", "Calculadoras", "Tazas", "Lanyard", "Pachones", "Almohadas", "Lápices", "Pulseras"],
       serigrafia: ["Camisas", "Pachones", "Telas"],
-      confección: ["Camisas Polo", "Suéteres", "Uniformes"],
-      sublimacion: ["Tazas", "Camisas", "Telas"]
+      confeccion: ["Camisas Polo", "Suéteres", "Uniformes"],
+      sublimacion: ["Tazas", "Camisas", "Telas"],
+      impresionlaser: ["Foldcote", "Couche", "Adhesivo"]
     }
     
     var servicios = document.getElementById('servicio')
     var productos = document.getElementById('producto')
     var servicioSeleccionado = servicios.value
     
-    // Se limpian los pueblos
+    // Se limpian los productos
     productos.innerHTML = '<option value="">Seleccione un producto</option>'
     
     if(servicioSeleccionado !== ''){
-      // Se seleccionan los pueblos y se ordenan
+      // Se seleccionan los productos y se ordenan
       servicioSeleccionado = listaProductos[servicioSeleccionado]
       servicioSeleccionado.sort()
     
-      // Insertamos los pueblos
+      // Insertamos los productos
       servicioSeleccionado.forEach(function(producto){
         let opcion = document.createElement('option')
         opcion.value = producto
@@ -87,11 +85,9 @@ function cargarProductos() {
         productos.add(opcion)
       });
     }
-    
   }
-  
- // Iniciar la carga de provincias solo para comprobar que funciona
 
+  
      
      </script>
 </body>
