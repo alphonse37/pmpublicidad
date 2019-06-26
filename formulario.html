@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body onload="cargarServicios()">
+   
+       
+               <!-- Añadido onchange para cargar los pueblos -->
+               <select name="servicio" id="servicio" onchange="cargarProductos()">
+                   <!-- Hay que terminar los options -->
+                   <!-- 
+                        Eliminado de value la llamada a la función,
+                        si eso funciona lo desconocía, y aunque 
+                        lo haga es totalmente innecesario, 
+                        lo correcto es usar el evento onchange 
+                     -->
+                   <option value="">Seleccione un servicio</option>
+               </select>
+           
+               <select name="producto" id="producto">
+                   <!-- Hay que terminar los options -->
+                   <!-- 
+                        Eliminado de value la llamada a la función,
+                        si eso funciona lo desconocía, y aunque 
+                        lo haga es totalmente innecesario, 
+                        lo correcto es usar el evento onchange 
+                     -->
+                   <option value="">Seleccione un producto</option>
+               </select>
+          
+
+     <script>
+         function cargarServicios() {
+    var array = ["Promocionales", "Bordados", "Láser", "Impresión Digital", "Serigrafía", "Confección", "Sublimación"];
+    array.sort();
+    addOptions("servicio", array);
+}
+
+
+//Función para agregar opciones a un <select>.
+function addOptions(domElement, array) {
+    var selector = document.getElementsByName(domElement)[0];
+    for (servicio in array) {
+        var opcion = document.createElement("option");
+        opcion.text = array[servicio];
+        // Añadimos un value a los option para hacer mas facil escoger los pueblos
+        opcion.value = array[servicio].toLowerCase()
+        selector.add(opcion);
+    }
+}
+
+
+
+function cargarProductos() {
+    // Objeto de provincias con pueblos
+    var listaProductos = {
+      bordados: ["Camisas"],
+      impresionDigital: ["Banner", "Vinil", "Microperforado"],
+      I: ["Foldcote", "Couche", "Adhesivo"],
+      promocionales: ["Gorras", "Llaveros", "Agendas", "Gabachas", "Camisetas", "Lapiceros", "Calculadoras", "Tazas", "Lanyard", "Pachones", "Almohadas", "Lápices", "Pulseras"],
+      serigrafia: ["Camisas", "Pachones", "Telas"],
+      confección: ["Camisas Polo", "Suéteres", "Uniformes"],
+      sublimacion: ["Tazas", "Camisas", "Telas"]
+    }
+    
+    var servicios = document.getElementById('servicio')
+    var productos = document.getElementById('producto')
+    var servicioSeleccionado = servicios.value
+    
+    // Se limpian los pueblos
+    productos.innerHTML = '<option value="">Seleccione un producto</option>'
+    
+    if(servicioSeleccionado !== ''){
+      // Se seleccionan los pueblos y se ordenan
+      servicioSeleccionado = listaProductos[servicioSeleccionado]
+      servicioSeleccionado.sort()
+    
+      // Insertamos los pueblos
+      servicioSeleccionado.forEach(function(producto){
+        let opcion = document.createElement('option')
+        opcion.value = producto
+        opcion.text = producto
+        productos.add(opcion)
+      });
+    }
+    
+  }
+  
+ // Iniciar la carga de provincias solo para comprobar que funciona
+
+     
+     </script>
+</body>
+</html>
