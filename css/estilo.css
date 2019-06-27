@@ -344,6 +344,62 @@ https://www.basili.co/en/agency/
     background-color: rgba(0, 0, 0, 0.26);
     box-shadow: none;
 }
+
+/* QUIENES SOMOS */
+
+.nosotros {
+    margin-bottom: 10%;
+    margin-top: 5%;
+    color: var(--textos2);
+}
+
+.nosotros h4 {
+    width: 80vw;
+    margin: 0 auto;
+    padding-bottom: 5%;
+}
+
+.historia {
+    position: relative;
+}
+
+
+
+.contenido-historia {
+    position: absolute;
+    top: 0;
+}
+
+.historia h3 {
+    font-family: var(--titulos);
+    font-size: 4rem;
+    line-height: 1;
+    letter-spacing: 1px;
+    font-weight: 500;
+    word-spacing: 0px;
+    color: var(--textos2);
+}
+
+.historia-texto {
+    font-family: var(--parrafo);
+    padding: 0.2em;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+
+.mision p, .vision p {
+    padding: 7%;
+    text-align: justify;
+    align-content: center;
+    font-family: var(--parrafo);
+    padding: 0.2em;
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+
 /* SERVICIOS */
 
 .tarjetas {
@@ -412,33 +468,6 @@ https://www.basili.co/en/agency/
     padding: 0.2em;
     font-size: 1.5rem;
     line-height: 1.6;
-}
-
-
-/* SECCION DE QUIENES SOMOS */
-.nosotros {
-    margin-top: 5%;
-    color: var(--textos2);
-}
-
-.nosotros h3 {
-    font-family: var(--titulos);
-    font-weight: 500;
-    letter-spacing: 6px;
-    word-spacing: 0px;
-}
-
-.nosotros h4 {
-    width: 80vw;
-    margin: 0 auto;
-}
-
-.mision p, .vision p {
-    padding: 7%;
-    font-family: var(--parrafo);
-    font-size: 1.8em;
-    text-align: justify;
-    align-content: center;
 }
 
 /* SECCION DE PRODUCTOS */
@@ -703,7 +732,9 @@ https://www.basili.co/en/agency/
 
 /* SECCION DE CONTACTOS */
 .contactos {
-    margin-bottom: 10%;
+    background-image: url('../imagenes/contacto.jpg');
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .contactos ul li a {
@@ -716,7 +747,7 @@ https://www.basili.co/en/agency/
 }
 
 .info-contacto {
-    background-color: var(--terciario);
+    background-color: #0c406ab2;
     height: 500px;
 }
 
