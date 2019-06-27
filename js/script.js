@@ -25,7 +25,6 @@ $(document).ready(function(){
 		fullWidth: true
 	});
 
-	// EFECTO DE SELECTS
 	$('select').formSelect();
 
 	// funcion para que sea automatico

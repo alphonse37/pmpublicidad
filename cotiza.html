@@ -17,12 +17,12 @@
     <!-- font awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
-    <!-- scripts de js -->
+    <!-- scripts de js --> 
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="js/script.js"></script>
 </head>
 
-<body>
+<body >
     <header>
         <!-- BARRA DE NAVEGACION -->
         <nav class="nav-wrapper barra">
@@ -106,8 +106,8 @@
                             <h5 class="center">Datos de cotización.</h5>
                             <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                             <div class="input-field col s12 l6"> 
-                                <select name="servicio" id="servicio" onchange="cargarProductos()">
-                                    <option value="" selected disabled>Elige el servicio</option>
+                                <select class="browser-default" name="servicio" id="servicio" onchange="cargarProductos()">
+                                    <option value="">Elige el servicio</option>
                                     <!-- <option value="">Bordados</option>
                                     <option value="">Serigrafía</option>
                                     <option value="">Impresión Láser</option>
@@ -117,8 +117,8 @@
                             </div>
 
                             <div class="input-field col s12 l6">
-                                <select name="producto" id="producto">
-                                    <option value="" selected disabled>Elige el producto</option>
+                                <select class="browser-default" name="producto" id="producto">
+                                    <option value="">Elige el producto</option>
                                     <!-- <option value="">Opción 1</option>
                                     <option value="">Opción 2</option>
                                     <option value="">Opción 3</option>
@@ -148,7 +148,7 @@
                                     </div>
 
                                     <div class="input-field col s12 l6 offset-l3">
-                                            <select name="" id="select">
+                                            <select class="browser-default" name="" id="select">
                                                 <option value="" selected disabled>Selecciona el material</option>
                                                 <option value="">Vinil</option>
                                                 <option value="">Opción 2</option>
@@ -235,8 +235,6 @@ function addOptions (domElement, array) {
 	}
 }
 
-
-
 // agregar productos a los servicios
 function cargarProductos() {
 	var listaProductos = {
@@ -260,7 +258,7 @@ function cargarProductos() {
 		servicioSeleccionado = listaProductos[servicioSeleccionado];
 		servicioSeleccionado.sort();
 
-		servicioSeleccionado.forEach(function(producto){
+		servicioSeleccionado.forEach(function(producto) {
 			let opcion = documetn.createElement("option");
 			opcion.value = producto;
 			opcion.text = producto;
@@ -268,8 +266,8 @@ function cargarProductos() {
 		});
     }
 }
-
 cargarServicios();
+
     </script>
 
     </body>

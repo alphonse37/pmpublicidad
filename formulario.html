@@ -5,35 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="js/script.js"></script>
+ <!-- <script src="https://code.jquery.com/jquery-3.4.1.js"></script> -->
 </head>
-<body onload="cargarServicios()">
+<body>
    
-       
                <!-- Añadido onchange para cargar los productos -->
-               <select name="servicio" id="servicio" onchange="cargarProductos()">
-                   <!-- Hay que terminar los options -->
-                   <!-- 
-                        Eliminado de value la llamada a la función,
-                        si eso funciona lo desconocía, y aunque 
-                        lo haga es totalmente innecesario, 
-                        lo correcto es usar el evento onchange 
-                     -->
-                   <option value="">Seleccione un servicio</option>
-               </select>
-           
-               <select name="producto" id="producto">
-                   <!-- Hay que terminar los options -->
-                   <!-- 
-                        Eliminado de value la llamada a la función,
-                        si eso funciona lo desconocía, y aunque 
-                        lo haga es totalmente innecesario, 
-                        lo correcto es usar el evento onchange 
-                     -->
-                   <option value="">Seleccione un producto</option>
-               </select>
-          
+            
+               <div class="row">
+                 <div class="input-field col s12">
+                    <select class="browser-default" name="servicio" id="servicio" onchange="cargarProductos()">
+                        <!-- Hay que terminar los options -->
+                        <!-- 
+                             Eliminado de value la llamada a la función,
+                             si eso funciona lo desconocía, y aunque 
+                             lo haga es totalmente innecesario, 
+                             lo correcto es usar el evento onchange 
+                          -->
+                        <option value="">Seleccione un servicio</option>
+                    </select>
+                 </div>
+
+                 <div class="input-field col s12">
+                    <select class="browser-default" name="producto" id="producto">
+                        <!-- Hay que terminar los options -->
+                        <!-- 
+                             Eliminado de value la llamada a la función,
+                             si eso funciona lo desconocía, y aunque 
+                             lo haga es totalmente innecesario, 
+                             lo correcto es usar el evento onchange 
+                          -->
+                        <option value="">Seleccione un producto</option>
+                    </select>
+                 </div>
+               </div>
+                  
+ 
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
      <script>
+             document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems);
+  });
          function cargarServicios() {
     var array = ["Promocionales", "Bordados", "Impresión Digital", "Serigrafía", "Confección", "Sublimación", "Impresión Láser"];
     array.sort();
@@ -87,8 +106,8 @@ function cargarProductos() {
     }
   }
 
-  
-     
-     </script>
+  cargarServicios();
+
+    </script>
 </body>
 </html>

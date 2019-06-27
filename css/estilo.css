@@ -104,7 +104,18 @@ https://www.basili.co/en/agency/
 /* estilo navbar haburguesa */
 .sidenav {
     width: 80vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-family: var(--menu);
 }
+
+.lista-menu {
+    margin-top: 10%;
+}
+
+.cerrar {
+    padding: 12px;
+}
+
 
 /* estilo del sliderslider */
 .slider {
@@ -295,6 +306,44 @@ https://www.basili.co/en/agency/
     margin-top: 3%;
 }
 
+.nuestros-servicios {
+    margin-top: 2%;
+}
+
+.nuestros-servicios h2 {
+    font-family: var(--titulos);
+    font-size: 4rem;
+    line-height: 1;
+    letter-spacing: 1px;
+    font-weight: 500;
+    word-spacing: 0px;
+    color: var(--textos2);
+}
+
+.nuestros-servicios p {
+    font-family: var(--parrafo);
+    padding: 0.2em;
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.boton-servicios {
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+.boton-servicios a{
+    border-radius: 10px;
+    border: 2px solid #fff;
+    background-color: transparent;
+    font-size: 1.2rem;
+    box-shadow: none;
+}
+
+.boton-servicios a:hover {
+    background-color: rgba(0, 0, 0, 0.26);
+    box-shadow: none;
+}
 /* SERVICIOS */
 
 .tarjetas {
@@ -333,7 +382,6 @@ https://www.basili.co/en/agency/
 .card:hover .details {
     transform: scale(1);
     visibility: visible;
-   
 }
 
 .content h5 {
@@ -343,28 +391,27 @@ https://www.basili.co/en/agency/
     text-shadow: 2px 2px 2px var(--textos2);
 }
 
+.productos-texto {
+    margin-bottom: 3%;
+}
 
 .productos-texto h2 {
-    font-size: 3em;
     font-family: var(--titulos);
-    padding: 0.5em;
+    font-size: 4rem;
+    line-height: 1;
+    letter-spacing: 1px;
     font-weight: 500;
-    /* letter-spacing: 2px; */
     word-spacing: 0px;
     color: var(--textos2);
-    width: 80%;
-    margin: 0 auto;
 }
 
 .productos-texto p {
-    font-family: var(--parrafo);
-    padding: 0.5em;
-    text-align: justify;
-    font-size: 1.2em;
-    color: var(--textos2);
-    padding: 2%;
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
+    font-family: var(--parrafo);
+    padding: 0.2em;
+    font-size: 1.5rem;
+    line-height: 1.6;
 }
 
 
