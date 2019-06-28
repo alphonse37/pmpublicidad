@@ -12,6 +12,7 @@ https://pm3.agency/about/
 http://pmpublicidadymercadeo.co/
 http://legalia.eu/
 https://mediaproper.com/contact-us/
+https://www.eone-time.com/
 */
 
 /* variables para fuentes y colores */
@@ -353,21 +354,14 @@ https://www.basili.co/en/agency/
     color: var(--textos2);
 }
 
+.historia {
+    margin-bottom: 5%;
+}
+
 .nosotros h4 {
     width: 80vw;
     margin: 0 auto;
     padding-bottom: 5%;
-}
-
-.historia {
-    position: relative;
-}
-
-
-
-.contenido-historia {
-    position: absolute;
-    top: 0;
 }
 
 .historia h3 {
@@ -378,25 +372,36 @@ https://www.basili.co/en/agency/
     font-weight: 500;
     word-spacing: 0px;
     color: var(--textos2);
+    padding: 1.8rem;
 }
 
 .historia-texto {
     font-family: var(--parrafo);
-    padding: 0.2em;
-    font-size: 1.5rem;
+    padding: 1.8rem;
+    font-size: 1.3rem;
     line-height: 1.6;
     text-align: justify;
 }
 
+.identidad h3 {
+    font-family: var(--titulos);
+    font-size: 4rem;
+    line-height: 1;
+    letter-spacing: 1px;
+    font-weight: 500;
+    word-spacing: 0px;
+    color: var(--textos2);
+    padding: 1.8rem;
+    margin-bottom: 5%;
+}
+
 
 .mision p, .vision p {
-    padding: 7%;
-    text-align: justify;
-    align-content: center;
     font-family: var(--parrafo);
-    padding: 0.2em;
-    font-size: 1.5rem;
+    padding: 1rem;
+    font-size: 1.3rem;
     line-height: 1.6;
+    text-align: justify;
 }
 
 
