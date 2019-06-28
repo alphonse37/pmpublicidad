@@ -80,105 +80,104 @@
         </div>
         <section class="cotizar">
             <!-- <h2>¡Cotiza tu producto!</h2> -->
-            <div class="row">
-                <div class="col s12 l6 offset-l3">
-                    <h5 class="center">Datos del cliente</h5>
-                    <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <br>
-                    <form action="">
-                        <div class="row">
-                            <div class="input-field col s12 l6">
-                                <input type="text" class="validate" required>
-                                <label for="">Nombre y apellido</label>
+                <div class="row tableta">
+                    <div class="col s12 l6 offset-l3">
+                        <h5 class="center">Datos del cliente</h5>
+                        <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <br>
+                        <form action="">
+                            <div class="row">
+                                <div class="input-field col s12 l6">
+                                    <input type="text" class="validate" required>
+                                    <label for="">Nombre y apellido</label>
+                                </div>
+    
+                                <div class="input-field col s12 l6">
+                                    <input type="text">
+                                    <label for="">Nombre de la empresa</label>
+                                </div>
                             </div>
-
-                            <div class="input-field col s12 l6">
-                                <input type="text">
-                                <label for="">Nombre de la empresa</label>
+                            <div class="row">
+                                <div class="input-field col s12 l6">
+                                    <input type="text">
+                                    <label for="">Teléfono</label>
+                                </div>
+    
+                                <div class="input-field col s12 l6">
+                                    <input type="email">
+                                    <label for="">Correo Electrónico</label>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s12 l6">
-                                <input type="text">
-                                <label for="">Teléfono</label>
-                            </div>
-
-                            <div class="input-field col s12 l6">
-                                <input type="email">
-                                <label for="">Correo Electrónico</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <h5 class="center">Datos de cotización.</h5>
-                            <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <div class="input-field col s12 l6"> 
-                                <select class="browser-default" name="servicio" id="servicio" onchange="cargarProductos()">
-                                    <option value="">Elige el servicio</option>
-                                    <!-- <option value="">Bordados</option>
-                                    <option value="">Serigrafía</option>
-                                    <option value="">Impresión Láser</option>
-                                    <option value="">Impresión Digital</option>
-                                    <option value="">Instalaciones</option> -->
-                                </select>
-                            </div>
-
-                            <div class="input-field col s12 l6">
-                                <select class="browser-default" name="producto" id="producto">
-                                    <option value="">Elige el producto</option>
-                                    <!-- <option value="">Opción 1</option>
-                                    <option value="">Opción 2</option>
-                                    <option value="">Opción 3</option>
-                                    <option value="">Opción 4</option>
-                                    <option value="">Opción 5</option> -->
-                                </select>
-
-                            </div>
-
-                            <div class="input-field col s12 l6 offset-l3">
-                                <input type="number">
-                                <label for="">Cantidad</label>
-                            </div>
-
-                            <div class="input-field col s12 material">
-                                <h6 class="center">Material y medidas a escala</h6>
+                            <div class="row">
+                                <h5 class="center">Datos de cotización.</h5>
                                 <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                <div class="row">
-                                    <div class="input-field col s12 l6">
-                                        <input type="number" id="alto" required>
-                                        <label for="">Alto</label>
-                                    </div>
-
-                                    <div class="input-field col s12 l6">
-                                        <input type="number" id="ancho" required>
-                                        <label for="">Ancho</label>
-                                    </div>
-
-                                    <div class="input-field col s12 l6 offset-l3">
-                                            <select class="browser-default" name="" id="select">
-                                                <option value="" selected disabled>Selecciona el material</option>
-                                                <option value="">Vinil</option>
-                                                <option value="">Opción 2</option>
-                                                <option value="">Opción 3</option>
-                                            </select>
+                                <div class="input-field col s12 l6"> 
+                                    <select class="browser-default" name="servicio" id="servicio" onchange="cargarProductos()">
+                                        <option value="">Elige el servicio</option>
+                                        <!-- <option value="">Bordados</option>
+                                        <option value="">Serigrafía</option>
+                                        <option value="">Impresión Láser</option>
+                                        <option value="">Impresión Digital</option>
+                                        <option value="">Instalaciones</option> -->
+                                    </select>
+                                </div>
+    
+                                <div class="input-field col s12 l6">
+                                    <select class="browser-default" name="producto" id="producto">
+                                        <option value="">Elige el producto</option>
+                                        <!-- <option value="">Opción 1</option>
+                                        <option value="">Opción 2</option>
+                                        <option value="">Opción 3</option>
+                                        <option value="">Opción 4</option>
+                                        <option value="">Opción 5</option> -->
+                                    </select>
+    
+                                </div>
+    
+                                <div class="input-field col s12 l6 offset-l3">
+                                    <input type="number">
+                                    <label for="">Cantidad</label>
+                                </div>
+    
+                                <div class="input-field col s12 material">
+                                    <h6 class="center">Material y medidas a escala</h6>
+                                    <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    <div class="row">
+                                        <div class="input-field col s12 l6">
+                                            <input type="number" id="alto" required>
+                                            <label for="">Alto</label>
                                         </div>
-
-                                    <div class="boton center">
-                                        <button class="cyan btn modal-trigger" data-target="modal1">Previsualizar tamaño</button>
-                                        <a href="" class="btn cyan">Cotizar</a>
+    
+                                        <div class="input-field col s12 l6">
+                                            <input type="number" id="ancho" required>
+                                            <label for="">Ancho</label>
+                                        </div>
+    
+                                        <div class="input-field col s12 l6 offset-l3">
+                                                <select class="browser-default" name="" id="select">
+                                                    <option value="" selected disabled>Selecciona el material</option>
+                                                    <option value="">Vinil</option>
+                                                    <option value="">Opción 2</option>
+                                                    <option value="">Opción 3</option>
+                                                </select>
+                                            </div>
+    
+                                        <div class="boton center">
+                                            <button class="cyan btn modal-trigger" data-target="modal1">Previsualizar tamaño</button>
+                                            <a href="" class="btn cyan">Cotizar</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
-                        </div>
-                        
-                    </form>
+                        </form>
+                    </div>
                 </div>
 
-            </div>
+           
         </section>
 
                 <!-- Modal -->
-        <div id="modal1" class="modal modal-fixed-footer" style="width:80%">
+        <div id="modal1" class="modal modal-fixed-footer" style="width:100%">
             <div class="modal-content">
                 <h5 class="center">Tamaño a escala.</h5>
                 <div class="text-center">
