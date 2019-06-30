@@ -5,8 +5,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
 
-@import url('https://fonts.googleapis.com/css?family=Palanquin&display=swap');
-
 /* https://www.emenjivar.com 
 https://pm3.agency/about/ 
 http://pmpublicidadymercadeo.co/
@@ -40,8 +38,6 @@ https://littlethunder.co/showcase/
 https://www.basili.co/en/agency/
 */
 
-
-/* eliminar la configuracion por defecto del navegador */
 * {
     margin: 0;
     padding: 0;
@@ -63,7 +59,6 @@ https://www.basili.co/en/agency/
     box-shadow: none;
     padding-top: 0px;
     transition: 0.5s;
-    /* background-color: #565a5e4b; */
 }
 
 .barra a {
@@ -278,17 +273,6 @@ https://www.basili.co/en/agency/
     background-color: rgba(36, 37, 40, 0.85);
 }
 
-/* .introduccion svg {
-    width: 100%;
- 
-    
-}
-
-.introduccion svg path {
-    fill: #ffff0077;
-} */
-
-
 /* servicios */
 .servicios {
     color: var(--textos2);
@@ -422,9 +406,7 @@ https://www.basili.co/en/agency/
 }
 
 .card {
-    /* height: 25%; */
     box-shadow: none !important;
-    /* background-color: rgba(255, 255, 255, 0); */
     position: relative;
 }
 
@@ -477,12 +459,6 @@ https://www.basili.co/en/agency/
 
 /* SECCION DE PRODUCTOS */
 
-.categorias {
-    margin: 0 auto;
-    position: relative;
-    /* z-index: 200; */
-}
-
 .busqueda {
     width: 95%;
     margin: 0 auto;
@@ -501,12 +477,64 @@ https://www.basili.co/en/agency/
 }
 
 .busqueda a:hover {
-    color: var(--textos2);
+    color: red;
 }
 
 .seccion-productos {
     width: 100%;
     margin: 0 auto;
+}
+
+.tarjeta-prd {
+    margin: 0 auto;
+    width: 250px;
+    height: 300px;
+    background: #fff;
+    font-family: var(--parrafo);
+    overflow: hidden;
+    border: 1px solid rgb(212, 212, 212);
+}
+
+.tarjeta-prd .imagen-prd img{
+    width: 100%;
+    transition: 0.5s;
+}
+
+.tarjeta-prd:hover .imagen-prd img {
+    opacity: 0.7;
+}
+
+.tarjeta-prd .detalles-prd {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #31a8ae;
+    text-align: center;
+    transition: 0.5s;
+    transform-origin: bottom;
+    transform: translateY(90%);
+    padding: 5px;   
+}
+
+.tarjeta-prd:hover .detalles-prd {
+    transform: translateY(45%);
+}
+
+.detalles-prd button {
+    background-color: transparent;
+    border: 1px solid #fff;
+    box-shadow: none;
+} 
+
+
+
+
+/* .seccion-productos {
+    width: 100%;
+    top: 0;
+    position: relative;
+    bottom: 20;
 }
 
 .product-card{
@@ -621,96 +649,8 @@ https://www.basili.co/en/agency/
        -moz-transition: all 200ms ease-out; 
          -o-transition: all 200ms ease-out; 
             transition: all 200ms ease-out; 		
-}
-/* .card-product {
-    position: relative;
-    width: 280px;
-    height: 310px;
-    background: #fff;
-    font-family: var(--parrafo);
-}
-.card-product .image {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    color: #31a8ae;
-    text-transform: uppercase;
-}
-.card-product .image img {
-    width: 100%;
-    transition: .5s;
-}
-.card-product:hover .image img {
-    opacity: .5;
-    transform: translateX(30%);
-}
-.card-product .details {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 70%;
-    height: 100%;
-    background: #31a8ae;
-    transition: .5s;
-    transform-origin: left;
-    transform: perspective(2000px) rotateY(-90deg);
-}
-.card-product:hover .details {
-    transform: perspective(2000px) rotateY(0deg);
-}
-.card-product .details .center {
-    padding: 20px;
-    text-align: center;
-    background: #fff;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.details button {
-    background-color: #31a8ae;
-}
-
-.card-product .details .center h1 {
-    margin: 0;
-    padding: 0;
-    color: #036a93;
-    line-height: 20px;
-    font-size: 20px;
-    text-transform: uppercase;
-}
-.card-product .details .center h1 span {
-    font-size: 14px;
-    color: #0c3f6a;
-}
-.card-product .details .center p {
-    margin: 10px 0;
-    padding: 0;
-    color: #0c3f6a;
-}
-.card-product .details .center ul {
-    margin: 10px auto 0;
-    padding: 0;
-    display: table;
-}
-.card-product .details .center ul li {
-    list-style: none;
-    margin: 0 5px;
-    float: left;
-}
-.card-product .details .center ul li a {
-    display: block;
-    background: #262626;
-    color: #fff;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    transform: .5s;
-}
-.card-product .details .center ul li a:hover {
-    background: #ff3636;
 } */
+
 
 /* SECCION DE COTIZACIONES */
 
