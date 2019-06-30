@@ -91,17 +91,17 @@
         </div>
                 
         <div class="seccion-productos">
-            <div id="productos">
+            <div id="personajes">
                 <div class="row">
-                    <div class="col s12 m6 l3" v-for="producto in productos" vbind:key="producto.id_producto">
+                    <div class="col s12 m6 l3 ta" v-for="personaje in personajes" v-bind:key="personaje.id">
                         <div class="card tarjeta-prd">
                             <div class="imagen-prd">
-                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt.png" alt="">
+                                <img v-bind:src="personaje.image" alt="">
                             </div>
                             <div class="detalles-prd">
-                                <p class="white-text">Producto</p>
+                                <p class="white-text">{{personaje.name}}</p>
                                 <br>
-                                <p class="white-text">Categoria</p>
+                                <p class="white-text">{{personaje.species}}</p>
                                 <br>
                                 <button class="btn btn-small white-text">Detalles</button>
                             </div>
@@ -142,24 +142,41 @@
 
     <script>
     new Vue ({
-        el: '#productos',
+        el: '#personajes',
 
         data: function() {
             return {
-                productos: [],
+                personajes: [],
             }
         },
 
-        mounted() {
-            axios.get("http://192.168.22.115/pm/api/producto")
-            .then(res => {
-                this.productos = res.data;
-                console.log(res.data);
-            })
-            .catch(err => {
-                console.log(err);
-            })
-        }
+        created() {
+                this.fetch()
+            },
+
+            methods: {
+                fetch() {
+                    let result = axios.get("https://rickandmortyapi.com/api/character")
+                    .then(rest => {
+                        this.personajes = rest.data.results;
+                        console.log(rest.data);
+                    })
+                    .catch(err => {
+                        console.log(err);
+                    })
+                }
+            }
+
+        // mounted() {
+        //     axios.get("https://rickandmortyapi.com/api/character")
+        //     .then(res => {
+        //         this.personajes = res.data;
+        //         console.log(res.data);
+        //     })
+        //     .catch(err => {
+        //         console.log(err);
+        //     })
+        // }
     });
     
     </script>

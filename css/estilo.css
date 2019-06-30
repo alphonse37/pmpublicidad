@@ -485,11 +485,15 @@ https://www.basili.co/en/agency/
     margin: 0 auto;
 }
 
+.ta {
+    margin-bottom: 20px;
+}
+
 .tarjeta-prd {
     margin: 0 auto;
     width: 250px;
     height: 300px;
-    background: #fff;
+    background: rgb(245, 52, 52);
     font-family: var(--parrafo);
     overflow: hidden;
     border: 1px solid rgb(212, 212, 212);

@@ -93,7 +93,7 @@
         <div class="seccion-productos">
             <div id="productos">
                 <div class="row">
-                    <div class="col s12 m6 l3" v-for="producto in productos" vbind:key="producto.id_producto">
+                    <div class="col s12 m6 l3" v-for="producto in productos" v-bind:key="producto.id_producto">
                         <div class="card tarjeta-prd">
                             <div class="imagen-prd">
                                 <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt.png" alt="">
