@@ -493,7 +493,7 @@ https://www.basili.co/en/agency/
     margin: 0 auto;
     width: 250px;
     height: 300px;
-    background: rgb(245, 52, 52);
+    background: rgb(255, 255, 255);
     font-family: var(--parrafo);
     overflow: hidden;
     border: 1px solid rgb(212, 212, 212);
@@ -538,8 +538,8 @@ https://www.basili.co/en/agency/
 } 
 
 #detalles {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
 }
 
 
@@ -703,12 +703,8 @@ https://www.basili.co/en/agency/
     margin: 0 auto;
     background-color: #000;
 }
+
 /* SECCION DE CONTACTOS */
-.contactos {
-    background-image: url('../imagenes/contacto.jpg');
-    background-attachment: fixed;
-    background-size: cover;
-}
 
 .contactos ul li a {
     color: var(--textos2) !important;
@@ -720,16 +716,26 @@ https://www.basili.co/en/agency/
 }
 
 .info-contacto {
-    background-color: #0c406ab2;
-    height: 500px;
+    margin-top: 5%;
+   
 }
 
 .info-contacto p {
-    color: var(--textos1);
     font-family: var(--parrafo);
-    margin: 10%;
-    width: 80%;
+    padding-left: 10%;
+    color: var(--textos2)
 }
+
+.boton-sucursal {
+    background-color: #0597F2;
+    border: #fff;
+}
+
+.bordecito {
+    margin: 2%;
+    border-bottom: 1px solid #fff;
+}
+
 
 /* FOOTER */
 footer {
