@@ -13,6 +13,11 @@ https://mediaproper.com/contact-us/
 https://www.eone-time.com/
 */
 
+/* COLORES AL FINAL
+#0e3582 AZUL
+#f7ab00 AMARILLO
+*/
+
 /* variables para fuentes y colores */
 :root {
     /* fuentes */
@@ -46,6 +51,8 @@ https://www.basili.co/en/agency/
     -webkit-box-sizing: border-box;
     letter-spacing: 0.5px;
 }
+
+
 
 
 /* barra de navegacion */
@@ -286,6 +293,7 @@ https://www.basili.co/en/agency/
 .servicios {
     color: var(--textos2);
     font-family: var(--titulos);
+    background-color: var(--terciario); 
 
 }
 
@@ -390,13 +398,34 @@ https://www.basili.co/en/agency/
     margin-bottom: 5%;
 }
 
+.forma1 {
+    height: 150px;
+    font-family: var(--titulos);
+    font-size: 4rem;
+    line-height: 1;
+    letter-spacing: 1px;
+    font-weight: 500;
+    word-spacing: 0px;
+    color: var(--textos2);
+    padding: 1.8rem;
+    margin-bottom: 5%;
+} 
+
 
 .mision p, .vision p {
     font-family: var(--parrafo);
-    padding: 1rem;
+    padding: 2rem;
     font-size: 1.3rem;
     line-height: 1.6;
     text-align: justify;
+    background-color: var(--terciario);
+    border-radius: 10px;
+    height: 150px;
+    border: 2px solid #fff;
+}
+
+#layer1 {
+    fill: var(--terciario);
 }
 
 
@@ -424,7 +453,7 @@ https://www.basili.co/en/agency/
 .details {
     position: absolute;
     visibility: hidden;
-    background: rgba(0, 0, 0, 0.35);
+    background: rgba(0, 0, 0, 0.5);
     transform: scale(.5);
     transition: .4s;
     top: 0px;
@@ -443,6 +472,15 @@ https://www.basili.co/en/agency/
     margin-top: 30%;
     color: var(--textos1);
     text-shadow: 2px 2px 2px var(--textos2);
+}
+
+.content a {
+    background-color: transparent;
+    border: 2px solid #fff;
+}
+
+.content a:hover {
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .productos-texto {
@@ -549,9 +587,11 @@ https://www.basili.co/en/agency/
 } 
 
 #detalles {
-    width: 100vw;
-    height: 100vh;
+    min-width: 100vw;
+    min-height: 90vh !important;
+    background-color: rgba(255, 255, 255, 0.9);
 }
+
 
 
 

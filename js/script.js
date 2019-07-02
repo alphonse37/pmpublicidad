@@ -112,3 +112,4 @@ $(document).ready(function(){
 			$('div.carouselNext, div.carouselPrev').removeClass('visible');
 	});	
 });
+

@@ -110,13 +110,23 @@
                 </div>
 
                  <!-- modal -->
-                <div id="detalles" class="modal modal-fixed-footer">
+                <div id="detalles" class="modal">
                     <div class="modal-content">
-                        <h4>{{seleccion.nombre}}</h4>
-                        <p>A bunch of text</p>
+                        <h4 class="center">{{seleccion.nombre}}</h4>
+                        <div class="row">
+                            <div class="col s12 m6 l6 center">
+                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt.png" alt="" class="cyan">
+                            </div>
+
+                            <div class="col s12 m6 l6 center">
+                                <p>Descripción:</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam expedita maxime ratione molestiae quisquam officiis, libero inventore voluptas, similique ea nulla architecto porro rerum voluptatem at, nisi reprehenderit consequatur? Quae!</p>
+                            </div>
+                        </div>
+                        
                     </div>
-                    <div class="modal-footer">
-                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+                    <div class="modal-footer cerrar-modal">
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar x</a>
                     </div>
                 </div>
             </div>
@@ -153,7 +163,7 @@
 
     <script>
     new Vue ({
-        el: '#productos',
+        el: '#producto',
 
         data: function() {
             return {
