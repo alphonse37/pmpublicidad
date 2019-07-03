@@ -96,7 +96,7 @@
                     <div class="col s12 m6 l3" v-for="producto in productos" v-bind:key="producto.id_producto">
                         <div class="card tarjeta-prd">
                             <div class="imagen-prd">
-                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt.png" alt="">
+                                <img :src="`data:image/jpg;base64,${producto.imagen}`" alt="">
                             </div>
                             <div class="detalles-prd">
                                 <p class="white-text">{{producto.nombre}}</p>
@@ -110,12 +110,12 @@
                 </div>
 
                  <!-- modal -->
-                <div id="detalles" class="modal">
+                <div id="detalles" class="modal modal-fixed-footer">
                     <div class="modal-content">
                         <h4 class="center">{{seleccion.nombre}}</h4>
                         <div class="row">
-                            <div class="col s12 m6 l6 center">
-                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt.png" alt="" class="cyan">
+                            <div class="col s12 m6 l6 center asd">
+                                <img :src="`data:image/jpg;base64,${seleccion.imagen}`" alt="" class="cyan">
                             </div>
 
                             <div class="col s12 m6 l6 center">
@@ -163,7 +163,7 @@
 
     <script>
     new Vue ({
-        el: '#producto',
+        el: '#productos',
 
         data: function() {
             return {
@@ -179,7 +179,7 @@
         },
 
         mounted() {
-            axios.get("http://192.168.22.115/pm/api/producto")
+            axios.get("http://192.168.22.115/pm/api/categoria")
             .then(res => {
                 this.productos = res.data;
                 console.log(res.data);

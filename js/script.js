@@ -52,7 +52,7 @@ $(document).ready(function(){
 	// $('.parallax').parallax();
 
 	//   efecto de tabs
-	$('.tabs').tabs();
+	$('#tabs').tabs();
       
 	
 	
@@ -96,6 +96,12 @@ $(document).ready(function(){
 				$(".medidas").html();
 				$("#alto").val("");
 				$("#ancho").val("");
+			} else {
+				txt += $(".medidas").width(ancho + "px") + "</br>";
+				txt += $(".medidas").height(alto + "px");
+				$(".medidas").html();
+				$("#alto").val("");
+				$("#ancho").val("");
 			}
 		});
 
@@ -104,12 +110,12 @@ $(document).ready(function(){
 		$('.modal').modal();
 
 		// tarjetas
-		$('.product-card').hover(function(){
-			$(this).addClass('animate');
-			$('div.carouselNext, div.carouselPrev').addClass('visible');			
-		 }, function(){
-			$(this).removeClass('animate');			
-			$('div.carouselNext, div.carouselPrev').removeClass('visible');
-	});	
+	// 	$('.product-card').hover(function(){
+	// 		$(this).addClass('animate');
+	// 		$('div.carouselNext, div.carouselPrev').addClass('visible');			
+	// 	 }, function(){
+	// 		$(this).removeClass('animate');			
+	// 		$('div.carouselNext, div.carouselPrev').removeClass('visible');
+	// });	
 });
 
