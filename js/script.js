@@ -52,7 +52,7 @@ $(document).ready(function(){
 	// $('.parallax').parallax();
 
 	//   efecto de tabs
-	$('#tabs').tabs();
+	$( "#tabs" ).tabs();
       
 	
 	

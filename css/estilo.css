@@ -247,7 +247,7 @@ https://www.basili.co/en/agency/
 
 .leyenda span i {
     background-color: #fff;
-    color: black;
+    color: rgba(0, 0, 0, 0.514);
     padding: 20px;
 }
 
@@ -767,9 +767,19 @@ https://www.basili.co/en/agency/
 }
 
 /* SECCION DE CONTACTOS */
+.tab button {
+    border: 2px solid #acacac;
+    border-radius: 10px;
+    background-color: transparent;
+    padding: 25px;
+    width: 300px;
+}
 
-.contactos ul li a {
-    color: var(--textos2) !important;
+.tab button:hover {
+    background-color: rgba(5, 151, 242, 0.8);
+    color: var(--textos1);
+    cursor: pointer;
+    border: none;
 }
 
 .sucursales {
@@ -779,7 +789,6 @@ https://www.basili.co/en/agency/
 
 .info-contacto {
     margin-top: 5%;
-   
 }
 
 .info-contacto p {
@@ -788,15 +797,6 @@ https://www.basili.co/en/agency/
     color: var(--textos2)
 }
 
-.boton-sucursal {
-    background-color: #0597F2;
-    border: #fff;
-}
-
-.bordecito {
-    margin: 2%;
-    border-bottom: 1px solid #fff;
-}
 
 
 /* FOOTER */
