@@ -21,6 +21,7 @@ http://2pixstudio.com.sv/
 https://barcodesignstudio.com/
 */
 
+/* color sacado de algun lado 2d80f3 */
 /* COLORES AL FINAL
 #0e3582 AZUL
 #f7ab00 AMARILLO
@@ -480,7 +481,7 @@ https://www.basili.co/en/agency/
 .but {
     position: absolute;
     visibility: hidden;
-    transition: .4s;
+    transition: .2s;
     top: 0px;
     left: 0px;
     right: 0px;
@@ -490,6 +491,18 @@ https://www.basili.co/en/agency/
 .tarjeta-prd:hover .but {
     visibility: visible;
 }
+
+ .imagen-prd:hover {
+
+    background-color: rgba(0, 255, 255, 0.123);
+}
+
+.botoncito {
+    position: absolute;
+    top: 25%;
+    left: 30%;
+}
+/* hasta aqui */
 
 .content h5 {
     /* text-transform: uppercase; */
