@@ -109,7 +109,7 @@
 
             <div class="col s4 offset-s1">
                 <label for="">busqueda</label>
-                <input type="text" placeholder="Buscar" v-model="buscar">
+                <input type="search" placeholder="Buscar" v-model="buscar">
             </div>
         </div>
         
@@ -120,7 +120,7 @@
                     <div class="col s12 m6 l3" v-for="producto in productos" v-bind:key="producto.id_producto">
                         <div class="card tarjeta-prd">
                             <div class="imagen-prd">
-                                <img src="https://images.pexels.com/photos/1313267/pexels-photo-1313267.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                                <img src="https://images.pexels.com/photos/1935946/pexels-photo-1935946.jpeg?cs=srgb&dl=beverage-cold-delicious-1935946.jpg&fm=jpg" alt="">
                             </div>
                             <div class="detalles-prd">
                                 <p class="white-text">{{producto.nombre}}</p>
@@ -134,7 +134,7 @@
                 </div>
 
                 <div class="row" v-else>
-                    no hay resultados
+                    <p>no hay resultados</p>
                 </div>
 
                  <!-- modal -->
@@ -143,7 +143,7 @@
                         <h4 class="center">{{seleccion.nombre}}</h4>
                         <div class="row">
                             <div class="col s12 m6 l6 center asd">
-                                <img src="https://images.pexels.com/photos/1313267/pexels-photo-1313267.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" class="cyan">
+                                <img src="https://images.pexels.com/photos/1935946/pexels-photo-1935946.jpeg?cs=srgb&dl=beverage-cold-delicious-1935946.jpg&fm=jpg" alt="" class="cyan">
                             </div>
 
                             <div class="col s12 m6 l6 center">

@@ -476,6 +476,21 @@ https://www.basili.co/en/agency/
     visibility: visible;
 }
 
+/* esto es algo que no se para que estoy haciendo D: */
+.but {
+    position: absolute;
+    visibility: hidden;
+    transition: .4s;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+.tarjeta-prd:hover .but {
+    visibility: visible;
+}
+
 .content h5 {
     /* text-transform: uppercase; */
     margin-top: 30%;
@@ -580,7 +595,7 @@ https://www.basili.co/en/agency/
 }
 
 .tarjeta-prd:hover .detalles-prd {
-    transform: translateY(45%);
+    transform: translateY(70%);
 }
 
 .detalles-prd a {
