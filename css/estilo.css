@@ -19,6 +19,7 @@ http://dmte.sv/
 https://www.novumec.com/home
 http://2pixstudio.com.sv/
 https://barcodesignstudio.com/
+http://www.enelsalvador.sv
 */
 
 /* color sacado de algun lado 2d80f3 */
@@ -115,9 +116,13 @@ https://www.basili.co/en/agency/
 
 /* estilo navbar haburguesa */
 .sidenav {
-    width: 80vw;
+    width: 80%;
     background-color: rgba(0, 0, 0, 0.6);
     font-family: var(--menu);
+}
+
+.sidenav hr {
+    color: var(--textos1);
 }
 
 .lista-menu {
