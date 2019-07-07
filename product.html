@@ -73,17 +73,17 @@
         <div class="container">
 
             <div class="row">
-                <div class="col s3">
+                <div class="col s8 m6 l3 offset-s2">
                     <label for="">sucursales</label>
-                    <select class="browser-default" name="" id="" v-model="seleccionarSucursal">
+                    <select class="browser-default" v-model="seleccionarSucursal">
                         <option selected>Todas</option>
-                        <option>Santa Ana 1</option>
-                        <option>Santa Ana 2</option>
-                        <option>San Salvador</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
                     </select>
                 </div>
     
-                <div class="col s3 offset-s1">
+                <div class="col s8 m6 l3 offset-s2 offset-l1">
                     <div class="busqueda">
                         <label class="center">Categorías</label>
                         <select v-model="seleccionarCategoria" class="browser-default">
@@ -104,7 +104,7 @@
                     </div>
                 </div>
     
-                <div class="col s4 offset-s1">
+                <div class="col s8 m6 l4 offset-s2 offset-m3 offset-l1">
                     <label for="">Buscar producto</label>
                     <input type="search" placeholder="Buscar" v-model="buscar">
                 </div>
@@ -132,7 +132,7 @@
                 </div>
 
                 <div class="row" v-else>
-                    <p class="center">No hay resultados</p>
+                    <p class="center flow-text">No hay resultados</p>
                 </div>
 
                  <!-- modal -->
@@ -201,56 +201,56 @@
             
                 productos: [
                     {
-                    id_sucursal: 1,
+                    sucursal: 1,
                     categoria: "Bordados",
                     nombre: "Camisas",
                     descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea voluptatibus repellat, facilis temporibus vitae ad iste voluptates corporis error architecto aut officia perspiciatis, rerum perferendis aspernatur ut minima eius! Nihil."
                     },
 
                     {
-                    id_sucursal: 1,
+                    sucursal: 1,
                     categoria: "Impresión Láser",
                     nombre: "Banners",
                     descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea voluptatibus repellat, facilis temporibus vitae ad iste voluptates corporis error architecto aut officia perspiciatis, rerum perferendis aspernatur ut minima eius! Nihil."
                     },
 
                     {
-                    id_sucursal: 1,
+                    sucursal: 1,
                     categoria: "Impresión Digital",
                     nombre: "Afiche",
                     descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea voluptatibus repellat, facilis temporibus vitae ad iste voluptates corporis error architecto aut officia perspiciatis, rerum perferendis aspernatur ut minima eius! Nihil."
                     },
 
                     {
-                    id_sucursal: 2,
+                    sucursal: 2,
                     categoria: "Servicios de Instalación",
                     nombre: "Instalación de Rotulos",
                     descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea voluptatibus repellat, facilis temporibus vitae ad iste voluptates corporis error architecto aut officia perspiciatis, rerum perferendis aspernatur ut minima eius! Nihil."
                     },
 
                     {
-                    id_sucursal: 2,
+                    sucursal: 2,
                     categoria: "Serigrafía",
                     nombre: "Tazas",
                     descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea voluptatibus repellat, facilis temporibus vitae ad iste voluptates corporis error architecto aut officia perspiciatis, rerum perferendis aspernatur ut minima eius! Nihil."
                     },
 
                     {
-                    id_sucursal: 2,
+                    sucursal: 2,
                     categoria: "Serigrafía",
                     nombre: "Camisas",
                     descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea voluptatibus repellat, facilis temporibus vitae ad iste voluptates corporis error architecto aut officia perspiciatis, rerum perferendis aspernatur ut minima eius! Nihil."
                     },
 
                     {
-                    id_sucursal: 3,
+                    sucursal: 3,
                     categoria: "Serigrafía",
                     nombre: "Pachones",
                     descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea voluptatibus repellat, facilis temporibus vitae ad iste voluptates corporis error architecto aut officia perspiciatis, rerum perferendis aspernatur ut minima eius! Nihil."
                     },
 
                     {
-                    id_sucursal: 3,
+                    sucursal: 3,
                     categoria: "Confección",
                     nombre: "Camisas",
                     descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea voluptatibus repellat, facilis temporibus vitae ad iste voluptates corporis error architecto aut officia perspiciatis, rerum perferendis aspernatur ut minima eius! Nihil."
@@ -270,13 +270,25 @@
         },
 
         computed: {
-            filtrarProductos: function() {
+            filtrarProductos() {
                 return this.filtrarCategoria.filter((producto) => {
                     return producto.nombre.toLowerCase().match(this.buscar.toLowerCase());
                 })
             },
 
-            filtrarCategoria: function() {
+            filtrarSucursal() {
+                var sucursal = this.seleccionarSucursal;
+
+                if (sucursal.toLowerCase() === "todas") {
+                    return this.productos;
+                } else {
+                    return this.productos.filter(function(producto){
+                        return producto.sucursal === sucursal;
+                    })
+                }
+            },
+
+            filtrarCategoria() {
                 var categoria = this.seleccionarCategoria;
 
                 if(categoria.toLowerCase() === "todas") {
