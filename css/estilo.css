@@ -371,8 +371,6 @@ https://www.basili.co/en/agency/
 
 /* QUIENES SOMOS */
 
-
-
 .nosotros {
     margin-bottom: 10%;
     margin-top: 5%;
@@ -605,6 +603,11 @@ https://www.basili.co/en/agency/
     font-size: 1.5rem;
     line-height: 1.6;
 }
+
+/* SECCION DE SERVICIOS */
+
+
+
 
 /* SECCION DE PRODUCTOS */
 
@@ -908,18 +911,9 @@ footer {
     font-size: 15px;
 }
 
-.footer {
-    /* width: 80vw; */
-    margin: 0 auto;
-}
 
-.f-logo p {
-    width: 80%;
-}
-
-.iconos {
-    font-size: 19px;
-    color: var(--blanco);
+.footer-container {
+    height: 100px;
 }
 
 #iconoRedes {
