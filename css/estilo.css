@@ -436,17 +436,18 @@ https://www.basili.co/en/agency/
     border: 2px solid var(--blanco)
 } */
 
-.container {
+.contenedor {
     width: 80%;
     height: 300px;
     position: relative;
     padding: 20px;
     top: 5%;
     margin: 0 auto;
-    border: 2px solid var(--blanco)
+    border: 2px solid var(--blanco);
+    font-size: 1.2rem
 }
 
-.container:after {
+.contenedor:after {
     content: "";
     position: absolute;
     width: 50px;
@@ -463,7 +464,7 @@ https://www.basili.co/en/agency/
     z-index:0;
 }
 
-.container .titulo, .container i {
+.contenedor .titulo {
     font-family: var(--titulos);
     font-size: 3.5rem;
     line-height: 1;
@@ -471,6 +472,11 @@ https://www.basili.co/en/agency/
     font-weight: 500;
     word-spacing: 0px;
 }
+
+#icon-heart, #icon-compass {
+    font-size: 50px;
+}
+
 /* .forma1 {
     height: 150px;
     font-family: var(--titulos);
@@ -858,6 +864,7 @@ https://www.basili.co/en/agency/
     background-color: transparent;
     color: var(--negro);
     width: 300px;
+
 }
 
 .tab button:hover {
@@ -878,6 +885,7 @@ https://www.basili.co/en/agency/
 .sucursales {
     width: 95%;
     margin: 0 auto;
+    transition: 0.5s
 }
 
 .info-contacto {
