@@ -605,9 +605,14 @@ https://www.basili.co/en/agency/
 }
 
 /* SECCION DE SERVICIOS */
+.contenedor-servicios {
+    width: 85%;
+    margin: 0 auto;
+}
 
-
-
+.info-servicios {
+    border: 1px solid rgb(212, 212, 212);
+}
 
 /* SECCION DE PRODUCTOS */
 
