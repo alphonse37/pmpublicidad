@@ -26,8 +26,9 @@ http://www.enelsalvador.sv
 
 /* color sacado de algun lado 2d80f3 */
 /* COLORES AL FINAL
-#0e3582 AZUL
-#f7ab00 AMARILLO
+0d72ba AZUL
+231f20 negro
+03bcf4 celeste
 */
 
 /* variables para fuentes y colores */
@@ -39,12 +40,12 @@ http://www.enelsalvador.sv
     /* --parrafo: 'Federo', sans-serif; */
 
     /* colores */
-    --titulo: #242528;
-    --principal: #16B4F2;
-    --secundario: #0597F2;
+    --c-menu: #231f20;
+    --c-principal: #0d72ba;
+    --c-secundario: #03bcf4;
     --terciario: #0c3f6a;
-    --textos1: #fff;
-    --textos2: rgb(36, 37, 40);
+    --blanco: #fff;
+    --negro: rgb(36, 37, 40);
 
 }
 /* http://preview.ab-themes.com/astir/ */
@@ -64,15 +65,12 @@ https://www.basili.co/en/agency/
     letter-spacing: 0.5px;
 }
 
-
-
-
 /* barra de navegacion */
 .barra {
     font-family: var(--menu);
     position: fixed;
     height: 14vh;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(35, 31, 32, 0);
     list-style: none;
     z-index: 10;
     box-shadow: none;
@@ -82,7 +80,7 @@ https://www.basili.co/en/agency/
 
 .barra a {
     font-size: 18px ;
-    color: var(--textos1);
+    color: var(--blanco);
     transition: 0.5s;
 }
 
@@ -90,7 +88,7 @@ https://www.basili.co/en/agency/
     height: 14vh;
     font-family: var(--menu);
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(35, 31, 32, 0.4);
     list-style: none;
     z-index: 10;
     box-shadow: none;
@@ -119,12 +117,16 @@ https://www.basili.co/en/agency/
 /* estilo navbar haburguesa */
 .sidenav {
     width: 80%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(35, 31, 32, 0.6);
     font-family: var(--menu);
 }
 
+.bt-menu {
+    margin-top: -5% !important;
+}
+
 .sidenav hr {
-    color: var(--textos1);
+    color: var(--blanco);
 }
 
 .lista-menu {
@@ -153,7 +155,7 @@ https://www.basili.co/en/agency/
 }
 
 .flechas i {
-    color: white;
+    color: var(--blanco);
     font-size: 55px;
 }
 
@@ -171,7 +173,7 @@ https://www.basili.co/en/agency/
     width: 50vw;
     position: absolute;
     font-size: 9vmin;
-    color: var(--textos1);
+    color: var(--blanco);
 }
 
 /* EFECTOS */
@@ -192,7 +194,7 @@ https://www.basili.co/en/agency/
 }
 
 .publi {
-    color: var(--textos1);
+    color: var(--blanco);
     animation: ani1 5s infinite;
     -moz-animation: ani1 5s infinite;
     animation-delay: -3s;
@@ -250,11 +252,13 @@ https://www.basili.co/en/agency/
 
 .banner {
     position: relative;
+    width: 100%;
     margin-bottom: 5%;
 }
 
+
 .leyenda span i {
-    background-color: #fff;
+    background-color: var(--blanco);
     color: rgba(0, 0, 0, 0.514);
     padding: 20px;
 }
@@ -264,8 +268,9 @@ https://www.basili.co/en/agency/
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    border: 5px solid #fff;
-    color: #fff;
+    border: 5px solid var(--blanco);
+    color: var(--blanco);
+    z-index: 5;
 }
 
 .introduccion {
@@ -280,7 +285,7 @@ https://www.basili.co/en/agency/
     letter-spacing: 1px;
     font-weight: 500;
     word-spacing: 0px;
-    color: var(--textos2);
+    color: var(--negro);
 }
 
 .descripcion p {
@@ -308,7 +313,7 @@ https://www.basili.co/en/agency/
 
 /* servicios */
 .servicios {
-    color: var(--textos2);
+    color: var(--negro);
     font-family: var(--titulos);
     background-color: var(--terciario); 
 
@@ -316,7 +321,7 @@ https://www.basili.co/en/agency/
 
 .frase-servicios {
     font-family: var(--titulos);
-    color: var(--textos1);
+    color: var(--blanco);
     font-size: 48px;
     padding: 40px;
 }
@@ -336,7 +341,7 @@ https://www.basili.co/en/agency/
     letter-spacing: 1px;
     font-weight: 500;
     word-spacing: 0px;
-    color: var(--textos2);
+    color: var(--negro);
 }
 
 .nuestros-servicios p {
@@ -353,7 +358,7 @@ https://www.basili.co/en/agency/
 
 .boton-servicios a{
     border-radius: 10px;
-    border: 2px solid #fff;
+    border: 2px solid var(--blanco);
     background-color: transparent;
     font-size: 1.2rem;
     box-shadow: none;
@@ -371,27 +376,22 @@ https://www.basili.co/en/agency/
 .nosotros {
     margin-bottom: 10%;
     margin-top: 5%;
-    color: var(--textos2);
+    color: var(--negro);
 }
 
 .historia {
     margin-bottom: 5%;
 }
 
-.nosotros h4 {
-    width: 80vw;
-    margin: 0 auto;
-    padding-bottom: 5%;
-}
 
-.contenido-historia h3 {
+.historia h3 {
     font-family: var(--titulos);
     font-size: 4rem;
     line-height: 1;
     letter-spacing: 1px;
     font-weight: 500;
     word-spacing: 0px;
-    color: var(--textos2);
+    color: var(--negro);
     padding: 1.8rem;
 }
 
@@ -403,6 +403,7 @@ https://www.basili.co/en/agency/
     text-align: justify;
 }
 
+
 .identidad h3 {
     font-family: var(--titulos);
     font-size: 4rem;
@@ -410,12 +411,67 @@ https://www.basili.co/en/agency/
     letter-spacing: 1px;
     font-weight: 500;
     word-spacing: 0px;
-    color: var(--textos2);
+    color: var(--negro);
     padding: 1.8rem;
     margin-bottom: 5%;
 }
 
+.f-img {
+    position: relative;
+}
+
+.figuras {
+    position: absolute;
+    top: 0;
+    margin-top: 30%;
+   
+}
+
 .forma1 {
+    background-color:var(--terciario);
+    height: 400px;
+}
+
+/* .forma1 img {
+    border: 2px solid var(--blanco)
+} */
+
+.container {
+    width: 80%;
+    height: 300px;
+    position: relative;
+    padding: 20px;
+    top: 5%;
+    margin: 0 auto;
+    border: 2px solid var(--blanco)
+}
+
+.container:after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-top: 0px solid var(--blanco);
+    border-right: 2px solid var(--blanco);
+    border-left: 0px solid var(--blanco);
+    border-bottom: 2px solid var(--blanco);
+    top: 100%;
+    margin-left: -25px;
+    margin-top: -24px;
+    transform: rotate(45deg);
+    background: var(--terciario);
+    z-index:0;
+}
+
+.container .titulo, .container i {
+    font-family: var(--titulos);
+    font-size: 3.5rem;
+    line-height: 1;
+    letter-spacing: 1px;
+    font-weight: 500;
+    word-spacing: 0px;
+}
+/* .forma1 {
     height: 150px;
     font-family: var(--titulos);
     font-size: 4rem;
@@ -423,22 +479,16 @@ https://www.basili.co/en/agency/
     letter-spacing: 1px;
     font-weight: 500;
     word-spacing: 0px;
-    color: var(--textos2);
+    color: var(--negro);
     padding: 1.8rem;
     margin-bottom: 5%;
-} 
+}  */
 
 
-.mision p, .vision p {
+.container p {
     font-family: var(--parrafo);
-    padding: 2rem;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     line-height: 1.6;
-    text-align: justify;
-    background-color: var(--terciario);
-    border-radius: 10px;
-    height: 150px;
-    border: 2px solid #fff;
 }
 
 #layer1 {
@@ -514,13 +564,13 @@ https://www.basili.co/en/agency/
 .content h5 {
     /* text-transform: uppercase; */
     margin-top: 30%;
-    color: var(--textos1);
-    text-shadow: 2px 2px 2px var(--textos2);
+    color: var(--blanco);
+    text-shadow: 2px 2px 2px var(--negro);
 }
 
 .content a {
     background-color: transparent;
-    border: 2px solid #fff;
+    border: 2px solid var(--blanco);
 }
 
 .content a:hover {
@@ -538,7 +588,7 @@ https://www.basili.co/en/agency/
     letter-spacing: 1px;
     font-weight: 500;
     word-spacing: 0px;
-    color: var(--textos2);
+    color: var(--negro);
 }
 
 .productos-texto p {
@@ -564,7 +614,7 @@ https://www.basili.co/en/agency/
 
 .busqueda a {
     text-decoration: none;
-    color: black;
+    color: var(--negro);
     font-size: 16px;
     padding: 15px;
 }
@@ -586,7 +636,7 @@ https://www.basili.co/en/agency/
     margin: 0 auto;
     width: 250px;
     height: 300px;
-    background: rgb(255, 255, 255);
+    background: var(--blanco);
     font-family: var(--parrafo);
     overflow: hidden;
     border: 1px solid rgb(212, 212, 212);
@@ -620,13 +670,13 @@ https://www.basili.co/en/agency/
 
 .detalles-prd a {
     background-color: transparent;
-    border: 1px solid #fff;
+    border: 1px solid var(--blanco);
     box-shadow: none;
 } 
 
 .detalles-prd a:hover {
     background-color: rgba(255, 255, 255, 0.2);
-    border: 1px solid #fff;
+    border: 1px solid var(--blanco);
     box-shadow: none;
 } 
 
@@ -771,7 +821,7 @@ https://www.basili.co/en/agency/
     width: 90vw;
     margin-left: 5vw;
     margin-right: 5vw;
-    background-color: #fff;
+    background-color: var(--blanco);
 }
 .caja {
     border: 1px solid rgb(219, 219, 219);
@@ -789,7 +839,7 @@ https://www.basili.co/en/agency/
 }
 
 .tableta {
-    background-color: #fff;
+    background-color: var(--blanco);
     border: 3px solid rgb(201, 201, 201);
     border-radius: 20px;
     padding: 2%;
@@ -806,13 +856,13 @@ https://www.basili.co/en/agency/
     border: none;
     box-shadow: none;
     background-color: transparent;
-    color: var(--textos2);
+    color: var(--negro);
     width: 300px;
 }
 
 .tab button:hover {
     background-color: rgba(32, 32, 32, 0.8);
-    color: var(--textos1);
+    color: var(--blanco);
     cursor: pointer;
     border: none;
 }
@@ -820,7 +870,7 @@ https://www.basili.co/en/agency/
 
 .tab button:focus {
     background-color: rgba(32, 32, 32, 0.8);
-    color: var(--textos1);
+    color: var(--blanco);
     cursor: pointer;
     border: none;
 }
@@ -837,7 +887,7 @@ https://www.basili.co/en/agency/
 .info-contacto p {
     font-family: var(--parrafo);
     padding-left: 10%;
-    color: var(--textos2)
+    color: var(--negro)
 }
 
 
@@ -846,7 +896,7 @@ https://www.basili.co/en/agency/
 footer {
     background-color:  rgb(36, 37, 40);
     padding: 3%;
-    color: var(--textos1);
+    color: var(--blanco);
     font-size: 15px;
 }
 
@@ -861,17 +911,21 @@ footer {
 
 .iconos {
     font-size: 19px;
-    color: var(--textos1);
+    color: var(--blanco);
 }
 
 #iconoRedes {
-    color: var(--textos1);
+    color: var(--blanco);
     font-size: 30px;
 }
 
 /* media queries */
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 992px){
+    .bt-menu {
+        margin-top: -1% !important;
+    }
+
     .informacion {
         display: none;
     }
@@ -891,5 +945,44 @@ footer {
         transition: 0.5s;
         margin-top: 25px;
     }
-}
+
+    /* .leyenda span i {
+        font-size: .5rem;
+    } */
+    
+    .leyenda {
+        font-size: 1.8rem; 
+    }
+ }
+
+ @media screen and (max-width: 768px){ 
+    .bt-menu {
+        margin-top: -2% !important;
+    }
+
+    .leyenda {
+        border: 3px solid var(--blanco);
+        top: 40%;
+    }
+
+    .leyenda span i {
+        padding: 15px;
+    }
+  }
+
+ @media  screen and (max-width: 480px){ 
+    .bt-menu {
+        margin-top: -4% !important;
+    }
+
+    .leyenda {
+        font-size: 1rem;
+        border: 2px solid var(--blanco);
+        top: 30%;
+    }
+
+    .leyenda span i {
+        padding: 10px;
+    }
+ }
 
