@@ -22,7 +22,8 @@ https://barcodesignstudio.com/
 http://www.enelsalvador.sv
 */
 
-/* enrutamiento con vuejs https://fernando-gaitan.com.ar/enrutamiento-con-vue-js/ */
+/* enrutamiento con vuejs https://fernando-gaitan.com.ar/enrutamiento-con-vue-js/ 
+https://es.stackoverflow.com/questions/155950/filtrar-varios-par%C3%A1metros-en-un-input-con-vue-js*/
 
 /* color sacado de algun lado 2d80f3 */
 /* COLORES AL FINAL
@@ -612,7 +613,39 @@ https://www.basili.co/en/agency/
 
 .info-servicios {
     border: 1px solid rgb(212, 212, 212);
+    height: 300px;
 }
+
+.info-servicios:hover {
+    box-shadow: -8px 8px 0px 1px var(--c-principal)
+}
+
+.izquierda::before {
+    position: absolute;
+    content: "";
+    height: 300px;
+    width: 2px;
+    border: 1px solid rgb(212, 212, 212);
+    top: 2.5%;
+    left: -0.7%;
+}
+
+
+
+.abajo::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: inherit;
+    border: 1px solid rgb(212, 212, 212);
+    top: 96.5%;
+    left: -0.5%
+    
+}
+/* .cuadrado {
+    height: 300px;
+    background-color: var(--c-principal)
+} */
 
 /* SECCION DE PRODUCTOS */
 
