@@ -75,86 +75,129 @@
     </header>
 
     <main>
-        <div class="busqueda">
-            <p class="center">Categorías</p>
-            <a href="#">Bordados</a>
-            <a href="#">Confección</a>
-            <a href="#">Sublimación</a>
-            <a href="#">Serigrafía</a>
-            <a href="#">Impresión Digital</a>
-            <a href="#">Artículos Promocionales</a>
-            <a href="#">Impresión Láser</a>
-            <a href="#">Rotulaciones</a>
-            <a href="#">Letras Encajueladas</a>
-            <a href="#">Productos para Serigrafía</a>
-            <a href="#">Servicios de Instalación</a>
-        </div>
+        <div id="productos">
+                <div class="container">
+                        <div class="row">
+                            <div class="col s8 m6 l3 offset-s2">
+                                <label for="">sucursales</label>
+                                <select class="browser-default" v-model="seleccionarSucursal">
+                                    <option selected value="1">Todas</option>
+                                    <option value="2">Santa Ana 1</option>
+                                    <option value="3">Santa Ana 2</option>
+                                    <option value="4">San Salvador</option>
+                                </select>
+                            </div>
                 
-        <div class="seccion-productos">
-            <div id="productos">
-                <div class="row">
-                    <div class="col s12 m6 l3" v-for="producto in productos" v-bind:key="producto.id_producto">
-                        <div class="card tarjeta-prd">
-                            <div class="imagen-prd">
-                                <img :src="`data:image/jpg;base64,${producto.imagen}`" alt="">
-                            </div>
-                            <div class="detalles-prd">
-                                <p class="white-text">{{producto.nombre}}</p>
-                                <br>
-                                <p class="white-text">Categoria</p>
-                            </div>
-                            <div class="but">
-                                <div class="botoncito">
-                                    <a href="#detalles" class="btn btn-small white-text modal-trigger" v-on:click="abrirSelec(producto)">Detalles</a>
+                            <div class="col s8 m6 l3 offset-s2 offset-l1">
+                                <div class="busqueda">
+                                    <label>Categorías</label>
+                                    <select v-model="seleccionarCategoria" class="browser-default">
+                                        
+                                        <option selected>Todas</option>
+                                        <option>Bordados</option>
+                                        <option>Confección</option>
+                                        <option>Sublimación</option>
+                                        <option>Serigrafía</option>
+                                        <option>Impresión Digital</option>
+                                        <option>Artículos Promocionales</option>
+                                        <option>Impresión Láser</option>
+                                        <option>Rotulaciones</option>
+                                        <option>Letras Encajueladas</option>
+                                        <option>Productos para Serigrafía</option>
+                                        <option>Servicios de Instalación</option>
+                                    </select>
                                 </div>
                             </div>
-                        </div>
-                        <br>
-                    </div>
-                </div>
-
-                 <!-- modal -->
-                <div id="detalles" class="modal modal-fixed-footer">
-                    <div class="modal-content">
-                        <h4 class="center">{{seleccion.nombre}}</h4>
-                        <div class="row">
-                            <div class="col s12 m6 l6 center asd">
-                                <img :src="`data:image/jpg;base64,${seleccion.imagen}`" alt="" class="cyan">
-                            </div>
-
-                            <div class="col s12 m6 l6 center">
-                                <p>Descripción:</p>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam expedita maxime ratione molestiae quisquam officiis, libero inventore voluptas, similique ea nulla architecto porro rerum voluptatem at, nisi reprehenderit consequatur? Quae!</p>
+                
+                            <div class="col s8 m6 l4 offset-s2 offset-m3 offset-l1">
+                                <label for="">Buscar producto</label>
+                                <input type="search" placeholder="Buscar" v-model="buscar">
                             </div>
                         </div>
-                        
                     </div>
-                    <div class="modal-footer cerrar-modal">
-                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar x</a>
+                    
+                    <br><br><br><br>
+
+
+            <div class="seccion-productos">
+                    <div class="row" v-if="filtrarProductos.length">
+                        <div class="col s12 m6 l3" v-for="producto in filtrarProductos" v-bind:key="producto.id_producto">
+                            <div class="card tarjeta-prd">
+                                <div class="imagen-prd">
+                                    <!-- <img :src="`data:image/jpg;base64,${producto.imagen}`" alt=""> -->
+                                    <img src="https://images.pexels.com/photos/1935946/pexels-photo-1935946.jpeg?cs=srgb&dl=beverage-cold-delicious-1935946.jpg&fm=jpg" alt="" class="cyan">
+                                </div>
+                                <div class="detalles-prd">
+                                    <p class="white-text">{{producto.producto}}</p>
+                                    <br>
+                                    <p class="white-text">{{producto.categoria}}</p>
+                                </div>
+                                <div class="boton-detalles">
+                                    <div class="botoncito">
+                                        <a href="#detalles" class="btn btn-small white-text modal-trigger" v-on:click="abrirSelec(producto)">Detalles</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
                     </div>
-                </div>
+
+                    <div class="row" v-else>
+                            <p class="center flow-text">No hay resultados</p>
+                        </div>
+    
+                     <!-- modal -->
+                    <div id="detalles" class="modal modal-fixed-footer">
+                        <div class="modal-content">
+                            <h4 class="center">{{seleccion.producto}}</h4>
+                            <div class="row">
+                                <div class="col s12 m6 l6 center imagen-producto">
+                                    <!-- <img :src="`data:image/jpg;base64,${seleccion.imagen}`" alt="" class="cyan"> -->
+                                    <img src="https://images.pexels.com/photos/1935946/pexels-photo-1935946.jpeg?cs=srgb&dl=beverage-cold-delicious-1935946.jpg&fm=jpg" alt="" class="cyan">
+                                </div>
+    
+                                <div class="col s12 m6 l6 center">
+                                    <p>Descripción:</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam expedita maxime ratione molestiae quisquam officiis, libero inventore voluptas, similique ea nulla architecto porro rerum voluptatem at, nisi reprehenderit consequatur? Quae!</p>
+                                    <br>
+                                    <div class="precio" v-if="seleccion.precio != '0'">
+                                        <p>Precio:</p>
+                                        <p>$ {{seleccion.precio}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="modal-footer cerrar-modal">
+                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar x</a>
+                        </div>
+                    </div>
+                
             </div>
+
         </div>
+       
+                
     </main>
     
     <footer>
         <div class="footer center">
             <div class="row">
-                <div class="col s12 m6 l3">
+                <div class="col s12 m6 l3 footer-container">
                     <div class="footer-info">
                         <img src="imagenes/logo2.png" alt="" width="60%">
                     </div>
                     <br>
                 </div>
 
-                <div class="col s12 m6 l3">
+                <div class="col s12 m6 l3 footer-container">
                     <div class="footer-info">
                         <h6>Correo Electrónico</h6>
                         <p><i class="far fa-envelope"></i>&nbsp;&nbsp;pmpublicidadventas@gmail.com</p>
                     </div>
                 </div>
 
-                <div class="col s12 m6 l3">
+                <div class="col s12 m6 l3 footer-container">
                     <div class="footer-info">
                         <h6>Teléfonos</h6>
                         <p><i class="fas fa-phone"></i>&nbsp;&nbsp;+(503) 2406-6563</p>
@@ -162,7 +205,7 @@
                     </div>
                 </div>
 
-                <div class="col s12 m6 l3">
+                <div class="col s12 m6 l3 footer-container">
                     <div class="footer-info">
                         <h6>Facebook</h6>
                         <a href="https://es-la.facebook.com/pages/category/Product-Service/Pm-Publicidad-83252799961/" target="_blank"><i class="fab fa-facebook-square" id="iconoRedes"></i></a>
@@ -180,8 +223,9 @@
     
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/app.js"></script>
 
-    <script>
+    <!-- <script>
     new Vue ({
         el: '#productos',
 
@@ -199,7 +243,7 @@
         },
 
         mounted() {
-            axios.get("http://192.168.22.115/pm/api/producto_categoria")
+            axios.get("http://192.168.22.115/pm/api/productoCategoria")
             .then(res => {
                 this.productos = res.data;
                 console.log(res.data);
@@ -210,6 +254,6 @@
         }
     });
     
-    </script>
+    </script> -->
 </body>
 </html>

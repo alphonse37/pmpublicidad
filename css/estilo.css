@@ -55,6 +55,17 @@ https://codex-themes.com/thegem/starting_page/themes.php?page=thegem
 http://bountybev.com/contact/
 https://littlethunder.co/showcase/
 https://www.basili.co/en/agency/
+
+
+filtrar datos de json https://dev.to/alexmourer/click-event-filtering-on-a-json-rendered-list-in-vuejs-3kpn
+https://codepen.io/blakewatson/pen/xEXApK
+
+enrutamiento con vue
+https://fernando-gaitan.com.ar/enrutamiento-con-vue-js/
+
+
+filtrar fecha con js
+https://es.stackoverflow.com/questions/155950/filtrar-varios-par%C3%A1metros-en-un-input-con-vue-js*/
 */
 
 * {
@@ -540,30 +551,7 @@ https://www.basili.co/en/agency/
 }
 
 /* esto es algo que no se para que estoy haciendo D: */
-.but {
-    position: absolute;
-    visibility: hidden;
-    transition: .2s;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-}
 
-.tarjeta-prd:hover .but {
-    visibility: visible;
-}
-
- .imagen-prd:hover {
-
-    background-color: rgba(0, 255, 255, 0.123);
-}
-
-.botoncito {
-    position: absolute;
-    top: 25%;
-    left: 30%;
-}
 /* hasta aqui */
 
 .content h5 {
@@ -733,8 +721,32 @@ https://www.basili.co/en/agency/
     background-color: rgba(255, 255, 255, 0.9);
 }
 
-.asd img {
+.imagen-producto img {
     width: 70%
+}
+
+.boton-detalles {
+    position: absolute;
+    visibility: hidden;
+    transition: .2s;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+.tarjeta-prd:hover .boton-detalles {
+    visibility: visible;
+}
+
+ .imagen-prd:hover {
+    background-color: rgba(0, 255, 255, 0.123);
+}
+
+.botoncito {
+    position: absolute;
+    top: 25%;
+    left: 30%;
 }
 
 
