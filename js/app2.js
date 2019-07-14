@@ -102,7 +102,7 @@ new Vue ({
 
     computed: {
         filtrarProductos() {
-                return this.filtrarSucursal.filter((producto) => {
+            return this.filtrarSucursal.filter((producto) => {
                     return producto.producto.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, '').match(this.buscar.toLowerCase());
                 })
         },
@@ -110,8 +110,10 @@ new Vue ({
         filtrarSucursal() {
             var sucursal = this.seleccionarSucursal;
 
+            console.log(sucursal)
+
             if (sucursal.toLowerCase() == "todas") {
-                return this.productos;
+                return this.productos;  
             } else {
                 return this.productos.filter(function(producto){
                     return producto.sucursal == sucursal;
@@ -122,13 +124,16 @@ new Vue ({
         },
 
         filtrarCategoria() {
+
             var categoria = this.seleccionarCategoria;
+
+            console.log(categoria)
 
             if(categoria.toLowerCase() === "todas") {
                 return this.productos;
             } else {
                 return this.productos.filter(function(producto){
-                    return producto.categoria === categoria;
+                    return producto.categoria == categoria;
                 })
             }
         }

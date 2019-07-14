@@ -878,9 +878,6 @@ https://es.stackoverflow.com/questions/155950/filtrar-varios-par%C3%A1metros-en-
     /* margin-left: 5vw;
     margin-right: 5vw; */
     /* background-color: var(--blanco); */
-   
-
-    
 }
 .caja {
     border: 1px solid rgb(219, 219, 219);
@@ -897,8 +894,10 @@ https://es.stackoverflow.com/questions/155950/filtrar-varios-par%C3%A1metros-en-
     transition: 0.05s;
 }
 
-/* .formulario {
-} */
+
+.formulario {
+    border: 1px solid rgb(212, 212, 212);
+}
 
 /*.tableta {
      border: 3px solid rgb(201, 201, 201);

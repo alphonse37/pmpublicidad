@@ -80,10 +80,12 @@
         </div>
         <div class="cotizar">
             <!-- <h2>¡Cotiza tu producto!</h2> -->
-                <div class="row tableta">
+                <div class="row">
                     <div class="col s12 l8 offset-l2 formulario">
-                        <h5 class="center cyan">Datos del cliente</h5>
-                        <p class="center cyan">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <img src="imagenes/form.jpg" alt="" width="100%">
+                        <br>
+                        <h5 class="center">Datos del cliente</h5>
+                        <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         <br>
                         <form action="">
                             <div class="row">
@@ -169,6 +171,7 @@
                                 </div>
                             </div>
                         </form>
+                        <img src="imagenes/formfooter.jpg" alt="" width="100%">
                     </div>
                 </div>
 
@@ -280,7 +283,7 @@ function cargarProductos() {
 		servicioSeleccionado.sort();
 
 		servicioSeleccionado.forEach(function(producto) {
-			let opcion = documetn.createElement("option");
+			let opcion = document.createElement("option");
 			opcion.value = producto;
 			opcion.text = producto;
 			productos.add(opcion);
