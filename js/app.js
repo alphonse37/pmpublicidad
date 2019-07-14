@@ -82,17 +82,17 @@ new Vue ({
             })
         },
 
-        filtrarSucursal() {
-            var sucursal = this.seleccionarSucursal;
+        // filtrarSucursal() {
+        //     var sucursal = this.seleccionarSucursal;
 
-            if (sucursal.toLowerCase() === "todas") {
-                return this.productos;
-            } else {
-                return this.productos.filter(function(producto){
-                    return producto.sucursal === sucursal;
-                })
-            }
-        },
+        //     if (sucursal.toLowerCase() === "todas") {
+        //         return this.productos;
+        //     } else {
+        //         return this.productos.filter(function(producto){
+        //             return producto.sucursal === sucursal;
+        //         })
+        //     }
+        // },
 
         filtrarCategoria() {
             var categoria = this.seleccionarCategoria;

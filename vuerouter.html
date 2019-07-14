@@ -2,27 +2,46 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title> Vue.js </title>
+	<title>holis </title>
 	
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- iconos materialize -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/estilo.css">
 
 </head>
 <body>
 
 	<div id="app" class="container">
-		<h1> Router </h1>
-		<ul class="nav nav-pills">
-			<li role="presentation">
-				<router-link to="/principal">Principal</router-link>
+			<h1>Elige la Sucursal</h1>
+		<ul class="tabs">
+			<li role="presentation" class="tab col s2">
+				
+				<router-link to="/principal">Inicio</router-link>
 			</li>
-			<li role="presentation">
-				<router-link to="/posts">Ver publicaciones</router-link>
+			<li role="presentation" class="tab col s2">
+				
+					<router-link to="/todas">Todas</router-link>
+				</li>
+			<li role="presentation" class="tab col s2">
+				<router-link to="/matriz">Casa Matriz</router-link>
+
 			</li>
+			<li role="presentation" class="tab col s2">
+					<router-link to="/posts">Santa Ana 2</router-link>
+				</li>
+				<li role="presentation" class="tab col s2">
+						<router-link to="/posts">San Salvador</router-link>
+					</li>
 		</ul>
 		<router-view></router-view>
 	</div>
 
+	<!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	<script src="https://unpkg.com/vue/dist/vue.js"></script>
 	<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
 	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -32,79 +51,109 @@
 		const Principal = {
 			template: `
 				<div>
-					<h2> Esta es mi página principal </h2>
+					<h2> Elige una opcion </h2>
 					<p> Simple ejemplo de <a href="https://vuejs.org/v2/guide/routing.html" target="_blank">Vue router</a>. </p>
 				</div>
 			`
 		};
 
-		const Posts = {
+		const Todas = {
 			data: function(){
 				return {
 					// cargando: true,
 					// error: false,
-					posts: [{
-"userId": 1,
-"id": 1,
-"title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-"body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
-},
-{
-"userId": 1,
-"id": 1,
-"title": "qui est esse",
-"body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
-},
-{
-"userId": 3,
-"id": 1,
-"title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
-"body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
-},
-{
-"userId": 1,
-"id": 4,
-"title": "eum et est occaecati",
-"body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
-},
-{
-"userId": 1,
-"id": 5,
-"title": "nesciunt quas odio",
-"body": "repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque"
-},
-{
-"userId": 1,
-"id": 6,
-"title": "dolorem eum magni eos aperiam quia",
-"body": "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae"
-},
-{
-"userId": 1,
-"id": 7,
-"title": "magnam facilis autem",
-"body": "dolore placeat quibusdam ea quo vitae\nmagni quis enim qui quis quo nemo aut saepe\nquidem repellat excepturi ut quia\nsunt ut sequi eos ea sed quas"
-},
-{
-"userId": 1,
-"id": 8,
-"title": "dolorem dolore est ipsam",
-"body": "dignissimos aperiam dolorem qui eum\nfacilis quibusdam animi sint suscipit qui sint possimus cum\nquaerat magni maiores excepturi\nipsam ut commodi dolor voluptatum modi aut vitae"
-},
-{
-"userId": 1,
-"id": 9,
-"title": "nesciunt iure omnis dolorem tempora et accusantium",
-"body": "consectetur animi nesciunt iure dolore\nenim quia ad\nveniam autem ut quam aut nobis\net est aut quod aut provident voluptas autem voluptas"
-},
-{
-"userId": 1,
-"id": 10,
-"title": "optio molestias id quia eum",
-"body": "quo et expedita modi cum officia vel magni\ndoloribus qui repudiandae\nvero nisi sit\nquos veniam quod sed accusamus veritatis error"
-},]
+					productos: [
+					{
+                id_sucursal: "1",
+                sucursal: "Santa Ana 1",
+                idCategoria: "1",
+                categoria: "Bordados",
+                producto: "Camisas bordadas",
+                descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea voluptatibus repellat, facilis temporibus vitae ad iste voluptates corporis error architecto aut officia perspiciatis, rerum perferendis aspernatur ut minima eius! Nihil.",
+                imagen: "https://images.pexels.com/photos/1935946/pexels-photo-1935946.jpeg?cs=srgb&dl=beverage-cold-delicious-1935946.jpg&fm=jpg"
+                },
+
+                {
+                id_sucursal: "1",
+                sucursal: "Santa Ana 1",
+                idCategoria: "2",
+                categoria: "Impresión Láser",
+                producto: "Banners",
+                descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea voluptatibus repellat, facilis temporibus vitae ad iste voluptates corporis error architecto aut officia perspiciatis, rerum perferendis aspernatur ut minima eius! Nihil.",
+                imagen: "https://images.pexels.com/photos/1831256/pexels-photo-1831256.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                },
+
+                {
+                id_sucursal: "1",
+                sucursal: "Santa Ana 1",
+                idCategoria: "3",
+                categoria: "Impresión Digital",
+                producto: "Afiche",
+                descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea voluptatibus repellat, facilis temporibus vitae ad iste voluptates corporis error architecto aut officia perspiciatis, rerum perferendis aspernatur ut minima eius! Nihil.",
+                imagen: "https://images.pexels.com/photos/2588641/pexels-photo-2588641.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                },
+
+                {
+                id_sucursal: "2",
+                sucursal: "Santa Ana 2",
+                idCategoria: "4",
+                categoria: "Servicios de Instalación",
+                producto: "Instalación de Rotulos",
+                descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea voluptatibus repellat, facilis temporibus vitae ad iste voluptates corporis error architecto aut officia perspiciatis, rerum perferendis aspernatur ut minima eius! Nihil.",
+                imagen: "https://images.pexels.com/photos/2575830/pexels-photo-2575830.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                },
+
+                {
+                id_sucursal: "2",
+                sucursal: "Santa Ana 2",
+                idCategoria: "5",
+                categoria: "Serigrafía",
+                producto: "Tazas",
+                descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea voluptatibus repellat, facilis temporibus vitae ad iste voluptates corporis error architecto aut officia perspiciatis, rerum perferendis aspernatur ut minima eius! Nihil.",
+                imagen: "https://images.pexels.com/photos/2621990/pexels-photo-2621990.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                },
+
+                {
+                id_sucursal: "2",
+                sucursal: "Santa Ana 2",
+                idCategoria: "5",
+                categoria: "Serigrafía",
+                producto: "Camisas",
+                descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea voluptatibus repellat, facilis temporibus vitae ad iste voluptates corporis error architecto aut officia perspiciatis, rerum perferendis aspernatur ut minima eius! Nihil.",
+                imagen: "https://images.pexels.com/photos/2179865/pexels-photo-2179865.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                },
+
+                {
+                id_sucursal: "3",
+                sucursal: "San Salvador",
+                idCategoria: "5",
+                categoria: "Serigrafía",
+                producto: "Pachones",
+                descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea voluptatibus repellat, facilis temporibus vitae ad iste voluptates corporis error architecto aut officia perspiciatis, rerum perferendis aspernatur ut minima eius! Nihil.",
+                imagen: "https://images.pexels.com/photos/2122294/pexels-photo-2122294.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                },
+
+                {
+                id_sucursal: "3",
+                sucursal: "San Salvador",
+                idCategoria: "6",
+                categoria: "Confección",
+                producto: "faldas",
+                descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea voluptatibus repellat, facilis temporibus vitae ad iste voluptates corporis error architecto aut officia perspiciatis, rerum perferendis aspernatur ut minima eius! Nihil.",
+                imagen: "https://images.pexels.com/photos/1974508/pexels-photo-1974508.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                }
+						],
+						seleccion: "",
 				}
 			},
+			methods: {
+        // abrirCategoria(nombre) {
+        //     this.seleccionarSucursal = nombre;
+        // },
+        abrirSelec(id_producto) {
+            this.seleccion = id_producto;
+        }
+    },
 			// created: function(){
 			// 	this.recuperarPosts();
 			// },
@@ -124,82 +173,197 @@
 			// },
 			template: `
 				<div>
-					<div v-if="cargando">
-						Cargando publicaciones...
-					</div>
-					<div v-else-if="error" class="alert alert-danger">
-						Error al intentar cargar las publicaciones.
-					</div>
-					<div v-else>
-						<h2> Publicaciones </h2>
-						<table class="table table-striped">
-							<thead>
-								<tr>
-									<th> Id de usuario </th>
-									<th> Id </th>
-									<th> Título </th>
-									<th>  </th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr v-for="item in posts">
-									<td> {{ item.userId }} </td>
-									<td> {{ item.id }} </td>
-									<td> {{ item.title }} </td>
-									<td>
-										<router-link :to="'/posts/' + item.id" > Ver publicación </router-link> 
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
+						<div class="seccion-productos">
+                    <div class="row" >
+                        <div class="col s12 m6 l3" v-for="producto in productos" v-bind:key="producto.producto">
+                            <div class="card tarjeta-prd">
+                                <div class="imagen-prd">
+                                    <img :src="producto.imagen" alt="">
+                                </div>
+                                <div class="detalles-prd">
+                                    <p class="white-text">{{producto.producto}}</p>
+                                    <p class="white-text">{{producto.categoria}}</p>
+                                </div>
+                                <div class="boton-detalles">
+                                    <div class="botoncito">
+                                        <a href="#detalles" class="btn btn-small white-text modal-trigger" v-on:click="abrirSelec(producto)">Detalles</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+
+                    <div id="detalles" class="modal modal-fixed-footer">
+                        <div class="modal-content">
+                            <h4 class="center">{{seleccion.producto}}</h4>
+                            <div class="row">
+                                <div class="col s12 m6 l6 center imagen-producto">
+                                    <img :src="seleccion.imagen" alt="" class="cyan">
+                                </div>
+    
+                                <div class="col s12 m6 l6 center">
+                                    <p>Descripción:</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam expedita maxime ratione molestiae quisquam officiis, libero inventore voluptas, similique ea nulla architecto porro rerum voluptatem at, nisi reprehenderit consequatur? Quae!</p>
+                                    <br>
+                                    <div class="precio" v-if="seleccion.precio != '0'">
+                                        <p>Precio:</p>
+                                        <p>$ {{seleccion.precio}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="modal-footer cerrar-modal">
+                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar x</a>
+                        </div>
+                    </div>
+                
+            </div>
 				</div>
 			`
 		};
 
-		const Post = {
+		const Matriz = {
 			data: function(){
 				return {
-					cargando: true,
-					error: false,
-					post: null
+					// cargando: true,
+					// error: false,
+					// post: ''
+					buscar: "",
+            
+            seleccionarCategoria: 'todas'
 				}
 			},
-			created: function(){
-				this.recuperarPost();
-			},
-			methods: {
-				recuperarPost: function(){
-					var that = this;
-					var ide = this.$route.params.id;
-					axios.get('https://jsonplaceholder.typicode.com/posts/' + ide)
-					.then(function (response) {
-						that.cargando = false;
-						that.post = response.data;
-					})
-					.catch(function (error) {
-						that.cargando = false;
-						that.error = true;
-					});
-				}
-			},
+			// created: function(){
+			// 	this.recuperarPost();
+			// },
+			// methods: {
+			// 	recuperarPost: function(){
+			// 		var that = this;
+			// 		var ide = this.$route.params.id;
+			// 		axios.get('https://jsonplaceholder.typicode.com/posts/' + ide)
+			// 		.then(function (response) {
+			// 			// that.cargando = false;
+			// 			that.post = response.data;
+			// 		})
+			// 		.catch(function (error) {
+			// 			// that.cargando = false;
+			// 			that.error = true;
+			// 		});
+			// 	}
+			// },
+
+			computed: {
+        filtrarProductos() {
+				var that = this
+                return that.filtrarCategoria.filter((producto) => {
+                    return producto.producto.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, '').match(that.buscar.toLowerCase());
+                })
+        },
+
+
+        filtrarCategoria() {
+            var categoria = this.seleccionarCategoria;
+
+            if(categoria.toLowerCase() === "todas") {
+                return this.productos;
+            } else {
+                return this.productos.filter(function(producto){
+                    return producto.categoria === categoria;
+                })
+            }
+        }
+    },
+
 			template: `
 				<div>
-					<div v-if="cargando">
-						Cargando publicación...
-					</div>
-					<div v-else-if="error" class="alert alert-danger">
-						Error al intentar cargar la publicación.
-					</div>
-					<div v-else>
-						<h2> {{ post.title }} </h2>
-						<hr />
-						<div class="row">
-							<div class="col-md-12">
-								{{ post.body }}
-							</div>
-						</div>
-					</div>
+						<div class="container">
+                        <div class="row">
+                
+                            <div class="col s8 m6 l3 offset-s2 offset-l1">
+                                <div class="busqueda">
+                                    <label>Categorías</label>
+                                    <select v-model="seleccionarCategoria" class="browser-default">
+                                        
+                                        <option selected>Todas</option>
+                                        <option>Bordados</option>
+                                        <option>Confección</option>
+                                        <option>Sublimación</option>
+                                        <option>Serigrafía</option>
+                                        <option>Impresión Digital</option>
+                                        <option>Artículos Promocionales</option>
+                                        <option>Impresión Láser</option>
+                                        <option>Rotulaciones</option>
+                                        <option>Letras Encajueladas</option>
+                                        <option>Productos para Serigrafía</option>
+                                        <option>Servicios de Instalación</option>
+                                    </select>
+                                </div>
+                            </div>
+                
+                            <div class="col s8 m6 l4 offset-s2 offset-m3 offset-l1">
+                                <label for="">Buscar producto</label>
+                                <input type="search" placeholder="Buscar" v-model="buscar">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <br><br><br><br>
+
+
+            <div class="seccion-productos">
+                    <div class="row" v-if="filtrarProductos.length">
+                        <div class="col s12 m6 l3" v-for="producto in filtrarProductos" v-bind:key="producto.producto">
+                            <div class="card tarjeta-prd">
+                                <div class="imagen-prd">
+                                    <img :src="producto.imagen" alt="">
+                                </div>
+                                <div class="detalles-prd">
+                                    <p class="white-text">{{producto.producto}}</p>
+                                    <p class="white-text">{{producto.categoria}}</p>
+                                </div>
+                                <div class="boton-detalles">
+                                    <div class="botoncito">
+                                        <a href="#detalles" class="btn btn-small white-text modal-trigger" v-on:click="abrirSelec(producto)">Detalles</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+
+                    <div class="row" v-else>
+                            <p class="center flow-text">No hay resultados</p>
+                        </div>
+    
+
+                    <div id="detalles" class="modal modal-fixed-footer">
+                        <div class="modal-content">
+                            <h4 class="center">{{seleccion.producto}}</h4>
+                            <div class="row">
+                                <div class="col s12 m6 l6 center imagen-producto">
+                                    <img :src="seleccion.imagen" alt="" class="cyan">
+                                </div>
+    
+                                <div class="col s12 m6 l6 center">
+                                    <p>Descripción:</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam expedita maxime ratione molestiae quisquam officiis, libero inventore voluptas, similique ea nulla architecto porro rerum voluptatem at, nisi reprehenderit consequatur? Quae!</p>
+                                    <br>
+                                    <div class="precio" v-if="seleccion.precio != '0'">
+                                        <p>Precio:</p>
+                                        <p>$ {{seleccion.precio}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="modal-footer cerrar-modal">
+                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar x</a>
+                        </div>
+                    </div>
+                
+            </div>
 				</div>
 			`
 		};
@@ -207,8 +371,9 @@
 		const routes = [
 			{path: '/', component: Principal},
 		  	{path: '/principal', component: Principal},
-		  	{path: '/posts', component: Posts},
-		  	{path: '/posts/:id', component: Post}
+			  {path: '/todas', component: Todas},
+			  {path: '/matriz', component: Matriz},
+		  	// {path: '/posts/:id', component: Post}
 		];
 
 		const router = new VueRouter({

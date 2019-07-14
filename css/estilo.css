@@ -481,10 +481,11 @@ https://es.stackoverflow.com/questions/155950/filtrar-varios-par%C3%A1metros-en-
     letter-spacing: 1px;
     font-weight: 500;
     word-spacing: 0px;
+    /* margin-bottom: -10%; */
 }
 
 #icon-heart, #icon-compass {
-    font-size: 50px;
+    font-size: 40px;
 }
 
 /* .forma1 {
@@ -501,11 +502,11 @@ https://es.stackoverflow.com/questions/155950/filtrar-varios-par%C3%A1metros-en-
 }  */
 
 
-.container p {
+/* .contenedor p {
     font-family: var(--parrafo);
     font-size: 1.1rem;
     line-height: 1.6;
-}
+} */
 
 #layer1 {
     fill: var(--terciario);
@@ -549,10 +550,6 @@ https://es.stackoverflow.com/questions/155950/filtrar-varios-par%C3%A1metros-en-
     transform: scale(1);
     visibility: visible;
 }
-
-/* esto es algo que no se para que estoy haciendo D: */
-
-/* hasta aqui */
 
 .content h5 {
     /* text-transform: uppercase; */
@@ -877,10 +874,13 @@ https://es.stackoverflow.com/questions/155950/filtrar-varios-par%C3%A1metros-en-
 
 .cotizar {
     /* margin-top: 20%; */
-    width: 90vw;
-    margin-left: 5vw;
-    margin-right: 5vw;
-    background-color: var(--blanco);
+    width: 100%;
+    /* margin-left: 5vw;
+    margin-right: 5vw; */
+    /* background-color: var(--blanco); */
+   
+
+    
 }
 .caja {
     border: 1px solid rgb(219, 219, 219);
@@ -897,18 +897,20 @@ https://es.stackoverflow.com/questions/155950/filtrar-varios-par%C3%A1metros-en-
     transition: 0.05s;
 }
 
-.tableta {
-    background-color: var(--blanco);
-    border: 3px solid rgb(201, 201, 201);
-    border-radius: 20px;
-    padding: 2%;
-}
+/* .formulario {
+} */
 
-.pantalla {
+/*.tableta {
+     border: 3px solid rgb(201, 201, 201);
+    border-radius: 20px;
+    padding: 2%; 
+}*/
+
+/*.pantalla {
     width: 90vw;
     margin: 0 auto;
     background-color: #000;
-}
+} */
 
 /* SECCION DE CONTACTOS */
 .tab button {
