@@ -885,8 +885,8 @@ https://es.stackoverflow.com/questions/155950/filtrar-varios-par%C3%A1metros-en-
 }
 
 .medidas {
-    border: 3px solid rgb(36, 167, 255);
-    background-color: rgb(95, 191, 255);
+    border: 2px solid var(--terciario);
+    background-color: var(--c-principal);
     margin: 0 auto;
 }
 
@@ -955,13 +955,16 @@ https://es.stackoverflow.com/questions/155950/filtrar-varios-par%C3%A1metros-en-
 
 
 /* FOOTER */
-footer {
-    background-color:  rgb(36, 37, 40);
+.footer {
+    background-color:  #242528;
     padding: 3%;
     color: var(--blanco);
     font-size: 15px;
 }
 
+.footerimg {
+    margin-bottom: -10px;
+}
 
 .footer-container {
     height: 100px;

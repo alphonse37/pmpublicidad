@@ -85,8 +85,8 @@ $(document).ready(function(){
 				$("#alto").val("");
 				$("#ancho").val("");
 			} else if (ancho > 50 && ancho <= 150 && alto > 50 && alto >= 150) {
-				txt += $(".medidas").width(ancho*4 + "px") + "</br>";
-				txt += $(".medidas").height(alto*4 + "px");
+				txt += $(".medidas").width(ancho*5 + "px") + "</br>";
+				txt += $(".medidas").height(alto*5 + "px");
 				$(".medidas").html();
 				$("#alto").val("");
 				$("#ancho").val("");
