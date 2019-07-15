@@ -692,12 +692,12 @@ https://es.stackoverflow.com/questions/155950/filtrar-varios-par%C3%A1metros-en-
     text-align: center;
     transition: 0.5s;
     transform-origin: bottom;
-    transform: translateY(90%);
-    padding: 5px;   
+    transform: translateY(85%);
+    padding: 1px;
 }
 
 .tarjeta-prd:hover .detalles-prd {
-    transform: translateY(70%);
+    transform: translateY(65%);
 }
 
 .detalles-prd a {
