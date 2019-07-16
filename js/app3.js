@@ -5,7 +5,7 @@ new Vue({
     sucursales: [
       'Sucursal 9 calle, Santa Ana',
       'Sucursal Independencia, Santa Ana',
-      'San Salvador'
+      'Sucursal San Salvador, San Salvador'
     ],
     categorias: [
       'Bordados',
@@ -143,13 +143,34 @@ new Vue({
   // computed: {}
 
   mounted() {
+    // axios.get("http://192.168.22.115/pm/api/sucursal")
+    //   .then(res => {
+    //       this.sucursales = res.data;
+    //       console.log(res.data);
+    //   })
+    //   .catch(err => {
+    //       console.log(err);
+    //   });
+
+      // axios.get("http://192.168.22.115/pm/api/categoriaSucursal")
+      // .then(res => {
+      //     this.categorias = res.data;
+      //     console.log(res.data);
+      // })
+      // .catch(err => {
+      //     console.log(err);
+      // });
+
       axios.get("http://192.168.22.115/pm/api/productoCategoria")
       .then(res => {
           this.productos = res.data;
+          this.categorias = res.data;
           console.log(res.data);
       })
       .catch(err => {
           console.log(err);
       })
+
+      
   }
 });

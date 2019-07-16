@@ -430,21 +430,60 @@ https://es.stackoverflow.com/questions/155950/filtrar-varios-par%C3%A1metros-en-
     margin-bottom: 5%;
 }
 
-.f-img {
-    position: relative;
+.mision-img {
+    position: relative
 }
 
-.figuras {
+.mision-titulo {
     position: absolute;
-    top: 0;
-    margin-top: 30%;
-   
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%); 
+    border: 3px solid var(--blanco);
+    padding: 3%;
+    z-index: 2
 }
 
-.forma1 {
+.mision-background {
+    position: absolute;
+    width: 97%;
+    height: 35%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%); 
+    background-color: #0d72ba7c;
+    z-index: 1
+}
+
+.vision-img {
+    position: relative
+}
+
+.vision-titulo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translateX(-50%) translateY(-50%); 
+    border: 3px solid var(--blanco);
+    padding: 3%;
+}
+
+.vision-background {
+    position: absolute;
+    width: 97%;
+    height: 35%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%); 
+    background-color: #0d72ba7c;
+    z-index: 1
+}
+
+/* .forma1 {
     background-color:var(--terciario);
     height: 400px;
-}
+} */
 
 /* .forma1 img {
     border: 2px solid var(--blanco)

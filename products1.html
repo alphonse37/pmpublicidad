@@ -86,6 +86,7 @@
             <label for="">sucursales</label>
             <select v-on:change="filtrarProductos()" v-model="sucursalSeleccionada" class="browser-default">
               <option selected>Todas</option>
+              <!-- <option v-for="sucursal of sucursales" :key="sucursal.id_sucursal">{{sucursal.nombre}}</option> -->
               <option v-for="sucursal of sucursales">{{sucursal}}</option>
             </select>
           </div>
@@ -95,6 +96,7 @@
               <label>Categorías</label>
               <select v-on:change="filtrarProductos()" v-model="categoriaSeleccionada" class="browser-default">
                 <option value="Todas">Todas</option>
+                <!-- <option v-for="categoria of categorias" :key="id_categoria_sucursal">{{categoria.categoria}}</option> -->
                 <option v-for="categoria of categorias">{{categoria}}</option>
               </select>
             </div>
@@ -115,7 +117,7 @@
           <div class="col s12 m6 l3" v-for="producto in productosFiltrados" v-bind:key="producto.producto">
             <div class="card tarjeta-prd">
               <div class="imagen-prd">
-                <img :src="`${producto.imagen}`" alt="">
+                <img :src="`data:image/jpg;base64,${producto.imagen}`" alt="" width="100%">
               </div>
               <div class="detalles-prd">
                 <p class="white-text">{{producto.producto}}</p>
@@ -141,17 +143,34 @@
             <h4 class="center">{{seleccion.producto}}</h4>
             <div class="row">
               <div class="col s12 m6 l6 center imagen-producto">
-                <img :src="`${seleccion.imagen}`" alt="">
+                <img :src="`data:image/jpg;base64,${seleccion.imagen}`" alt="" width="100%">
               </div>
 
               <div class="col s12 m6 l6 center">
                 <p>Descripción:</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam expedita maxime ratione molestiae quisquam officiis, libero inventore voluptas, similique ea nulla architecto porro rerum voluptatem at, nisi reprehenderit consequatur? Quae!</p>
+                <p>{{seleccion.descripcion}}</p>
                 <br>
-                <div class="precio" v-if="seleccion.precio != '0'">
+
+                <div class="col s12 l6" v-if="seleccion.precio != '0'">
                   <p>Precio:</p>
                   <p>$ {{seleccion.precio}}</p>
                 </div>
+                <div class="col s12 l6" v-if="seleccion.talla != '0'">
+                    <p>Talla:</p>
+                    <p>{{seleccion.talla}}</p>
+                  </div>
+                <div class="col s12 l6" v-if="seleccion.color != ''">
+                    <p>Color:</p>
+                    <p>{{seleccion.color}}</p>
+                  </div>
+                  <div class="col s12 l6" v-if="seleccion.material != ''">
+                      <p>Material:</p>
+                      <p>{{seleccion.material}}</p>
+                    </div>
+                    <div class="col s12 l6" v-if="seleccion.medida != ''">
+                        <p>Medida:</p>
+                        <p>{{seleccion.medida}}</p>
+                      </div>
               </div>
             </div>
 
