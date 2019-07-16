@@ -285,6 +285,7 @@ https://es.stackoverflow.com/questions/155950/filtrar-varios-par%C3%A1metros-en-
     z-index: 5;
 }
 
+
 .introduccion {
     width: 100%;
     margin-bottom: 8%;
@@ -407,7 +408,7 @@ https://es.stackoverflow.com/questions/155950/filtrar-varios-par%C3%A1metros-en-
 
 .historia-texto {
     font-family: var(--parrafo);
-    padding: 1.8rem;
+    padding: 1.5rem;
     font-size: 1.3rem;
     line-height: 1.6;
     text-align: justify;
