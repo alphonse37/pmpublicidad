@@ -85,7 +85,7 @@ https://es.stackoverflow.com/questions/155950/filtrar-varios-par%C3%A1metros-en-
     font-family: var(--menu);
     position: fixed;
     height: 14vh;
-    background-color: rgba(35, 31, 32, 0);
+    background-color: rgba(35, 31, 32, 0.3);
     list-style: none;
     z-index: 10;
     box-shadow: none;
@@ -420,7 +420,11 @@ https://es.stackoverflow.com/questions/155950/filtrar-varios-par%C3%A1metros-en-
 
 .historia-texto img {
     float: right;
-    shape-outside: polygon(50%, 50%, 25%)
+    shape-outside: polygon( 14.5% 45.95%, 14.3% 36.9%, 14.3% 26.9%, 10.55% 23.7%, 8.45% 20.8%, 8.45% 16.4%, 8.35% 4.05%, 15.4% -0.85%, 21.45% -1.1%, 29.8% -1%, 49.95% -1.1%, 100.9% -1.35%, 101.65% 101.95%, 40.05% 102.1%, 12.75% 102.2%, 12.65% 92.4%, 4.95% 88%, 5.05% 73.85%, 12.45% 68.45%, 12.1% 53.9%, 19.7% 95.6%);
+}
+
+.otra {
+    float: left
 }
 
 
@@ -468,7 +472,7 @@ https://es.stackoverflow.com/questions/155950/filtrar-varios-par%C3%A1metros-en-
     letter-spacing: 1px;
     font-weight: 500;
     word-spacing: 0px;
-    padding: 1.8rem;
+    padding: 1rem;
     margin-bottom: 5%;
     color: var(--negro);
     background-color: var(--terciario);
