@@ -103,7 +103,7 @@ https://es.stackoverflow.com/questions/155950/filtrar-varios-par%C3%A1metros-en-
     height: 14vh;
     font-family: var(--menu);
     position: fixed;
-    background-color: rgba(35, 31, 32, 0.4);
+    background-color: rgba(35, 31, 32, 0.8);
     list-style: none;
     z-index: 10;
     box-shadow: none;
@@ -142,6 +142,7 @@ https://es.stackoverflow.com/questions/155950/filtrar-varios-par%C3%A1metros-en-
 
 .sidenav hr {
     color: var(--blanco);
+    width: 75%
 }
 
 .lista-menu {
@@ -417,6 +418,11 @@ https://es.stackoverflow.com/questions/155950/filtrar-varios-par%C3%A1metros-en-
     text-align: justify;
 }
 
+.historia-texto img {
+    float: right;
+    shape-outside: polygon(50%, 50%, 25%)
+}
+
 
 .identidad h3 {
     font-family: var(--titulos);
@@ -430,11 +436,11 @@ https://es.stackoverflow.com/questions/155950/filtrar-varios-par%C3%A1metros-en-
     margin-bottom: 5%;
 }
 
-.mision-img {
+.mision, .vision {
     position: relative
 }
 
-.mision-titulo {
+.mision-titulo, .vision-titulo {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -444,7 +450,7 @@ https://es.stackoverflow.com/questions/155950/filtrar-varios-par%C3%A1metros-en-
     z-index: 2
 }
 
-.mision-background {
+.mision-background, .vision-background {
     position: absolute;
     width: 97%;
     height: 35%;
@@ -455,7 +461,29 @@ https://es.stackoverflow.com/questions/155950/filtrar-varios-par%C3%A1metros-en-
     z-index: 1
 }
 
-.vision-img {
+.mision-texto .titulo, .vision-texto .titulo {
+    font-family: var(--titulos);
+    font-size: 3rem;
+    line-height: 1;
+    letter-spacing: 1px;
+    font-weight: 500;
+    word-spacing: 0px;
+    padding: 1.8rem;
+    margin-bottom: 5%;
+    color: var(--negro);
+    background-color: var(--terciario);
+    border-bottom-right-radius: 75px
+}
+
+.mision-texto, .vision-texto {
+    font-family: var(--parrafo);
+    padding: 1.5rem;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* .vision-img {
     position: relative
 }
 
@@ -467,9 +495,9 @@ https://es.stackoverflow.com/questions/155950/filtrar-varios-par%C3%A1metros-en-
     transform: translateX(-50%) translateY(-50%); 
     border: 3px solid var(--blanco);
     padding: 3%;
-}
+} */
 
-.vision-background {
+/* .vision-background {
     position: absolute;
     width: 97%;
     height: 35%;
@@ -478,7 +506,7 @@ https://es.stackoverflow.com/questions/155950/filtrar-varios-par%C3%A1metros-en-
     transform: translateX(-50%) translateY(-50%); 
     background-color: #0d72ba7c;
     z-index: 1
-}
+} */
 
 /* .forma1 {
     background-color:var(--terciario);
@@ -489,7 +517,7 @@ https://es.stackoverflow.com/questions/155950/filtrar-varios-par%C3%A1metros-en-
     border: 2px solid var(--blanco)
 } */
 
-.contenedor {
+/* .contenedor {
     width: 80%;
     height: 300px;
     position: relative;
@@ -525,11 +553,11 @@ https://es.stackoverflow.com/questions/155950/filtrar-varios-par%C3%A1metros-en-
     font-weight: 500;
     word-spacing: 0px;
     /* margin-bottom: -10%; */
-}
+/* }
 
 #icon-heart, #icon-compass {
     font-size: 40px;
-}
+} */ 
 
 /* .forma1 {
     height: 150px;
@@ -550,10 +578,10 @@ https://es.stackoverflow.com/questions/155950/filtrar-varios-par%C3%A1metros-en-
     font-size: 1.1rem;
     line-height: 1.6;
 } */
-
+/* 
 #layer1 {
     fill: var(--terciario);
-}
+} */
 
 
 /* SERVICIOS */
@@ -634,7 +662,20 @@ https://es.stackoverflow.com/questions/155950/filtrar-varios-par%C3%A1metros-en-
 }
 
 /* SECCION DE SERVICIOS */
-.contenedor-servicios {
+
+.tarjeta-srv {
+    border: 1px solid var(--negro);
+
+}
+
+.info-srv {
+    width: 90%;
+}
+
+/* .texto-srv {
+    position: absolute
+} */
+/* .contenedor-servicios {
     width: 85%;
     margin: 0 auto;
 }
@@ -658,8 +699,6 @@ https://es.stackoverflow.com/questions/155950/filtrar-varios-par%C3%A1metros-en-
     left: -0.7%;
 }
 
-
-
 .abajo::before {
     position: absolute;
     content: "";
@@ -669,7 +708,7 @@ https://es.stackoverflow.com/questions/155950/filtrar-varios-par%C3%A1metros-en-
     top: 96.5%;
     left: -0.5%
     
-}
+} */
 /* .cuadrado {
     height: 300px;
     background-color: var(--c-principal)
