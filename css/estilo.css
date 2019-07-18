@@ -393,12 +393,23 @@
     text-align: justify;
 }
 
-.imgh1 {
+.historia-texto2 .imgh1 {
+    float: left;
+    width: 25%;
+    shape-outside: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+
+.imgh2 {
+    float: right;
+    width: 25%
+}
+
+.imgh3 {
     float: left;
     width: 25%;
 }
 
-.imgh2 {
+.imgh4 {
     float: right;
     width: 25%
 }
