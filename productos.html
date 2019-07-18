@@ -140,7 +140,7 @@
 
         <div id="detalles" class="modal modal-fixed-footer">
           <div class="modal-content">
-            <h4 class="center">{{seleccion.nombre}}</h4>
+            <h4 class="center titulo-producto white-text">{{seleccion.nombre}}</h4>
             <div class="row">
               <div class="col s12 m6 l6 center imagen-producto">
                 <img :src="`data:image/jpg;base64,${seleccion.imagen}`" alt="" width="100%">
@@ -155,7 +155,7 @@
                   <p>Precio:</p>
                   <p>$ {{seleccion.precio}}</p>
                 </div>
-                <div class="col s12 l6" v-if="seleccion.talla != '0'">
+                <div class="col s12 l6" v-if="seleccion.talla != ''">
                     <p>Talla:</p>
                     <p>{{seleccion.talla}}</p>
                   </div>
