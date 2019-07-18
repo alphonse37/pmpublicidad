@@ -5,35 +5,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
 
-/* https://chrome.google.com/webstore/detail/css-shapes-editor/nenndldnbcncjmeacmnondmkkfedmgmp */
 
-
-/* https://www.emenjivar.com 
-https://pm3.agency/about/ 
-http://pmpublicidadymercadeo.co/
-http://legalia.eu/
-https://mediaproper.com/contact-us/
-https://www.eone-time.com/
-
-
-
-http://www.artedigital-sv.net/
-http://dmte.sv/
-https://www.novumec.com/home
-http://2pixstudio.com.sv/
-https://barcodesignstudio.com/
-http://www.enelsalvador.sv
-*/
-
-/* enrutamiento con vuejs https://fernando-gaitan.com.ar/enrutamiento-con-vue-js/ 
-https://es.stackoverflow.com/questions/155950/filtrar-varios-par%C3%A1metros-en-un-input-con-vue-js*/
-
-/* color sacado de algun lado 2d80f3 */
-/* COLORES AL FINAL
-0d72ba AZUL
-231f20 negro
-03bcf4 celeste
-*/
 
 /* variables para fuentes y colores */
 :root {
@@ -52,24 +24,7 @@ https://es.stackoverflow.com/questions/155950/filtrar-varios-par%C3%A1metros-en-
     --negro: rgb(36, 37, 40);
 
 }
-/* http://preview.ab-themes.com/astir/ */
-/* http://manufactura.bold-themes.com/main-demo/shop/
-https://codex-themes.com/thegem/starting_page/themes.php?page=thegem 
-http://bountybev.com/contact/
-https://littlethunder.co/showcase/
-https://www.basili.co/en/agency/
 
-
-filtrar datos de json https://dev.to/alexmourer/click-event-filtering-on-a-json-rendered-list-in-vuejs-3kpn
-https://codepen.io/blakewatson/pen/xEXApK
-
-enrutamiento con vue
-https://fernando-gaitan.com.ar/enrutamiento-con-vue-js/
-
-
-filtrar fecha con js
-https://es.stackoverflow.com/questions/155950/filtrar-varios-par%C3%A1metros-en-un-input-con-vue-js*/
-*/
 
 * {
     margin: 0;
@@ -487,107 +442,6 @@ https://es.stackoverflow.com/questions/155950/filtrar-varios-par%C3%A1metros-en-
     text-align: center;
 }
 
-/* .vision-img {
-    position: relative
-}
-
-.vision-titulo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 2;
-    transform: translateX(-50%) translateY(-50%); 
-    border: 3px solid var(--blanco);
-    padding: 3%;
-} */
-
-/* .vision-background {
-    position: absolute;
-    width: 97%;
-    height: 35%;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%); 
-    background-color: #0d72ba7c;
-    z-index: 1
-} */
-
-/* .forma1 {
-    background-color:var(--terciario);
-    height: 400px;
-} */
-
-/* .forma1 img {
-    border: 2px solid var(--blanco)
-} */
-
-/* .contenedor {
-    width: 80%;
-    height: 300px;
-    position: relative;
-    padding: 20px;
-    top: 5%;
-    margin: 0 auto;
-    border: 2px solid var(--blanco);
-    font-size: 1.2rem
-}
-
-.contenedor:after {
-    content: "";
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    border-top: 0px solid var(--blanco);
-    border-right: 2px solid var(--blanco);
-    border-left: 0px solid var(--blanco);
-    border-bottom: 2px solid var(--blanco);
-    top: 100%;
-    margin-left: -25px;
-    margin-top: -24px;
-    transform: rotate(45deg);
-    background: var(--terciario);
-    z-index:0;
-}
-
-.contenedor .titulo {
-    font-family: var(--titulos);
-    font-size: 3.5rem;
-    line-height: 1;
-    letter-spacing: 1px;
-    font-weight: 500;
-    word-spacing: 0px;
-    /* margin-bottom: -10%; */
-/* }
-
-#icon-heart, #icon-compass {
-    font-size: 40px;
-} */ 
-
-/* .forma1 {
-    height: 150px;
-    font-family: var(--titulos);
-    font-size: 4rem;
-    line-height: 1;
-    letter-spacing: 1px;
-    font-weight: 500;
-    word-spacing: 0px;
-    color: var(--negro);
-    padding: 1.8rem;
-    margin-bottom: 5%;
-}  */
-
-
-/* .contenedor p {
-    font-family: var(--parrafo);
-    font-size: 1.1rem;
-    line-height: 1.6;
-} */
-/* 
-#layer1 {
-    fill: var(--terciario);
-} */
-
-
 /* SERVICIOS */
 
 .tarjetas {
@@ -675,48 +529,6 @@ https://es.stackoverflow.com/questions/155950/filtrar-varios-par%C3%A1metros-en-
 .info-srv {
     width: 90%;
 }
-
-/* .texto-srv {
-    position: absolute
-} */
-/* .contenedor-servicios {
-    width: 85%;
-    margin: 0 auto;
-}
-
-.info-servicios {
-    border: 1px solid rgb(212, 212, 212);
-    height: 300px;
-}
-
-.info-servicios:hover {
-    box-shadow: -8px 8px 0px 1px var(--c-principal)
-}
-
-.izquierda::before {
-    position: absolute;
-    content: "";
-    height: 300px;
-    width: 2px;
-    border: 1px solid rgb(212, 212, 212);
-    top: 2.5%;
-    left: -0.7%;
-}
-
-.abajo::before {
-    position: absolute;
-    content: "";
-    height: 2px;
-    width: inherit;
-    border: 1px solid rgb(212, 212, 212);
-    top: 96.5%;
-    left: -0.5%
-    
-} */
-/* .cuadrado {
-    height: 300px;
-    background-color: var(--c-principal)
-} */
 
 /* SECCION DE PRODUCTOS */
 
@@ -832,130 +644,6 @@ https://es.stackoverflow.com/questions/155950/filtrar-varios-par%C3%A1metros-en-
     left: 30%;
 }
 
-
-
-/* .seccion-productos {
-    width: 100%;
-    top: 0;
-    position: relative;
-    bottom: 20;
-}
-
-.product-card{
-	width:325px;
-	height:450px;  
-	top:10px;
-	left:10px;	
-	overflow:hidden;
-	-webkit-transition:  100ms ease-out; 
-       -moz-transition:  100ms ease-out; 
-         -o-transition:  100ms ease-out; 
-            transition:  100ms ease-out;
-}
-
-.stats-container{
-	background:#fff;	
-	position:absolute;
-	top:378px;
-	left:0;
-	width:265px;
-	height:300px;
-	padding:27px 35px 35px;	
-	-webkit-transition: all 200ms ease-out; 
-       -moz-transition: all 200ms ease-out; 
-         -o-transition: all 200ms ease-out; 
-            transition: all 200ms ease-out;
-}
-
-.product-card.animate .stats-container{
-	top:272px;
-	-webkit-transition: all 200ms ease-out; 
-       -moz-transition: all 200ms ease-out; 
-         -o-transition: all 200ms ease-out; 
-            transition: all 200ms ease-out; 
-}
-
-.stats-container .product_name{
-	font-size:22px;
-	color:#393c45;	
-}
-.stats-container p{
-	font-size:16px;
-	color:#b1b1b3;	
-	padding:2px 0 20px 0;
-}
-.stats-container .product_price{
-	float:right;
-	color:#48cfad;
-	font-size:22px;
-	font-weight:600;
-}
-.image_overlay{
-	position:absolute;
-	top:0;
-	left:0; 
-	width:100%;
-	height:100%;
-	background:#48daa1;
-	opacity:0;	
-}
-.product-card.animate .image_overlay{
-	opacity:0.7;	
-	-webkit-transition: all 200ms ease-out; 
-       -moz-transition: all 200ms ease-out; 
-         -o-transition: all 200ms ease-out; 
-            transition: all 200ms ease-out; 
-}
-
-.product-options strong{
-	font-weight:700;
-	color:#393c45;
-	font-size:14px;
-}
-.product-options span{	
-	color:#969699;
-	font-size:14px;
-	display:block;
-	margin-bottom:8px;
-}
-#view_details{	
-	position:absolute;
-	top:112px;
-	left:50%;
-	margin-left:-85px;	
-	border:2px solid #fff;
-	color:#fff;
-	font-size:19px;
-	text-align:center;
-	text-transform:uppercase;
-	font-weight:700;
-	padding:10px 0;
-	width:172px;	
-	opacity:0;
-	-webkit-transition: all 200ms ease-out; 
-       -moz-transition: all 200ms ease-out; 
-         -o-transition: all 200ms ease-out; 
-            transition: all 200ms ease-out; 
-}
-#view_details:hover{	
-	background:#fff;
-	color:#48cfad;
-	cursor:pointer;
-
-}
-.product-card.animate #view_details{
-	opacity:1;
-	width:152px;
-	font-size:15px;
-	margin-left:-75px;
-	top:115px;
-	-webkit-transition: all 200ms ease-out; 
-       -moz-transition: all 200ms ease-out; 
-         -o-transition: all 200ms ease-out; 
-            transition: all 200ms ease-out; 		
-} */
-
-
 /* SECCION DE COTIZACIONES */
 
 .cotizar {
@@ -985,17 +673,6 @@ https://es.stackoverflow.com/questions/155950/filtrar-varios-par%C3%A1metros-en-
     border: 1px solid rgb(212, 212, 212);
 }
 
-/*.tableta {
-     border: 3px solid rgb(201, 201, 201);
-    border-radius: 20px;
-    padding: 2%; 
-}*/
-
-/*.pantalla {
-    width: 90vw;
-    margin: 0 auto;
-    background-color: #000;
-} */
 
 /* SECCION DE CONTACTOS */
 .tab button {

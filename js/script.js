@@ -48,9 +48,6 @@ $(document).ready(function(){
 		  $('.carousel').carousel('prev');
 	  });
 
-	// //   efecto parallax
-	// $('.parallax').parallax();
-
 	//   efecto de tabs
 	$( "#tabs" ).tabs();
       
@@ -108,14 +105,5 @@ $(document).ready(function(){
 
 		// para abrir el modal
 		$('.modal').modal();
-
-		// tarjetas
-	// 	$('.product-card').hover(function(){
-	// 		$(this).addClass('animate');
-	// 		$('div.carouselNext, div.carouselPrev').addClass('visible');			
-	// 	 }, function(){
-	// 		$(this).removeClass('animate');			
-	// 		$('div.carouselNext, div.carouselPrev').removeClass('visible');
-	// });	
 });
 

@@ -18,9 +18,6 @@ new Vue({
   },
 
   methods: {
-    // abrirCategoria(nombre) {
-    //     this.seleccionarSucursal = nombre;
-    // },
     abrirSelec(id_producto) {
       this.seleccion = id_producto;
     },
