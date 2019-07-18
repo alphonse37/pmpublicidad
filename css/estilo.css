@@ -97,7 +97,6 @@
 
 .sidenav hr {
     color: var(--blanco);
-    width: 75%
 }
 
 .lista-menu {
@@ -378,8 +377,30 @@
     shape-outside: polygon( 14.5% 45.95%, 14.3% 36.9%, 14.3% 26.9%, 10.55% 23.7%, 8.45% 20.8%, 8.45% 16.4%, 8.35% 4.05%, 15.4% -0.85%, 21.45% -1.1%, 29.8% -1%, 49.95% -1.1%, 100.9% -1.35%, 101.65% 101.95%, 40.05% 102.1%, 12.75% 102.2%, 12.65% 92.4%, 4.95% 88%, 5.05% 73.85%, 12.45% 68.45%, 12.1% 53.9%, 19.7% 95.6%);
 }
 
-.otra {
-    float: left
+.contenido-historia2 {
+    display: none
+}
+
+.contenido-historia1 {
+    display: block
+}
+
+.historia-texto2 {
+    font-family: var(--parrafo);
+    padding: 1.5rem;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.imgh1 {
+    float: left;
+    width: 25%;
+}
+
+.imgh2 {
+    float: right;
+    width: 25%
 }
 
 
@@ -406,7 +427,8 @@
     transform: translateX(-50%) translateY(-50%); 
     border: 3px solid var(--blanco);
     padding: 3%;
-    z-index: 2
+    z-index: 2;
+
 }
 
 .mision-background, .vision-background {
@@ -522,12 +544,33 @@
 /* SECCION DE SERVICIOS */
 
 .tarjeta-srv {
-    border: 1px solid var(--negro);
-
+   background-image: url('../imagenes/srv.jpg');
+   background-size: cover;
+   /* background: linear-gradient(to left, #0d72ba, #2066fc); */
+    position: relative;
+    border-radius: 10px;
 }
 
-.info-srv {
-    width: 90%;
+
+
+.img-srv {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translateX(-3%) translateY(-50%);
+    z-index: 5
+}
+
+.descripcion-srv {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translateX(-5%) translateY(-50%);
+    padding: 1rem;
+    border: 5px solid var(--blanco);
+    z-index: 3;
+    color: var(--negro);
+    font-family: var(--parrafo);
 }
 
 /* SECCION DE PRODUCTOS */
@@ -709,9 +752,14 @@
     margin-top: 5%;
 }
 
+.info-contacto h6 {
+    font-family: var(--titulos);
+}
+
 .info-contacto p {
     font-family: var(--parrafo);
-    padding-left: 10%;
+    padding-left: 7%;
+    padding-right: 5%;
     color: var(--negro)
 }
 
@@ -740,7 +788,31 @@
 
 /* media queries */
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 1250px){
+    .mision-titulo h2, .vision-titulo h2{
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 992px) and (orientation: landscape) {
+    .barra2 {
+        height: 30vh;
+    }
+
+    .barra2 ul {
+        margin-top: -15px;
+    }
+    
+    .logo2 img {
+        width: 20vw;
+    }
+
+    .nav .sidenav-trigger {
+        margin: -14px 18px;
+    }
+}
+
+@media screen and (max-width: 992px) and (orientation: portrait){
     .bt-menu {
         margin-top: -1% !important;
     }
@@ -748,7 +820,7 @@
     .informacion {
         display: none;
     }
-
+ 
     .texto2 {
         display: none;
     }
@@ -772,6 +844,34 @@
     .leyenda {
         font-size: 1.8rem; 
     }
+
+    .contenido-historia1 {
+        display: none
+    }
+
+    .contenido-historia2 {
+        display: block
+    }
+    
+    .historia-texto2 {
+        font-family: var(--parrafo);
+        padding: 1.5rem;
+        font-size: 1.3rem;
+        line-height: 1.6;
+        text-align: justify;
+    }
+    
+    .imgh1 {
+        float: left;
+        width: 25%;
+    }
+    
+    .imgh2 {
+        float: right;
+        width: 25%
+    }
+
+    
  }
 
  @media screen and (max-width: 768px){ 
@@ -786,6 +886,10 @@
 
     .leyenda span i {
         padding: 15px;
+    }
+
+    .mision-titulo h2, .vision-titulo h2{
+        font-size: 25px;
     }
   }
 
