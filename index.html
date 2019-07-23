@@ -154,7 +154,7 @@
         </div>
 
         <!-- SECCION PRODUCTOS DE LA EMPRESA -->
-            <div class="tarjetas" id="productos">
+            <div class="tarjetas" id="servicios">
                 <div class="row ">
                     <div class="col s12 productos-texto">
                         <h2 class="center">Nuestros Productos</h2>
@@ -162,156 +162,16 @@
                     </div>
 
                      <!-- TARJETAS DE SERVICIOS  -->
-                    <!-- BORDADOS -->
-                    <div class="col s12 m6 l3 columna center">
+                    
+                    <div class="col s12 m6 l3 columna center" v-for="servicio in servicios" v-bind:key="servicios.id_catgoria">
                         <div class="card">
                             <div class="card-image">
-                                <img src="imagenes/servicios/bordado.jpg" alt="Bordados">
+                                <img :src="`data:image/jpg;base64,${servicio.imagen}`" alt="" width="100%">
                             </div>
                             <div class="details">
                                 <div class="content">
-                                    <h3>Bordados<br><br></h3>
+                                    <h3>{{servicio.nombre}}<br><br></h3>
                                     <!-- <span><a href="#" class="btn">Ver Productos</a></span> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                
-                    <!-- CONFECCION -->
-                    <div class="col s12 m6 l3 columna center">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="imagenes/servicios/confeccion.jpg" alt="Confecciones">
-                            </div>
-                            <div class="details">
-                                <div class="content">
-                                    <h3>Confección<br><br></h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-               
-                    <!-- SUBLIMACION -->
-                    <div class="col s12 m6 l3 columna center">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="imagenes/servicios/sublimacion.jpg" alt="Sublimación">
-                            </div>
-                            <div class="details">
-                                <div class="content">
-                                    <h3>Sublimación<br><br></h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- SERIGRAFIA -->
-                    <div class="col s12 m6 l3 columna center">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="imagenes/servicios/serigrafia.jpg" alt="Serigrafía" >
-                            </div>
-                            <div class="details">
-                                <div class="content">
-                                    <h3>Serigrafía<br><br></h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- IMPRESION DIGITAL -->
-                    <div class="col s12 m6 l3 columna center">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="imagenes/servicios/digital.jpg" alt="Impresión Digital">
-                            </div>
-                            <div class="details">
-                                <div class="content">
-                                    <h3>Impresión Digital<br><br></h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- PROMOCIONALES -->
-                    <div class="col s12 m6 l3 columna center">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="imagenes/servicios/promocionales.jpg" alt="Promocionales">
-                            </div>
-                            <div class="details">
-                                <div class="content">
-                                    <h3>Artículos Promocionales<br><br></h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- IMPRESION LASER -->
-                    <div class="col s12 m6 l3 columna center">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="imagenes/servicios/impresion.jpg" alt="IMpresión Láser">
-                            </div>
-                            <div class="details">
-                                <div class="content">
-                                    <h3>Impresión Láser<br><br></h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- ROTULACIONES -->
-                    <div class="col s12 m6 l3 columna center">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="imagenes/servicios/rotulos.jpg" alt="Rotulaciones">
-                            </div>
-                            <div class="details">
-                                <div class="content">
-                                    <h3>Rotulaciones<br><br></h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- LETRAS -->
-                    <div class="col s12 m6 l3 columna center">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="imagenes/servicios/letras.jpg" alt="Letras Encajueladas">
-                            </div> 
-                            <div class="details">
-                                <div class="content">
-                                    <h3>Letras Encajueladas<br><br></h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- PRODUCTOS -->
-                    <div class="col s12 m6 l3 columna center">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="imagenes/servicios/productos.jpg" alt="Productos para serigrafía">
-                            </div>
-                            <div class="details">
-                                <div class="content">
-                                    <h3>Productos para Serigrafía<br><br></h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- INSTALACIONES -->
-                    <div class="col s12 m6 l3 columna center">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="imagenes/servicios/instalaciones.jpg" alt="Instalaciones">
-                            </div>
-                            <div class="details">
-                                <div class="content">
-                                    <h3>Instalaciones<br><br></h3>
                                 </div>
                             </div>
                         </div>
@@ -367,6 +227,6 @@
             
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/app2.js"></script>
 </body>
 </html>

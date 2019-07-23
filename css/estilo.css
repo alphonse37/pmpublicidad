@@ -378,7 +378,7 @@
 }
 
 .contenido-historia2 {
-    display: none
+    display: block
 }
 
 .contenido-historia1 {
@@ -393,20 +393,22 @@
     text-align: justify;
 }
 
-.historia-texto2 .imgh1 {
+.imgh1 {
     float: left;
     width: 25%;
-    shape-outside: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    shape-outside: polygon(51.3% 2.1%, 92.05% 26.05%, 92.85% 77.1%, 50.8% 100.25%, 12.45% 76.85%, 12.45% 27.9%);
 }
 
 .imgh2 {
     float: right;
-    width: 25%
+    width: 25%;
+    shape-outside: polygon(51.3% 2.1%, 92.05% 25.8%, 92.85% 77.1%, 50.8% 100.25%, 9% 76.05%, 8.45% 26.05%);
 }
 
 .imgh3 {
     float: left;
     width: 25%;
+    shape-outside: polygon(51.3% 2.1%, 92.05% 25.8%, 92.85% 77.1%, 50.8% 100.25%, 9% 76.05%, 8.45% 26.05%);
 }
 
 .imgh4 {
@@ -813,7 +815,7 @@
 
 @media screen and (max-width: 992px) and (orientation: landscape) {
     .barra2 {
-        height: 30vh;
+        height: 15vh;
     }
 
     .barra2 ul {
@@ -824,8 +826,16 @@
         width: 20vw;
     }
 
-    .nav .sidenav-trigger {
-        margin: -14px 18px;
+    /* .nav .sidenav-trigger {
+        margin: 2px 18px;
+    } */
+
+    .contenido-historia1 {
+        display: none
+    }
+
+    .contenido-historia2 {
+        display: block
     }
 }
 

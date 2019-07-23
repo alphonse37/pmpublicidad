@@ -27,7 +27,7 @@ new Vue({
       if(sucursal == "Todas"){
         sucursal = 0;
       }
-      axios.get("http://192.168.22.115/pm/api/categoriaSucursal?id="+sucursal)
+      axios.get("https://pmpu.000webhostapp.com/api/categoriaSucursal?id="+sucursal)
       .then(res => {
           this.categorias = res.data;
           console.log(res.data);
