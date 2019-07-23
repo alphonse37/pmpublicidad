@@ -1,5 +1,5 @@
 new Vue({
-  el: '#products',
+  el: '#productos',
 
   data: {
     sucursales: [],
@@ -58,7 +58,7 @@ new Vue({
       if(cat == "Todas"){
         cat = 0;
       }
-      axios.get("http://192.168.22.115/pm/api/productoCategoria?cat="+cat)
+      axios.get("https://pmpu.000webhostapp.com/api/productoCategoria?cat="+cat)
       .then(res => {
           this.productosFiltrados2 = res.data;
           // this.categorias = res.data;
@@ -90,7 +90,7 @@ new Vue({
   // computed: {}
 
   mounted() {
-    axios.get("http://192.168.22.115/pm/api/sucursal")
+    axios.get("https://pmpu.000webhostapp.com/api/sucursal")
       .then(res => {
           this.sucursales = res.data;
           console.log(res.data);

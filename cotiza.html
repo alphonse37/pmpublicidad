@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,14 +16,15 @@
     <link rel="stylesheet" href="css/estilo.css">
 
     <!-- font awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
-    <!-- scripts de js --> 
+    <!-- scripts de js -->
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="js/script.js"></script>
 </head>
 
-<body >
+<body>
     <header>
         <!-- BARRA DE NAVEGACION -->
         <nav class="nav-wrapper barra">
@@ -32,7 +34,8 @@
                     <a href="index.html" class="brand-logo logo1"><img src="imagenes/logo2.png"></a>
                 </div>
             </div>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="large material-icons white-text">menu</i></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i
+                    class="large material-icons white-text">menu</i></a>
             <div class="col s7  menu">
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="index.html">Inicio</a></li>
@@ -40,11 +43,11 @@
                     <li><a href="servicios.html">Servicios</a></li>
                     <li><a href="productos.html">Productos</a></li>
                     <li><a href="cotiza.html">Cotiza</a></li>
-                    <li><a href="contactanos.html">Contáctanos</a></li>    
+                    <li><a href="contactanos.html">Contáctanos</a></li>
                 </ul>
             </div>
         </nav>
-            
+
         <!-- MENU DE HAMBURGUESA PARA DISPOSITIVOS MEDIUM Y SMALL -->
         <ul class="sidenav" id="mobile-demo">
             <!-- <li><i class="material-icons right white-text cerrar">close</i></li> -->
@@ -58,12 +61,12 @@
                 <li><a href="servicios.html" class="white-text center">Servicios</a></li>
                 <li><a href="productos.html" class="white-text center">Productos</a></li>
                 <li><a href="cotiza.html" class="white-text center">Cotiza</a></li>
-                <li><a href="contactanos.html" class="white-text center">Contáctanos</a></li>   
-            </div>  
+                <li><a href="contactanos.html" class="white-text center">Contáctanos</a></li>
+            </div>
         </ul>
-    
+
     </header>
-    
+
     <main>
         <!-- banner -->
         <div class="banner">
@@ -71,113 +74,122 @@
             <h1 class="leyenda center"><span><i class="fas fa-calculator"></i></span>Cotiza</h1>
         </div>
         <div class="cotizar">
-                <div class="col s12 descripcion">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dolores quis illo eveniet neque sed eos, fugiat tempora perspiciatis qui dicta odit architecto omnis nemo nulla id ex atque odio.</p>
-                    </div>
+            <div class="col s12 descripcion">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dolores quis illo eveniet neque sed
+                    eos, fugiat tempora perspiciatis qui dicta odit architecto omnis nemo nulla id ex atque odio.</p>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col s12 l8 offset-l2 formulario">
+                    <img src="imagenes/form.jpg" alt="" width="100%">
                     <br>
-                <div class="row">
-                    <div class="col s12 l8 offset-l2 formulario">
-                        <img src="imagenes/form.jpg" alt="" width="100%">
-                        <br>
-                        <h5 class="center">Datos del cliente</h5>
-                        <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <br>
-                        <form action="">
-                            <div class="row">
-                                <div class="input-field col s12 l6">
-                                    <input type="text" class="validate" required>
-                                    <label for="">Nombre y apellido</label>
-                                </div>
-    
-                                <div class="input-field col s12 l6">
-                                    <input type="text" class="validate" required>
-                                    <label for="">Nombre de la empresa</label>
-                                </div>
+                    <h5 class="center">Datos del cliente</h5>
+                    <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <br>
+                    <form action="">
+                        <div class="row">
+                            <div class="input-field col s12 l6">
+                                <input id="nombre" type="text" class="validate" required>
+                                <label for="">Nombre y apellido</label>
                             </div>
-                            <div class="row">
-                                <div class="input-field col s12 l6">
-                                    <input type="text" class="validate" required>
-                                    <label for="">Teléfono</label>
-                                </div>
-    
-                                <div class="input-field col s12 l6">
-                                    <input type="email" class="validate" required>
-                                    <label for="">Correo Electrónico</label>
-                                </div>
+
+                            <div class="input-field col s12 l6">
+                                <input type="text" class="validate" required>
+                                <label for="">Nombre de la empresa</label>
                             </div>
-                            <div class="row">
-                                <h5 class="center">Datos de cotización.</h5>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12 l6">
+                                <input id="telefono" type="text" class="validate" required>
+                                <label for="">Teléfono</label>
+                            </div>
+
+                            <div class="input-field col s12 l6">
+                                <input id="correo" type="email" class="validate" required>
+                                <label for="">Correo Electrónico</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <h5 class="center">Datos de cotización.</h5>
+                            <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <div class="input-field col s12 l6">
+                                <select class="browser-default" name="servicio" id="servicio"
+                                    onchange="cargarProductos()">
+                                    <option value="">Elige el servicio</option>
+                                </select>
+                            </div>
+
+                            <div class="input-field col s12 l6">
+                                <select class="browser-default" name="producto" id="producto">
+                                    <option value="">Elige el producto</option>
+                                </select>
+
+                            </div>
+
+                            <div class="input-field col s12 l6">
+                                <input id="cantidad" type="number" class="validate" required>
+                                <label for="">Cantidad</label>
+                            </div>
+
+                            <div class="input-field col s12 l6">
+                                <textarea id="descripcion" class="materialize-textarea validate" required></textarea>
+                                <label for="descripcion">Descripción</label>
+                            </div>
+
+                            <div class="input-field col s12 material">
+                                <h6 class="center">Material y medidas a escala</h6>
                                 <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                <div class="input-field col s12 l6"> 
-                                    <select class="browser-default" name="servicio" id="servicio" onchange="cargarProductos()">
-                                        <option value="">Elige el servicio</option>
-                                    </select>
-                                </div>
-    
-                                <div class="input-field col s12 l6">
-                                    <select class="browser-default" name="producto" id="producto">
-                                        <option value="">Elige el producto</option>
-                                    </select>
-    
-                                </div>
-    
-                                <div class="input-field col s12 l6 offset-l3">
-                                    <input type="number" class="validate" required>
-                                    <label for="">Cantidad</label>
-                                </div>
-    
-                                <div class="input-field col s12 material">
-                                    <h6 class="center">Material y medidas a escala</h6>
-                                    <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                    <div class="row">
-                                        <div class="input-field col s12 l6">
-                                            <input type="number" id="alto" class="validate" required>
-                                            <label for="">Alto</label>
-                                        </div>
-    
-                                        <div class="input-field col s12 l6">
-                                            <input type="number" id="ancho" class="validate" required>
-                                            <label for="">Ancho</label>
-                                        </div>
-    
-                                        <div class="input-field col s12 l6 offset-l3">
-                                                <select class="browser-default" name="" id="select">
-                                                    <option value="" selected disabled>Selecciona el material</option>
-                                                    <option value="">Vinil sticker</option>
-                                                    <option value="">Lona banner</option>
-                                                </select>
-                                            </div>
-    
-                                        <div class="col s12 boton center">
-                                            <button class="cyan btn modal-trigger" data-target="modal1">Previsualizar tamaño</button>
-                                            <a href="" class="btn cyan">Cotizar</a>
-                                        </div>
+                                <div class="row">
+                                    <div class="input-field col s12 l6">
+                                        <input type="number" id="alto" class="validate" required>
+                                        <label for="">Alto</label>
+                                    </div>
+
+                                    <div class="input-field col s12 l6">
+                                        <input type="number" id="ancho" class="validate" required>
+                                        <label for="">Ancho</label>
+                                    </div>
+
+                                    <div class="input-field col s12 l6 offset-l3">
+                                        <select class="browser-default" name="" id="select">
+                                            <option value="" selected disabled>Selecciona el material</option>
+                                            <option value="">Vinil sticker</option>
+                                            <option value="">Lona banner</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col s12 boton center">
+                                        <button class="cyan btn modal-trigger" data-target="modal1">Previsualizar
+                                            tamaño</button>
+                                        <button class="btn cyan" onclick="enviar()">Cotizar</button>
                                     </div>
                                 </div>
                             </div>
-                        </form>
-                        <img src="imagenes/formfooter.jpg" alt="" width="100%">
-                    </div>
+                        </div>
+                    </form>
+                    <img src="imagenes/formfooter.jpg" alt="" width="100%">
                 </div>
-
-           
             </div>
 
-                <!-- Modal -->
+
+        </div>
+
+        <!-- Modal -->
         <div id="modal1" class="modal modal-fixed-footer" style="width:100%">
             <div class="modal-content">
                 <h5 class="center">Tamaño a escala.</h5>
                 <div class="text-center">
-                    <div class="medidas text-center white-text"><img src="imagenes/escala.jpg" alt="" width="100%"></div>
+                    <div class="medidas text-center white-text"><img src="imagenes/escala.jpg" alt="" width="100%">
+                    </div>
                 </div>
             </div>
             <div class="modal-footer">
-            <a href="#!" class="cyan modal-close waves-effect waves-green btn-flat white-text">Cerrar</a>
+                <a href="#!" class="cyan modal-close waves-effect waves-green btn-flat white-text">Cerrar</a>
             </div>
         </div>
         <br><br><br><br><br>
     </main>
-    
+
     <footer>
         <img src="imagenes/footerimg.png" alt="" width="100%" class="footerimg">
         <div class="footer center">
@@ -207,7 +219,8 @@
                 <div class="col s12 m6 l3 footer-container">
                     <div class="footer-info">
                         <h6>Facebook</h6>
-                        <a href="https://es-la.facebook.com/pages/category/Product-Service/Pm-Publicidad-83252799961/" target="_blank"><i class="fab fa-facebook-square" id="iconoRedes"></i></a>
+                        <a href="https://es-la.facebook.com/pages/category/Product-Service/Pm-Publicidad-83252799961/"
+                            target="_blank"><i class="fab fa-facebook-square" id="iconoRedes"></i></a>
                         <p>PM-Publicidad</p>
                     </div>
                 </div>
@@ -224,62 +237,84 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <script>
-    // Servicios de select en Formulario de cotización
+        // Servicios de select en Formulario de cotización
 
-// agregar opciones de servicios
-function cargarServicios() {
-	var array = ["Promocionales", "Bordados", "Impresión Digital", "Serigrafía", "Confección", "Sublimación", "Impresión Láser"];
-	array.sort();
-	addOptions("servicio", array);
-}
+        // agregar opciones de servicios
+        function cargarServicios() {
+            var array = ["Promocionales", "Bordados", "Impresión Digital", "Serigrafía", "Confección", "Sublimación", "Impresión Láser"];
+            array.sort();
+            addOptions("servicio", array);
+        }
 
-// agregar servicios al select
-function addOptions (domElement, array) {
-	var selector = document.getElementsByName(domElement)[0];
-	for (servicio in array) {
-		var opcion = document.createElement("option");
-		opcion.text = array[servicio];
+        // agregar servicios al select
+        function addOptions(domElement, array) {
+            var selector = document.getElementsByName(domElement)[0];
+            for (servicio in array) {
+                var opcion = document.createElement("option");
+                opcion.text = array[servicio];
 
-		// convertir string en minusculas y quitar espacios
-		opcion.value = array[servicio].trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, '').replace(/ /g, '');
-		selector.add(opcion);
-	}
-}
+                // convertir string en minusculas y quitar espacios
+                opcion.value = array[servicio].trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, '').replace(/ /g, '');
+                selector.add(opcion);
+            }
+        }
 
-// agregar productos a los servicios
-function cargarProductos() {
-	var listaProductos = {
-		bordados: ["Camisas"],
-      impresiondigital: ["Banner", "Vinil", "Microperforado"],
-      promocionales: ["Gorras", "Llaveros", "Agendas", "Gabachas", "Camisetas", "Lapiceros", "Calculadoras", "Tazas", "Lanyard", "Pachones", "Almohadas", "Lápices", "Pulseras"],
-      serigrafia: ["Camisas", "Pachones", "Telas"],
-      confeccion: ["Camisas Polo", "Suéteres", "Uniformes"],
-      sublimacion: ["Tazas", "Camisas", "Telas"],
-      impresionlaser: ["Foldcote", "Couche", "Adhesivo"]
-	}
+        // agregar productos a los servicios
+        function cargarProductos() {
+            var listaProductos = {
+                bordados: ["Camisas"],
+                impresiondigital: ["Banner", "Vinil", "Microperforado"],
+                promocionales: ["Gorras", "Llaveros", "Agendas", "Gabachas", "Camisetas", "Lapiceros", "Calculadoras", "Tazas", "Lanyard", "Pachones", "Almohadas", "Lápices", "Pulseras"],
+                serigrafia: ["Camisas", "Pachones", "Telas"],
+                confeccion: ["Camisas Polo", "Suéteres", "Uniformes"],
+                sublimacion: ["Tazas", "Camisas", "Telas"],
+                impresionlaser: ["Foldcote", "Couche", "Adhesivo"]
+            }
 
-	var servicios = document.getElementById("servicio");
-	var productos = document.getElementById("producto");
-	var servicioSeleccionado = servicios.value;
+            var servicios = document.getElementById("servicio");
+            var productos = document.getElementById("producto");
+            var servicioSeleccionado = servicios.value;
 
-	// limpiar select de productos
-	productos.innerHTML = "<option >Elige el producto</option>"
+            // limpiar select de productos
+            productos.innerHTML = "<option >Elige el producto</option>"
 
-	if (servicioSeleccionado !== '') {
-		servicioSeleccionado = listaProductos[servicioSeleccionado];
-		servicioSeleccionado.sort();
+            if (servicioSeleccionado !== '') {
+                servicioSeleccionado = listaProductos[servicioSeleccionado];
+                servicioSeleccionado.sort();
 
-		servicioSeleccionado.forEach(function(producto) {
-			let opcion = document.createElement("option");
-			opcion.value = producto;
-			opcion.text = producto;
-			productos.add(opcion);
-		});
-    }
-}
-cargarServicios();
+                servicioSeleccionado.forEach(function (producto) {
+                    let opcion = document.createElement("option");
+                    opcion.value = producto;
+                    opcion.text = producto;
+                    productos.add(opcion);
+                });
+            }
+        }
+
+        cargarServicios()
+
+        function enviar() {
+            cantidad = document.getElementById('cantidad')
+            telefono = document.getElementById('telefono')
+            descripcion = document.getElementById('descripcion')
+            nombre = document.getElementById('nombre')
+            correo = document.getElementById('correo')
+            fecha = '2019-07-24';
+            fetch('https://pmpu.000webhostapp.com/api/cotizacion', {
+                method: 'post',
+                body: JSON.stringify({ "id_producto_categoria": "1", "cantidad": '+cantidad+', "telefono": "+telefono+", "fecha": "+fecha+", "descripcion": "+descripcion+", "correo": "+correo+", "nombre": "+nombre+", "activo": "1" })
+            }).then(function (response) {
+                return response.json();
+            }).then(function (data) {
+                ChromeSamples.log('Created Gist:', data.html_url);
+            });
+        }
+
+
+
 
     </script>
 
-    </body>
+</body>
+
 </html>
