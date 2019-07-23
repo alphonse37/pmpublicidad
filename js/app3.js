@@ -1,5 +1,5 @@
 new Vue({
-  el: '#productos',
+  el: '#products',
 
   data: {
     sucursales: [],

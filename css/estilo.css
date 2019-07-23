@@ -767,6 +767,14 @@
     transition: 0.5s
 }
 
+.datos-sucursal {
+    height: 200px;
+}
+
+.mapas-info {
+    margin-bottom: 10%
+}
+
 .info-contacto {
     margin-top: 5%;
 }
