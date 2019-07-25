@@ -89,12 +89,12 @@
                     <form action="">
                         <div class="row">
                             <div class="input-field col s12 l6">
-                                <input id="nombre" type="text" class="validate" required>
+                                <input id="nombre" type="text" pattern="[A-Za-z]{1,50}" class="validate" title="Por favor, ingresa solo letras" required>
                                 <label for="nombre">Nombre y apellido</label>
                             </div>
 
                             <div class="input-field col s12 l6">
-                                <input id="empresa" type="text" class="validate" required>
+                                <input id="empresa" type="text" pattern="[]" class="validate" required>
                                 <label for="empresa">Nombre de la empresa</label>
                             </div>
                         </div>
@@ -141,13 +141,13 @@
                                 <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                 <div class="row">
                                     <div class="input-field col s12 l6">
-                                        <input type="number" id="alto" class="validate" required>
-                                        <label for="alto">Alto</label>
+                                        <input type="number" id="ancho" class="validate" required>
+                                        <label for="ancho">Ancho</label>
                                     </div>
 
                                     <div class="input-field col s12 l6">
-                                        <input type="number" id="ancho" class="validate" required>
-                                        <label for="ancho">Ancho</label>
+                                        <input type="number" id="alto" class="validate" required>
+                                        <label for="alto">Alto</label>
                                     </div>
 
                                     <div class="input-field col s12 l6 offset-l3">
@@ -161,7 +161,7 @@
                                     <div class="col s12 boton center">
                                         <button class="cyan btn modal-trigger" data-target="modal1">Previsualizar
                                             tamaño</button>
-                                        <button class="btn cyan" onclick="enviar()">Cotizar</button>
+                                        <input type="submit" class="btn cyan" value="Cotizar">
                                     </div>
                                 </div>
                             </div>
@@ -294,20 +294,21 @@
         cargarServicios()
 
         function enviar() {
-            cantidad = document.getElementById('cantidad').value;
-            telefono = document.getElementById('telefono').value;
-            descripcion = document.getElementById('descripcion').value;
-            nombre = document.getElementById('nombre').value;
-            correo = document.getElementById('correo').value;
-            fecha = '2019-07-24';
-            fetch('https://pmpu.000webhostapp.com/api/cotizacion', {
-                method: 'post',
-                body: JSON.stringify({ "id_producto_categoria": "1", "cantidad": cantidad, "telefono": telefono, "fecha": fecha, "descripcion": descripcion, "correo": correo, "nombre": nombre, "activo": "1" })
-            }).then(function (response) {
-                return true;
-            }).then(function (data) {
-                console.log("Creado");
-            });
+            console.log("Funciona");
+            // cantidad = document.getElementById('cantidad').value;
+            // telefono = document.getElementById('telefono').value;
+            // descripcion = document.getElementById('descripcion').value;
+            // nombre = document.getElementById('nombre').value;
+            // correo = document.getElementById('correo').value;
+            // fecha = '2019-07-24';
+            // fetch('https://pmpu.000webhostapp.com/api/cotizacion', {
+            //     method: 'post',
+            //     body: JSON.stringify({ "id_producto_categoria": "1", "cantidad": cantidad, "telefono": telefono, "fecha": fecha, "descripcion": descripcion, "correo": correo, "nombre": nombre, "activo": "1" })
+            // }).then(function (response) {
+            //     return true;
+            // }).then(function (data) {
+            //     console.log("Creado");
+            // });
         }
 
 
