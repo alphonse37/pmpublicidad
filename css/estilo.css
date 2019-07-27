@@ -5,7 +5,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
 
-
+/* https://dev.to/tsanak/building-an-image-carousel-with-vuejs--cjp */
 
 /* variables para fuentes y colores */
 :root {
@@ -108,7 +108,7 @@
 }
 
 
-/* estilo del sliderslider */
+/* estilo del slider */
 .slider {
     position: relative;
     height: 100vh;
@@ -831,7 +831,7 @@
     }
     
     .logo2 img {
-        width: 20vw;
+        width: 15vw;
     }
 
     .imgHistory {
@@ -864,14 +864,22 @@
         display: none;
     }
 
+    .barra {
+        height: 9vh;
+    }
+
+    .barra2 {
+        height: 9vh;
+    }
+
     .logo img {
-        width: 20vw;
+        width: 18vw;
         transition: 0.5s;
         margin-top: 25px;
     }
 
     .logo2 img {
-        width: 20vw;
+        width: 18vw;
         transition: 0.5s;
         margin-top: 25px;
     }

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image" href="./imagenes/pmicon.ico">
     <title>Cotiza | PM Publicidad</title>
 
     <!-- Compiled and minified CSS -->
@@ -16,12 +17,17 @@
     <link rel="stylesheet" href="css/estilo.css">
 
     <!-- font awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/7eaf41582e.js"></script>
 
     <!-- scripts de js -->
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="js/script.js"></script>
+
+    <style>
+        input {
+            caret-color: #0d72ba;
+        }
+    </style>
 </head>
 
 <body>
@@ -86,16 +92,16 @@
                     <h5 class="center">Datos del cliente</h5>
                     <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     <br>
-                    <form action="">
+                    <form>
                         <div class="row">
                             <div class="input-field col s12 l6">
-                                <input id="nombre" type="text" pattern="[A-Za-z]{1,50}" class="validate" title="Por favor, ingresa solo letras" required>
+                                <input id="nombre" name="nombre" type="text" pattern="[A-Za-z]{1,50}" class="validate" title="Este campo solo puede contener letras">
                                 <label for="nombre">Nombre y apellido</label>
                             </div>
 
                             <div class="input-field col s12 l6">
-                                <input id="empresa" type="text" pattern="[]" class="validate" required>
-                                <label for="empresa">Nombre de la empresa</label>
+                                <input id="empresa" type="text" pattern="[0-9]{1,100}" class="validate" required>
+                                <label for="empresa" data-error="wrong" data-success="right">Nombre de la empresa</label>
                             </div>
                         </div>
                         <div class="row">
@@ -120,7 +126,7 @@
                             </div>
 
                             <div class="input-field col s12 l6">
-                                <select class="browser-default" name="producto" id="producto">
+                                <select class="browser-default" name="producto" id="producto" required>
                                     <option value="">Elige el producto</option>
                                 </select>
 
@@ -161,7 +167,7 @@
                                     <div class="col s12 boton center">
                                         <button class="cyan btn modal-trigger" data-target="modal1">Previsualizar
                                             tamaño</button>
-                                        <input type="submit" class="btn cyan" value="Cotizar">
+                                        <button type="submit" class="btn cyan" onsubmit="enviar()">Cotizar</button>
                                     </div>
                                 </div>
                             </div>
@@ -240,67 +246,73 @@
         // Servicios de select en Formulario de cotización
 
         // agregar opciones de servicios
-        function cargarServicios() {
-            var array = ["Promocionales", "Bordados", "Impresión Digital", "Serigrafía", "Confección", "Sublimación", "Impresión Láser"];
-            array.sort();
-            addOptions("servicio", array);
-        }
+        // function cargarServicios() {
+        //     var array = ["Promocionales", "Bordados", "Impresión Digital", "Serigrafía", "Confección", "Sublimación", "Impresión Láser"];
+        //     array.sort();
+        //     addOptions("servicio", array);
+        // }
 
         // agregar servicios al select
-        function addOptions(domElement, array) {
-            var selector = document.getElementsByName(domElement)[0];
-            for (servicio in array) {
-                var opcion = document.createElement("option");
-                opcion.text = array[servicio];
+        // function addOptions(domElement, array) {
+        //     var selector = document.getElementsByName(domElement)[0];
+        //     for (servicio in array) {
+        //         var opcion = document.createElement("option");
+        //         opcion.text = array[servicio];
 
-                // convertir string en minusculas y quitar espacios
-                opcion.value = array[servicio].trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, '').replace(/ /g, '');
-                selector.add(opcion);
-            }
-        }
+        //         // convertir string en minusculas y quitar espacios
+        //         opcion.value = array[servicio].trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, '').replace(/ /g, '');
+        //         selector.add(opcion);
+        //     }
+        // }
 
         // agregar productos a los servicios
-        function cargarProductos() {
-            var listaProductos = {
-                bordados: ["Camisas"],
-                impresiondigital: ["Banner", "Vinil", "Microperforado"],
-                promocionales: ["Gorras", "Llaveros", "Agendas", "Gabachas", "Camisetas", "Lapiceros", "Calculadoras", "Tazas", "Lanyard", "Pachones", "Almohadas", "Lápices", "Pulseras"],
-                serigrafia: ["Camisas", "Pachones", "Telas"],
-                confeccion: ["Camisas Polo", "Suéteres", "Uniformes"],
-                sublimacion: ["Tazas", "Camisas", "Telas"],
-                impresionlaser: ["Foldcote", "Couche", "Adhesivo"]
-            }
+        // function cargarProductos() {
+        //     var listaProductos = {
+        //         bordados: ["Camisas"],
+        //         impresiondigital: ["Banner", "Vinil", "Microperforado"],
+        //         promocionales: ["Gorras", "Llaveros", "Agendas", "Gabachas", "Camisetas", "Lapiceros", "Calculadoras", "Tazas", "Lanyard", "Pachones", "Almohadas", "Lápices", "Pulseras"],
+        //         serigrafia: ["Camisas", "Pachones", "Telas"],
+        //         confeccion: ["Camisas Polo", "Suéteres", "Uniformes"],
+        //         sublimacion: ["Tazas", "Camisas", "Telas"],
+        //         impresionlaser: ["Foldcote", "Couche", "Adhesivo"]
+        //     }
 
-            var servicios = document.getElementById("servicio");
-            var productos = document.getElementById("producto");
-            var servicioSeleccionado = servicios.value;
+        //     var servicios = document.getElementById("servicio");
+        //     var productos = document.getElementById("producto");
+        //     var servicioSeleccionado = servicios.value;
 
             // limpiar select de productos
-            productos.innerHTML = "<option >Elige el producto</option>"
+        //     productos.innerHTML = "<option >Elige el producto</option>"
 
-            if (servicioSeleccionado !== '') {
-                servicioSeleccionado = listaProductos[servicioSeleccionado];
-                servicioSeleccionado.sort();
+        //     if (servicioSeleccionado !== '') {
+        //         servicioSeleccionado = listaProductos[servicioSeleccionado];
+        //         servicioSeleccionado.sort();
 
-                servicioSeleccionado.forEach(function (producto) {
-                    let opcion = document.createElement("option");
-                    opcion.value = producto;
-                    opcion.text = producto;
-                    productos.add(opcion);
-                });
-            }
-        }
+        //         servicioSeleccionado.forEach(function (producto) {
+        //             let opcion = document.createElement("option");
+        //             opcion.value = producto;
+        //             opcion.text = producto;
+        //             productos.add(opcion);
+        //         });
+        //     }
+        // }
 
-        cargarServicios()
+        // cargarServicios()
 
         function enviar() {
-            console.log("Funciona");
-            // cantidad = document.getElementById('cantidad').value;
-            // telefono = document.getElementById('telefono').value;
-            // descripcion = document.getElementById('descripcion').value;
-            // nombre = document.getElementById('nombre').value;
-            // correo = document.getElementById('correo').value;
-            // fecha = '2019-07-24';
+
+            cantidad = document.getElementById('cantidad').value;
+            telefono = document.getElementById('telefono').value;
+            descripcion = document.getElementById('descripcion').value;
+            nombre = document.getElementById('nombre').value;
+            correo = document.getElementById('correo').value;
+            fecha = '2019-07-24';
+
+                console.log(cantidad + telefono +descripcion + nombre + correo + fecha );
+                alert("datos enviados")
+            
+
+
             // fetch('https://pmpu.000webhostapp.com/api/cotizacion', {
             //     method: 'post',
             //     body: JSON.stringify({ "id_producto_categoria": "1", "cantidad": cantidad, "telefono": telefono, "fecha": fecha, "descripcion": descripcion, "correo": correo, "nombre": nombre, "activo": "1" })
@@ -310,10 +322,6 @@
             //     console.log("Creado");
             // });
         }
-
-
-
-
     </script>
 
 </body>

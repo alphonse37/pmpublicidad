@@ -23,30 +23,31 @@ $(document).ready(function(){
 	// EFECTOS DEL CARRUSEL
 	$('.carousel').carousel({
 		fullWidth: true
+		// indicators: true
 	});
 
 	$('select').formSelect();
 
 	// funcion para que sea automatico
-	function autoplay() {
-		$('.carousel').carousel('next');
-		setTimeout(autoplay, 5000);
-	  }
-	  setTimeout(autoplay, 5000);
+	// function autoplay() {
+	// 	$('.carousel').carousel('next');
+	// 	setTimeout(autoplay, 5000);
+	//   }
+	//   setTimeout(autoplay, 5000);
 
 	  // funcion para pasar con el boton derecho
-	$('.moveNextCarousel').click(function(e){
-		  e.preventDefault();
-		  e.stopPropagation();
-		  $('.carousel').carousel('next');
-	  });
+	// $('.moveNextCarousel').click(function(e){
+	// 	  e.preventDefault();
+	// 	  e.stopPropagation();
+	// 	  $('.carousel').carousel('next');
+	//   });
 
 	// funcion para regresar con el boton izquierdo
-	  $('.movePrevCarousel').click(function(e){
-		  e.preventDefault();
-		  e.stopPropagation();
-		  $('.carousel').carousel('prev');
-	  });
+	//   $('.movePrevCarousel').click(function(e){
+	// 	  e.preventDefault();
+	// 	  e.stopPropagation();
+	// 	  $('.carousel').carousel('prev');
+	//   });
 
 	//   efecto de tabs
 	$( "#tabs" ).tabs();

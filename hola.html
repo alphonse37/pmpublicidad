@@ -76,39 +76,28 @@
     </header>
     <main>
         <!-- SLIDER -->
-           <div class=" slider carousel carousel-slider center" id="promociones">
-               <!-- div de los botones -->
-               <!-- <div class="flechas">
-                   <div class="left">
-                       <a href="Previo" class="movePrevCarousel middle-indicator-text waves-effect waves-light content-indicator"><i class="material-icons left  middle-indicator-text">chevron_left</i></a>
-                   </div>
-                           
-                   <div class="right">
-                       <a href="Siguiente" class=" moveNextCarousel middle-indicator-text waves-effect waves-light content-indicator"><i class="material-icons right middle-indicator-text">chevron_right</i></a>
-                   </div>
-               </div> -->
-         
-               <div v-for="promocion in promociones" :key="promocion.id_promocion">
-                   <div class="carousel-item" >
-                        <p style="z-index: inherit 2000;" class="black-text">{{promocion.nombre}}</p>
-                        <img :src="`data:image/jpg;base64,${promocion.imagen}`" alt=""  class="responsive-img">
-                   </div>
-               </div>
-
-              
-       
-               <!-- <div class="carousel-item">
-                   <img src="imagenes/banner2.jpg" alt="" class="responsive-img">
-               </div>
-    
-               <div class="carousel-item">
-                    <img src="imagenes/banner3.jpg" alt="" class="responsive-img">
+        <div id="promociones">
+            <div class=" slider carousel  center">
+                <!-- div de los botones -->
+                <!-- <div class="flechas">
+                    <div class="left">
+                        <a href="Previo" class="movePrevCarousel middle-indicator-text waves-effect waves-light content-indicator"><i class="material-icons left  middle-indicator-text">chevron_left</i></a>
+                    </div>
+                            
+                    <div class="right">
+                        <a href="Siguiente" class=" moveNextCarousel middle-indicator-text waves-effect waves-light content-indicator"><i class="material-icons right middle-indicator-text">chevron_right</i></a>
+                    </div>
+                </div> -->
+          
+                <div v-for="promocion in promociones" :key="promocion.id_promocion">
+                    <div class="carousel-item" >
+                         <p style="z-index: inherit 2000;">{{promocion.nombre}}</p>
+                         <img :src="`data:image/jpg;base64,${promocion.imagen}`" alt=""  width="100%" height="100%">
+                    </div>
                 </div>
-       
-               <div class="carousel-item">
-                   <img src="imagenes/banner4.jpg" alt="" class="responsive-img">
-               </div> -->
-           </div>
+            </div>
+
+        </div>
     
            <div class="informacion center">
                <h1>
