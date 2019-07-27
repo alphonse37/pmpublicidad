@@ -28,6 +28,12 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="js/script.js"></script>
 
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.carousel');
+    var instances = M.Carousel.init(elems);
+  });
+    </script>
 
 </head> 
 <body>
@@ -77,7 +83,7 @@
     <main>
         <!-- SLIDER -->
         <div id="promociones">
-            <div class=" slider carousel  center">
+            <div class=" slider carousel carousel-slider center">
                 <!-- div de los botones -->
                 <!-- <div class="flechas">
                     <div class="left">
