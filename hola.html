@@ -89,7 +89,7 @@
                     </div>
                 </div> -->
           
-                <div v-for="promocion in promociones" :key="promocion.id_promocion">
+                <div v-for="(promocion, index) in promociones" :key="promocion.id_promocion">
                     <div class="carousel-item" >
                          <p style="z-index: inherit 2000;">{{promocion.nombre}}</p>
                          <img :src="`data:image/jpg;base64,${promocion.imagen}`" alt=""  width="100%" height="100%">
