@@ -177,8 +177,10 @@
     color: var(--blanco);
     animation: ani1 4s infinite;
     -moz-animation: ani1 4s infinite;
+    -webkit-animation: ani1 4s infinite;
     animation-delay: -1s;
     -moz-animation-delay: -1s;
+    -webkit-animation-delay: -1s;
     animation-direction: reverse;
     max-width: 0;
 }
