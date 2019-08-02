@@ -95,13 +95,15 @@
                     <form>
                         <div class="row">
                             <div class="input-field col s12 l6">
-                                <input id="nombre" name="nombre" type="text" pattern="[A-Za-z]{1,50}" class="validate" title="Este campo solo puede contener letras">
+                                <input id="nombre" name="nombre" type="text" pattern="[A-Za-z]{1,50}" class="validate"
+                                    title="Este campo solo puede contener letras">
                                 <label for="nombre">Nombre y apellido</label>
                             </div>
 
                             <div class="input-field col s12 l6">
                                 <input id="empresa" type="text" pattern="[0-9]{1,100}" class="validate" required>
-                                <label for="empresa" data-error="wrong" data-success="right">Nombre de la empresa</label>
+                                <label for="empresa" data-error="wrong" data-success="right">Nombre de la
+                                    empresa</label>
                             </div>
                         </div>
                         <div class="row">
@@ -133,7 +135,7 @@
                             </div>
 
                             <div class="input-field col s12 l6">
-                                <input id="cantidad" type="number" class="validate" required>
+                                <input id="cantidad" type="number" class="validate" required min="1">
                                 <label for="cantidad">Cantidad</label>
                             </div>
 
@@ -164,22 +166,23 @@
                                         </select>
                                     </div>
 
-                                    <div class="inputlfield col s12 l6">
+                                    <div class="input-field col s12 l6">
                                         <div class="file-field input-field">
                                             <div class=" btn-small cyan">
-                                              <span>Imagen</span>
-                                              <input type="file" multiple>
+                                                <span>Imagen</span>
+                                                <input type="file" multiple>
                                             </div>
                                             <div class="file-path-wrapper">
-                                              <input class="file-path validate" type="text" placeholder="Imagen de muestra">
+                                                <input class="file-path validate" type="text"
+                                                    placeholder="Imagen de muestra">
                                             </div>
-                                          </div>
+                                        </div>
                                     </div>
-                                    
+
                                     <div class="col s12 boton center">
                                         <button class="cyan btn modal-trigger" data-target="modal1">Previsualizar
                                             tamaño</button>
-                                        <button type="submit" class="btn cyan" onsubmit="enviar()">Cotizar</button>
+                                        <button type="submit" class="btn cyan" onclick="enviar()">Cotizar</button>
                                     </div>
                                 </div>
                             </div>
@@ -293,7 +296,7 @@
         //     var productos = document.getElementById("producto");
         //     var servicioSeleccionado = servicios.value;
 
-            // limpiar select de productos
+        // limpiar select de productos
         //     productos.innerHTML = "<option >Elige el producto</option>"
 
         //     if (servicioSeleccionado !== '') {
@@ -318,21 +321,25 @@
             descripcion = document.getElementById('descripcion').value;
             nombre = document.getElementById('nombre').value;
             correo = document.getElementById('correo').value;
-            fecha = '2019-07-24';
+            fecha = '2019-07-27';
 
-                console.log(cantidad + telefono +descripcion + nombre + correo + fecha );
-                alert("datos enviados")
-            
+            if (cantidad <= 0 || telefono == '' || nombre == '' || correo == '') {
+                alert("Por favor complete todos los campos");
+            } else {
+               
 
 
-            // fetch('https://pmpu.000webhostapp.com/api/cotizacion', {
-            //     method: 'post',
-            //     body: JSON.stringify({ "id_producto_categoria": "1", "cantidad": cantidad, "telefono": telefono, "fecha": fecha, "descripcion": descripcion, "correo": correo, "nombre": nombre, "activo": "1" })
-            // }).then(function (response) {
-            //     return true;
-            // }).then(function (data) {
-            //     console.log("Creado");
-            // });
+
+                fetch('http://localhost/pm/api/cotizacion', {
+                    method: 'post',
+                    body: JSON.stringify({ "id_producto_categoria": "1", "cantidad": cantidad, "telefono": telefono, "fecha": fecha, "descripcion": descripcion, "correo": correo, "nombre": nombre, "activo": "1" })
+                }).then(function (response) {
+                    return true;
+                }).then(function (data) {
+                    console.log("Creado");
+                    window.location.reload();
+                });
+            }
         }
     </script>
 

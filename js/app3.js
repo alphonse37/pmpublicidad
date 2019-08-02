@@ -27,7 +27,7 @@ new Vue({
       if(sucursal == "Todas"){
         sucursal = 0;
       }
-      axios.get("https://pmpu.000webhostapp.com/api/categoriaSucursal?id="+sucursal)
+      axios.get("http://localhost/pm/api/categoriaSucursal?id="+sucursal)
       .then(res => {
           this.categorias = res.data;
           console.log(res.data);
@@ -58,7 +58,7 @@ new Vue({
       if(cat == "Todas"){
         cat = 0;
       }
-      axios.get("https://pmpu.000webhostapp.com/api/productoCategoria?cat="+cat)
+      axios.get("http://localhost/pm/api/productoCategoria?cat="+cat)
       .then(res => {
           this.productosFiltrados2 = res.data;
           // this.categorias = res.data;
@@ -90,7 +90,7 @@ new Vue({
   // computed: {}
 
   mounted() {
-    axios.get("https://pmpu.000webhostapp.com/api/sucursal")
+    axios.get("http://localhost/pm/api/sucursal")
       .then(res => {
           this.sucursales = res.data;
           console.log(res.data);

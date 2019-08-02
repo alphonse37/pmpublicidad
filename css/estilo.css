@@ -132,18 +132,24 @@
 /* informacion del slider */
 .informacion {
     position: absolute;
-    margin-top: -34%;
-    font-family: var(--menu);
-    margin-left:  25%;
+    /* margin-top: -34%; */
+    /* font-family: var(--menu); */
+    /* margin-left:  25%; */
     z-index: 25;
+    top: 50%;
+    left: 15%;
+    transform: translateX(-50%) translateY(-50%);
+    font-family: 'Bauhaus 93' ;
+
 }
 
 .informacion h1 {
     margin: 0 auto;
-    width: 50vw;
+    width: 70vw;
     position: absolute;
-    font-size: 9vmin;
+    font-size: 11vmin;
     color: var(--blanco);
+    /* font-size: 20vmin; */
 }
 
 /* EFECTOS */
@@ -151,24 +157,28 @@
 .pm, .publi {
     display: inline-block;
     overflow:hidden;
-    height: 1.5em;
+    height: 1.8em;
+}
+
+.p {
+    font-size: 11vmin
 }
 
 .pm {
-    color: var(--terciario)
+    color: var(--blanco)
 }
 
 .pm2 {
     position: absolute;
-    color: var(--terciario);
+    color: var(--blanco);
 }
 
 .publi {
     color: var(--blanco);
-    animation: ani1 5s infinite;
-    -moz-animation: ani1 5s infinite;
-    animation-delay: -3s;
-    -moz-animation-delay: -3s;
+    animation: ani1 4s infinite;
+    -moz-animation: ani1 4s infinite;
+    animation-delay: -1s;
+    -moz-animation-delay: -1s;
     animation-direction: reverse;
     max-width: 0;
 }
@@ -201,8 +211,8 @@
 	position: absolute;
 	margin-top: -25px;
     margin-left: -25px;
-	height: 60%;
-	width: 10%;
+	height: 50%;
+	width: 8%;
 	border-left: 10px solid #f6b304;
 	border-top: 10px solid #f6b304;
 	transition: 0.5s;
@@ -250,13 +260,14 @@
 }
 
 .descripcion h2 {
-    font-family: var(--titulos);
+
+    font-family: 'Bauhaus 93';
     font-size: 4rem;
     line-height: 1;
     letter-spacing: 1px;
     font-weight: 500;
     word-spacing: 0px;
-    color: var(--negro);
+    color: var(--terciario);
 }
 
 .descripcion p {
@@ -264,7 +275,7 @@
     margin: 0 auto;
     font-family: var(--parrafo);
     padding: 0.2em;
-    text-align: center;
+    text-align: justify;
     font-size: 1.5rem;
     line-height: 1.6;
 }
@@ -295,7 +306,10 @@
     color: var(--blanco);
     font-size: 48px;
     padding: 40px;
+    color: #f6b304;
 }
+
+
 
 .boton-servicios {
     margin-top: 3%;
