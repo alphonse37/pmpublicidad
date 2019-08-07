@@ -266,7 +266,7 @@
     font-family: 'Bauhaus 93';
     font-size: 4rem;
     line-height: 1;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
     font-weight: 500;
     word-spacing: 0px;
     color: var(--terciario);
@@ -735,6 +735,24 @@
     border: 1px solid rgb(219, 219, 219);
     /* height: 55vh; */
 }
+
+.boton-cotizar {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color:rgb(36, 37, 40, 0.9);
+    font-size: 1.2rem;
+    font-family: var(--titulos);
+    color: var(--blanco);
+    padding: 0.8rem;
+}
+
+.boton-cotizar i {
+    align-content: center;
+}
+
+
 
 .medidas {
     border: 2px solid var(--terciario);
