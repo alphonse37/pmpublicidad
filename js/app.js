@@ -1,15 +1,22 @@
-new Vue ({
-    el: '#promociones',
+Vue.use(VueAgile)
 
+app = new Vue ({
+    el: '#promociones',
+    components: {
+		agile: VueAgile,
+    },
+    
     data:  {
-           promociones: [],
+           slides: [],
+           currentSlide: ""
     },
 
 
     mounted() {
+        this.slides[this.currentSlide]
         axios.get("https://pmpu.000webhostapp.com/api/promocion")
         .then(res => {
-            this.promociones = res.data;
+            this.slides = res.data;
             console.log(res.data);
         })
         .catch(err => {

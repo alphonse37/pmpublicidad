@@ -55,7 +55,7 @@
 }
 
 .barra2 {
-    height: 14vh;
+    height: 13vh;
     font-family: var(--menu);
     position: fixed;
     background-color: rgba(35, 31, 32, 0.8);
@@ -75,12 +75,12 @@
 }
 
 .logo1 img {
-    width: 19vw;
+    width: 18vw;
     transition: 0.5s;
 }
 
 .logo2 img {
-    width: 15vw;
+    width: 14vw;
     transition: 0.5s;
 }
 
@@ -109,7 +109,66 @@
 
 
 /* estilo del slider */
-.slider {
+.agile .nav-button {
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 24px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition-duration: .3s;
+    width: 80px;
+}
+
+.agile .nav-button:hover {
+    background-color: rgba(#000, .5);
+    opacity: 1;
+}
+
+.agile .nav-button .prev {
+    left: 0
+}
+
+.agile .nav-button .prev {
+    right: 0
+}
+
+.agile .nav-button .dots {
+    bottom: 10px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%)
+}
+
+.agile .nav-button .dot {
+    margin: 0 10px
+}
+
+.button {
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    display: block;
+    height: 10px;
+    font-size: 0;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+    transition-duration: .3s;
+    width: 10px
+}
+
+.slide {
+    display: block;
+	height: 680px;
+	object-fit: cover;
+	width: 100vw;
+}
+
+/* .slider {
     position: relative;
     height: 100vh;
     top: 0;
@@ -127,7 +186,7 @@
 .flechas i {
     color: var(--blanco);
     font-size: 55px;
-}
+} */
 
 /* informacion del slider */
 .informacion {

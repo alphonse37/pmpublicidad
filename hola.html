@@ -9,6 +9,10 @@
      
     <!-- vue -->
      <script src="https://vuejs.org/js/vue.min.js"></script>
+
+     <!-- VUE-AGILE -->
+     <script src="https://unpkg.com/vue-agile"></script>
+    <link rel="stylesheet" href="https://unpkg.com/vue-agile/dist/VueAgile.css">
     
      <!-- axios -->
      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -28,12 +32,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="js/script.js"></script>
 
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.carousel');
-    var instances = M.Carousel.init(elems);
-  });
-    </script>
+    
 
 </head> 
 <body>
@@ -82,10 +81,23 @@
     </header>
     <main>
         <!-- SLIDER -->
-        <div id="promociones">
-            <div class=" slider carousel carousel-slider center">
-                <!-- div de los botones -->
-                <!-- <div class="flechas">
+        <template id="promociones">
+            <main>
+                <agile initialSlide="0" :autoplay-speed="5000" :autoplay-speed="5000" :speed="2500" autoplay>
+                    <div v-for="(slide, index) in slides" :key="slide.id_promocion" class="slide">
+                        <img :src="`data:image/jpg;base64,${slide.imagen}`">
+                    </div>
+                    <template slot="prevButton"><i class="fas fa-chevron-left"></i></template>
+                    <template slot="nextButton"><i class="fas fa-chevron-right"></i></template>
+                    <!-- <img src="imagenes/banner1.jpg" alt="" class="slide" width="100%"> -->
+                    <!-- <img src="imagenes/banner2.jpg" alt="" class="slide" width="100%">
+                    <img src="imagenes/banner3.jpg" alt="" class="slide" width="100%"> -->
+                </agile>
+
+            </main>
+            <!-- <div class=" slider carousel carousel-slider center">
+             
+                <div class="flechas">
                     <div class="left">
                         <a href="Previo" class="movePrevCarousel middle-indicator-text waves-effect waves-light content-indicator"><i class="material-icons left  middle-indicator-text">chevron_left</i></a>
                     </div>
@@ -93,7 +105,7 @@
                     <div class="right">
                         <a href="Siguiente" class=" moveNextCarousel middle-indicator-text waves-effect waves-light content-indicator"><i class="material-icons right middle-indicator-text">chevron_right</i></a>
                     </div>
-                </div> -->
+                </div>
           
                 <div v-for="(promocion, index) in promociones" :key="promocion.id_promocion">
                     <div class="carousel-item" >
@@ -101,9 +113,9 @@
                          <img :src="`data:image/jpg;base64,${promocion.imagen}`" alt=""  width="100%" height="100%">
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-        </div>
+        </template>
     
            <div class="informacion center">
                <h1>
@@ -230,5 +242,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/app2.js"></script>
+
+    </script>
 </body>
 </html>
