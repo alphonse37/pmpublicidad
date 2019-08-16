@@ -109,8 +109,8 @@
 
 
 /* estilo del slider */
-.agile .nav-button {
-    background: transparent;
+/* .agile .nav-button { */
+    /* background: transparent;
     border: none;
     color: #fff;
     cursor: pointer;
@@ -166,7 +166,7 @@
 	height: 680px;
 	object-fit: cover;
 	width: 100vw;
-}
+} */
 
 /* .slider {
     position: relative;
