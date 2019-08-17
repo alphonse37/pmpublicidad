@@ -233,14 +233,16 @@
     <script src="js/app2.js"></script>
 
     <script>
-        $('#lightSlider').lightSlider({
-            gallery: true,
-            item: 1,
-            loop:true,
-            slideMargin: 0,
-            thumbItem: 9,
-            auto: true,
-           
+        document.addEventListener("DOMContentLoaded", function(){
+            $('#lightSlider').lightSlider({
+                gallery: true,
+                item: 1,
+                loop:true,
+                slideMargin: 0,
+                thumbItem: 9,
+                auto: true,
+            
+            });
         });
     </script>
 </body>
