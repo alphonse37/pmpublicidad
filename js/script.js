@@ -17,8 +17,6 @@ $(window).scroll(function() {
 });
 
 
-
-
 $(document).ready(function(){
 	// EFECTOS SIDENAV
 	$('.sidenav').sidenav();
